@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tutorial2 - Bluewhale Tutorial Site</title>
+<meta name="description" content="put your description">
+<meta name="generator" content="Hugo 0.94.0" />
+<link href="https://bluewhale-users.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://bluewhale-users.github.io/okd/cicd/tutorial2/">
+<link rel="stylesheet" href="https://bluewhale-users.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://bluewhale-users.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://bluewhale-users.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Tutorial2" />
+<meta property="og:description" content="GitHub Repository 준비 origin repository [src] https://github.com/bluewhale-users/okd-tutorial1-src [gitops] https://github.com/bluewhale-users/okd-tutorial1-gitops fork repository [src] https://github.com/blackwhale-testuser/okd-tutorial1-src [gitops] https://github.com/blackwhale-testuser/okd-tutorial1-gitops 1. 2개 리파지토리를 본인 계정으로 fork 한다. 2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy ke" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bluewhale-users.github.io/okd/cicd/tutorial2/" /><meta property="og:image" content="https://bluewhale-users.github.io/images/og-image.png"/><meta property="article:section" content="okd" />
+<meta property="article:published_time" content="2022-03-15T11:27:51+09:00" />
+<meta property="article:modified_time" content="2022-03-15T11:27:51+09:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bluewhale-users.github.io/images/og-image.png"/>
+
+<meta name="twitter:title" content="Tutorial2"/>
+<meta name="twitter:description" content="GitHub Repository 준비 origin repository [src] https://github.com/bluewhale-users/okd-tutorial1-src [gitops] https://github.com/bluewhale-users/okd-tutorial1-gitops fork repository [src] https://github.com/blackwhale-testuser/okd-tutorial1-src [gitops] https://github.com/blackwhale-testuser/okd-tutorial1-gitops 1. 2개 리파지토리를 본인 계정으로 fork 한다. 2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy ke"/>
+<meta itemprop="name" content="Tutorial2">
+<meta itemprop="description" content="GitHub Repository 준비 origin repository [src] https://github.com/bluewhale-users/okd-tutorial1-src [gitops] https://github.com/bluewhale-users/okd-tutorial1-gitops fork repository [src] https://github.com/blackwhale-testuser/okd-tutorial1-src [gitops] https://github.com/blackwhale-testuser/okd-tutorial1-gitops 1. 2개 리파지토리를 본인 계정으로 fork 한다. 2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy ke"><meta itemprop="datePublished" content="2022-03-15T11:27:51+09:00" />
+<meta itemprop="dateModified" content="2022-03-15T11:27:51+09:00" />
+<meta itemprop="wordCount" content="339"><meta itemprop="image" content="https://bluewhale-users.github.io/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Bluewhale Tutorial Site</h1><span class="version">Version 0.9.7</span><a href="https://github.com/thingsym/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+<p class="description">put your description</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com/">Blackwhale(OKD)</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Tutorial2</h1>
+<h1 id="github-repository-준비">GitHub Repository 준비</h1>
+<h2 id="origin-repository">origin repository</h2>
+<p>[src] <a href="https://github.com/bluewhale-users/okd-tutorial1-src">https://github.com/bluewhale-users/okd-tutorial1-src</a><br>
+[gitops] <a href="https://github.com/bluewhale-users/okd-tutorial1-gitops">https://github.com/bluewhale-users/okd-tutorial1-gitops</a></p>
+<h2 id="fork-repository">fork repository</h2>
+<p>[src] <a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">https://github.com/blackwhale-testuser/okd-tutorial1-src</a><br>
+[gitops] <a href="https://github.com/blackwhale-testuser/okd-tutorial1-gitops">https://github.com/blackwhale-testuser/okd-tutorial1-gitops</a></p>
+<h2 id="1-2개-리파지토리를-본인-계정으로-fork-한다">1. 2개 리파지토리를 본인 계정으로 fork 한다.</h2>
+<figure><img src="/cicd/tutorial2_1.jpg"/>
+</figure>
+
+<h2 id="2-deploy-key-생성-및-등록">2. Deploy Key 생성 및 등록</h2>
+<p>jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록한다.</p>
+<h3 id="21-gitbash를-실행하여-ssh-keygen을-통해-deploy-key를-생성">2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성</h3>
+<pre tabindex="0"><code>user@DESKTOP-1RAT70A MINGW64 ~/.ssh
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/user/.ssh/id_rsa): okd-tutorial-deploykey
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in okd-tutorial-deploykey.
+Your public key has been saved in okd-tutorial-deploykey.pub.
+The key fingerprint is:
+SHA256:AnFXcqY8jKZ9T3XTp12eh5cJd7ofMmRYMOml5gFZjao user@DESKTOP-1RAT70A
+The key&#39;s randomart image is:
++---[RSA 3072]----+
+|    . . o.*++    |
+|     o = B ooo . |
+|    . o = + +oo.=|
+|     =   o *o.oBB|
+|    . o S +..o++=|
+|       E o .o  o.|
+|          .  o.. |
+|              o..|
+|                .|
++----[SHA256]-----+
+</code></pre><h3 id="3-gitops-repohttpsgithubcomblackwhale-testuserokd-tutorial1-gitops-이동">3. <a href="https://github.com/blackwhale-testuser/okd-tutorial1-gitops">GitOps Repo</a> 이동</h3>
+<figure><img src="/cicd/tutorial2_2.jpg"/>
+</figure>
+
+<h4 id="31-settings---deploy-keys로-이동해-add-deploy-key-선택allow-write-access-체크">3.1 Settings -&gt; Deploy keys로 이동해 Add deploy key 선택(Allow write access 체크)</h4>
+<p><figure><img src="/cicd/tutorial2_3.jpg"/>
+</figure>
+
+<figure><img src="/cicd/tutorial2_4.jpg"/>
+</figure>
+</p>
+<h3 id="4-source-repohttpsgithubcomblackwhale-testuserokd-tutorial1-src-이동">4. <a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">Source Repo</a> 이동</h3>
+<h4 id="41-jenkins-파일-편집">4.1 Jenkins 파일 편집</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>......
+</span></span><span style="display:flex;"><span>stage(&#34;Update Tag&#34;) { 
+</span></span><span style="display:flex;"><span>    steps {
+</span></span><span style="display:flex;"><span>    checkout([$class: &#39;GitSCM&#39;,
+</span></span><span style="display:flex;"><span>                    branches: [[name: &#39;*/master&#39; ]],
+</span></span><span style="display:flex;"><span>                    extensions: scm.extensions,
+</span></span><span style="display:flex;"><span>                    userRemoteConfigs: [[                         
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+                   url: &#39;fork한 repo url&#39;,         
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#f92672">-                   url: &#39;git@github.com:blackwhale-testuser/okd-tutorial1-gitops.git&#39;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span>                    credentialsId: &#39;jenkins-ssh-private&#39;,
+</span></span><span style="display:flex;"><span>                    ]]
+</span></span><span style="display:flex;"><span>            ])
+</span></span><span style="display:flex;"><span>    sshagent(credentials: [&#39;jenkins-ssh-private&#39;]){
+</span></span><span style="display:flex;"><span>        sh(&#34;&#34;&#34;
+</span></span><span style="display:flex;"><span>            #!/usr/bin/env bash
+</span></span><span style="display:flex;"><span>            set +x
+</span></span><span style="display:flex;"><span>            export GIT_SSH_COMMAND=&#34;ssh -oStrictHostKeyChecking=no&#34;
+</span></span><span style="display:flex;"><span>            git config --global user.email &#34;test@gmail.com&#34;
+</span></span><span style="display:flex;"><span>            git checkout master
+</span></span><span style="display:flex;"><span>            cp --f base/deployment-sample.yaml okd-deploy/temp.yaml
+</span></span><span style="display:flex;"><span>            cd okd-deploy
+</span></span><span style="display:flex;"><span>            sed -i &#39;s/MY_BUILD_TAG/test.4/&#39; temp.yaml 
+</span></span><span style="display:flex;"><span>            cat temp.yaml
+</span></span><span style="display:flex;"><span>            cp --f temp.yaml testblog-deployment.yaml 
+</span></span><span style="display:flex;"><span>            git commit -a -m &#34;updated the image tag&#34;
+</span></span><span style="display:flex;"><span>            git push
+</span></span><span style="display:flex;"><span>        &#34;&#34;&#34;)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>......
+</span></span></code></pre></div><div class="edit-meta">
+Last updated on 15 Mar 2022
+
+
+<br>
+Published on 15 Mar 2022
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/okd%5ccicd%5ctutorial2.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://bluewhale-users.github.io/okd/cicd/" title="CI/CD"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - CI/CD</a>
+<a class="nav nav-next" href="https://bluewhale-users.github.io/okd/cicd/tutorial3/" title="Tutorial3">Next - Tutorial3 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://bluewhale-users.github.io/">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://bluewhale-users.github.io/okd/">okd<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://bluewhale-users.github.io/okd/tutorial1/">Tutorial1</a></li>
+
+<li class="parent has-sub-menu"><a href="https://bluewhale-users.github.io/okd/cicd/">CI/CD<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class="active"><a href="https://bluewhale-users.github.io/okd/cicd/tutorial2/">Tutorial2</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial3/">Tutorial3</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial4/">Tutorial4</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial5/">Tutorial5</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial6/">Tutorial6</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial7/">Tutorial7</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial8/">Tutorial8</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial9/">Tutorial9</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial10/">Tutorial10</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial11/">Tutorial11</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial12/">Tutorial12</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial13/">Tutorial13</a></li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+
+
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

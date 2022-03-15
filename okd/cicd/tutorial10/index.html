@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tutorial10 - Bluewhale Tutorial Site</title>
+<meta name="description" content="put your description">
+<meta name="generator" content="Hugo 0.94.0" />
+<link href="https://bluewhale-users.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://bluewhale-users.github.io/okd/cicd/tutorial10/">
+<link rel="stylesheet" href="https://bluewhale-users.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://bluewhale-users.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://bluewhale-users.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Tutorial10" />
+<meta property="og:description" content="CI/CD 1. GitHub Source Repository에 Webhook 추가 Source Repositoy Settings -&gt; Webhooks 이동후 Add Webhook 선택 jenkins 주소를 확인후 payload url에 입력 Payload URL : https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/ Content type : application/json Trigger : Juste the push event 소스 수정후 commit Jenkin" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bluewhale-users.github.io/okd/cicd/tutorial10/" /><meta property="og:image" content="https://bluewhale-users.github.io/images/og-image.png"/><meta property="article:section" content="okd" />
+<meta property="article:published_time" content="2022-03-15T11:32:53+09:00" />
+<meta property="article:modified_time" content="2022-03-15T11:32:53+09:00" /><meta property="og:site_name" content="Hugo Techdoc Theme" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bluewhale-users.github.io/images/og-image.png"/>
+
+<meta name="twitter:title" content="Tutorial10"/>
+<meta name="twitter:description" content="CI/CD 1. GitHub Source Repository에 Webhook 추가 Source Repositoy Settings -&gt; Webhooks 이동후 Add Webhook 선택 jenkins 주소를 확인후 payload url에 입력 Payload URL : https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/ Content type : application/json Trigger : Juste the push event 소스 수정후 commit Jenkin"/>
+<meta itemprop="name" content="Tutorial10">
+<meta itemprop="description" content="CI/CD 1. GitHub Source Repository에 Webhook 추가 Source Repositoy Settings -&gt; Webhooks 이동후 Add Webhook 선택 jenkins 주소를 확인후 payload url에 입력 Payload URL : https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/ Content type : application/json Trigger : Juste the push event 소스 수정후 commit Jenkin"><meta itemprop="datePublished" content="2022-03-15T11:32:53+09:00" />
+<meta itemprop="dateModified" content="2022-03-15T11:32:53+09:00" />
+<meta itemprop="wordCount" content="161"><meta itemprop="image" content="https://bluewhale-users.github.io/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Bluewhale Tutorial Site</h1><span class="version">Version 0.9.7</span><a href="https://github.com/thingsym/hugo-theme-techdoc" class="github"><i class="fab fa-github"></i></a>
+<p class="description">put your description</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com/">Blackwhale(OKD)</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Tutorial10</h1>
+<h1 id="cicd">CI/CD</h1>
+<h2 id="1-github-source-repository에-webhook-추가">1. GitHub Source Repository에 Webhook 추가</h2>
+<p><a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">Source Repositoy</a></p>
+<h3 id="settings---webhooks-이동후-add-webhook-선택">Settings -&gt; Webhooks 이동후 Add Webhook 선택</h3>
+<figure><img src="/cicd/tutorial10_1.jpg"/>
+</figure>
+
+<h3 id="jenkins-주소를-확인후-payload-url에-입력">jenkins 주소를 확인후 payload url에 입력</h3>
+<figure><img src="/cicd/tutorial10_2.jpg"/>
+</figure>
+
+<pre tabindex="0"><code>Payload URL : https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/
+Content type : application/json
+Trigger : Juste the push event
+</code></pre><h3 id="소스-수정후-commit">소스 수정후 commit</h3>
+<pre tabindex="0"><code>Jenkinsfile의 태그를 업데이트 해야 GitOps Repo로 Commit 할 수 있다. 
+    sed -i &#39;s/MY_BUILD_TAG/$BUILD_NUMBER/&#39; testblog-deployment.yaml
+
+BUILD_NUMBER가 정상적으로 셋팅되는지 확인
+</code></pre><figure><img src="/cicd/tutorial10_3.jpg"/>
+</figure>
+
+<h3 id="jenkins-빌드가-자동으로-동작하는지-확인">Jenkins 빌드가 자동으로 동작하는지 확인</h3>
+<figure><img src="/cicd/tutorial10_4.jpg"/>
+</figure>
+
+<h2 id="2-argocd-auto-sync">2. ArgoCD Auto-Sync</h2>
+<pre tabindex="0"><code>Applications -&gt; &#34;Your Application&#34; 이동후 App Details 선택
+SYNC-POLICY : Enable Auto-Sync 선택
+</code></pre><figure><img src="/cicd/tutorial10_5.jpg"/>
+</figure>
+
+<div class="edit-meta">
+Last updated on 15 Mar 2022
+
+
+<br>
+Published on 15 Mar 2022
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/okd%5ccicd%5ctutorial10.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://bluewhale-users.github.io/okd/cicd/tutorial9/" title="Tutorial9"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Tutorial9</a>
+<a class="nav nav-next" href="https://bluewhale-users.github.io/okd/cicd/tutorial11/" title="Tutorial11">Next - Tutorial11 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://bluewhale-users.github.io/">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://bluewhale-users.github.io/okd/">okd<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://bluewhale-users.github.io/okd/tutorial1/">Tutorial1</a></li>
+
+<li class="parent has-sub-menu"><a href="https://bluewhale-users.github.io/okd/cicd/">CI/CD<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial2/">Tutorial2</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial3/">Tutorial3</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial4/">Tutorial4</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial5/">Tutorial5</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial6/">Tutorial6</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial7/">Tutorial7</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial8/">Tutorial8</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial9/">Tutorial9</a></li>
+<li class="active"><a href="https://bluewhale-users.github.io/okd/cicd/tutorial10/">Tutorial10</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial11/">Tutorial11</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial12/">Tutorial12</a></li>
+<li class=""><a href="https://bluewhale-users.github.io/okd/cicd/tutorial13/">Tutorial13</a></li>
+</ul>
+  
+</li>
+</ul>
+  
+</li>
+
+
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
