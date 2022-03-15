@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Mar 2022 12:30:26 +0900</lastBuildDate><atom:link href="https://bluewhale-users.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Tutorial1</title>
+      <link>https://bluewhale-users.github.io/okd/cicd/tutorial1/</link>
+      <pubDate>Tue, 15 Mar 2022 10:47:32 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/okd/cicd/tutorial1/</guid>
+      <description>OKD CI/CD Tutorial CI/CD Flow with Argo CD [출처] https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/ &amp;#39;GitOps&amp;#39;는 형상 관리 도구인 &amp;#39;Git&amp;#39; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설</description>
+    </item>
+    
+    <item>
       <title>Tutorial2</title>
       <link>https://bluewhale-users.github.io/okd/cicd/tutorial2/</link>
       <pubDate>Tue, 15 Mar 2022 11:27:51 +0900</pubDate>
