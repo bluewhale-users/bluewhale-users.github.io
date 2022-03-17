@@ -2,19 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>https://bluewhale-users.github.io/en/sitemap.xml</loc>
+    <loc>https://bluewhale-users.github.io/ko/sitemap.xml</loc>
     
       <lastmod>2022-03-15T11:33:27+09:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>https://bluewhale-users.github.io/fr/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://bluewhale-users.github.io/zh/sitemap.xml</loc>
+    <loc>https://bluewhale-users.github.io/en/sitemap.xml</loc>
     
   </sitemap>
   
