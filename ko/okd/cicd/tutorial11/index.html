@@ -12,20 +12,21 @@
     <title>Tutorial11 : 문제 해결 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -689,20 +690,21 @@
 
 <h2 id="문제-해결">문제 해결</h2>
 <h3 id="1-okd-buildconfig-빌드-확인">1. OKD BuildConfig 빌드 확인</h3>
-<pre tabindex="0"><code>- okd -&gt; Developer -&gt; Builds 
-- 생성한 BuildConfig를 선택해 Builds 탭으로 이동하면 빌드 히스토리를 확인할 수 있다.  
-</code></pre><figure><img src="/cicd/tutorial11_1.jpg"/>
+<ul>
+<li>okd -&gt; Developer -&gt; Builds</li>
+<li>생성한 BuildConfig를 선택해 Builds 탭으로 이동하면 빌드 히스토리를 확인할 수 있다.<br>
+<figure><img src="/cicd/tutorial11_1.jpg"/>
 </figure>
-
+</li>
+</ul>
 <h3 id="2-새로-배포한-버전이-이전-이미지를-참고하는-문제">2. 새로 배포한 버전이 이전 이미지를 참고하는 문제</h3>
-<pre tabindex="0"><code>Deployment의 imagePullPolicy가 Always로 주었음에도
-이미지 갱신이 되지 않는 경우가 발생한다. 
 
-저장소의 이미지와 로컬에 있는 이미지가 동일한 경우 이런 문제가 발생한다. 
+<div class="notices warning" ><p>Deployment의 imagePullPolicy를 Always로 주었음에도 이미지 갱신이 되지 않는 경우가 발생한다.<br>
+저장소의 이미지와 로컬에 있는 이미지가 동일한 경우 이런 문제가 발생한다.
+Tag와 Digest 값이 동일한지 확인해본다.</p>
+</div>
 
-Tag와 Digest 값이 동일한지 확인해본다. 
-
-&lt;before&gt;
+<pre tabindex="0"><code>&lt;before&gt;
 spcsenti2023/okdtutorial:latest
 DIGEST:sha256:7521223d8a7c54a6c9e5a40b4f4866f4394eefb3494c5de8f47fbf4e536c40e9
 
@@ -1081,16 +1083,16 @@ spec:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -12,20 +12,21 @@
     <title>Tutorial2 : 리파지토리 생성 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -656,13 +657,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#github-repository-준비">GitHub Repository 준비</a></li>
-    <li><a href="#origin-repository">origin repository</a></li>
-    <li><a href="#fork-repository">fork repository</a></li>
-    <li><a href="#1-2개-리파지토리를-본인-계정으로-fork-한다">1. 2개 리파지토리를 본인 계정으로 fork 한다.</a></li>
-    <li><a href="#2-deploy-key-생성-및-등록">2. Deploy Key 생성 및 등록</a>
+    <li><a href="#github-repository-준비">GitHub Repository 준비</a>
       <ul>
-        <li><a href="#21-gitbash를-실행하여-ssh-keygen을-통해-deploy-key를-생성">2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성</a></li>
+        <li><a href="#origin-repository">origin repository</a></li>
+        <li><a href="#1-2개-리파지토리를-본인-계정으로-fork">1. 2개 리파지토리를 본인 계정으로 fork</a></li>
+        <li><a href="#2-deploy-key-생성-및-등록">2. Deploy Key 생성 및 등록</a></li>
         <li><a href="#3-gitops-repohttpsgithubcomblackwhale-testuserokd-tutorial1-gitops-이동">3. <a href="https://github.com/blackwhale-testuser/okd-tutorial1-gitops">GitOps Repo</a> 이동</a></li>
         <li><a href="#4-source-repohttpsgithubcomblackwhale-testuserokd-tutorial1-src-이동">4. <a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">Source Repo</a> 이동</a></li>
       </ul>
@@ -692,19 +691,22 @@
 
 
 <h2 id="github-repository-준비">GitHub Repository 준비</h2>
-<h2 id="origin-repository">origin repository</h2>
-<p>[src] <a href="https://github.com/bluewhale-users/okd-tutorial1-src">https://github.com/bluewhale-users/okd-tutorial1-src</a><br>
-[gitops] <a href="https://github.com/bluewhale-users/okd-tutorial1-gitops">https://github.com/bluewhale-users/okd-tutorial1-gitops</a></p>
-<h2 id="fork-repository">fork repository</h2>
-<p>[src] <a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">https://github.com/blackwhale-testuser/okd-tutorial1-src</a><br>
-[gitops] <a href="https://github.com/blackwhale-testuser/okd-tutorial1-gitops">https://github.com/blackwhale-testuser/okd-tutorial1-gitops</a></p>
-<h2 id="1-2개-리파지토리를-본인-계정으로-fork-한다">1. 2개 리파지토리를 본인 계정으로 fork 한다.</h2>
+<h3 id="origin-repository">origin repository</h3>
+<ul>
+<li><a href="https://github.com/bluewhale-users/okd-tutorial1-src">src</a></li>
+<li><a href="https://github.com/bluewhale-users/okd-tutorial1-gitops">gitops</a></li>
+</ul>
+<h3 id="1-2개-리파지토리를-본인-계정으로-fork">1. 2개 리파지토리를 본인 계정으로 fork</h3>
 <figure><img src="/cicd/tutorial2_1.jpg"/>
 </figure>
 
-<h2 id="2-deploy-key-생성-및-등록">2. Deploy Key 생성 및 등록</h2>
-<p>jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록한다.</p>
-<h3 id="21-gitbash를-실행하여-ssh-keygen을-통해-deploy-key를-생성">2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성</h3>
+<ul>
+<li><a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">src fork repo</a></li>
+<li><a href="https://github.com/blackwhale-testuser/okd-tutorial1-gitops">gitops fork repo</a></li>
+</ul>
+<h3 id="2-deploy-key-생성-및-등록">2. Deploy Key 생성 및 등록</h3>
+<p>jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록합니다.</p>
+<h4 id="21-gitbash를-실행하여-ssh-keygen을-통해-deploy-key를-생성">2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성</h4>
 <pre tabindex="0"><code>user@DESKTOP-1RAT70A MINGW64 ~/.ssh
 $ ssh-keygen
 Generating public/private rsa key pair.
@@ -747,9 +749,9 @@ The key&#39;s randomart image is:
 </span></span><span style="display:flex;"><span>                    branches: [[name: &#39;*/master&#39; ]],
 </span></span><span style="display:flex;"><span>                    extensions: scm.extensions,
 </span></span><span style="display:flex;"><span>                    userRemoteConfigs: [[                         
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+                   url: &#39;fork한 repo url&#39;,         
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#f92672">-                   url: &#39;git@github.com:blackwhale-testuser/okd-tutorial1-gitops.git&#39;, 
-</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span>                    credentialsId: &#39;jenkins-ssh-private&#39;,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-                   url: &#39;fork한 repo url&#39;,         
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+                   url: &#39;git@github.com:blackwhale-testuser/okd-tutorial1-gitops.git&#39;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>                    credentialsId: &#39;jenkins-ssh-private&#39;,
 </span></span><span style="display:flex;"><span>                    ]]
 </span></span><span style="display:flex;"><span>            ])
 </span></span><span style="display:flex;"><span>    sshagent(credentials: [&#39;jenkins-ssh-private&#39;]){
@@ -1108,16 +1110,16 @@ The key&#39;s randomart image is:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

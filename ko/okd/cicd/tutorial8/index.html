@@ -12,20 +12,21 @@
     <title>Tutorial8 : ArgoCD 설정 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -692,10 +693,12 @@
 
 <h1 id="argocd-설치">ArgoCD 설치</h1>
 <h2 id="1-argocd-operator-이동">1. ArgoCD Operator 이동</h2>
-<pre tabindex="0"><code>- okd -&gt; Administrator -&gt; Operators -&gt; Installed Operators 이동
-</code></pre><figure><img src="/cicd/tutorial8_1.jpg"/>
+<ul>
+<li>okd -&gt; Administrator -&gt; Operators -&gt; Installed Operators 이동
+<figure><img src="/cicd/tutorial8_1.jpg"/>
 </figure>
-
+</li>
+</ul>
 <h2 id="2-argocd-탭으로-이동후-create-argocd-선택">2. ArgoCD 탭으로 이동후 Create ArgoCD 선택</h2>
 <p><figure><img src="/cicd/tutorial8_2.jpg"/>
 </figure>
@@ -707,16 +710,20 @@
 </figure>
 </p>
 <h2 id="3-developer로-변경후-topology-확인">3. Developer로 변경후 Topology 확인</h2>
-<pre tabindex="0"><code>- okd -&gt; Developer -&gt; Topology
-</code></pre><figure><img src="/cicd/tutorial8_5.jpg"/>
+<ul>
+<li>okd -&gt; Developer -&gt; Topology
+<figure><img src="/cicd/tutorial8_5.jpg"/>
 </figure>
-
+</li>
+</ul>
 <h2 id="4-argocd-admin-패스워드-확인">4. ArgoCD Admin 패스워드 확인</h2>
-<pre tabindex="0"><code>- okd -&gt; Developer -&gt; Secrets 이동
-- cluster 검색
-</code></pre><figure><img src="/cicd/tutorial8_6.jpg"/>
+<ul>
+<li>okd -&gt; Developer -&gt; Secrets 이동</li>
+<li>cluster 검색
+<figure><img src="/cicd/tutorial8_6.jpg"/>
 </figure>
-
+</li>
+</ul>
 <h3 id="argocd-sample-cluster-시크릿-확인">argocd-sample-cluster 시크릿 확인</h3>
 <figure><img src="/cicd/tutorial8_7.jpg"/>
 </figure>
@@ -725,16 +732,19 @@
 <figure><img src="/cicd/tutorial8_8.jpg"/>
 </figure>
 
-<pre tabindex="0"><code>r8BtkSKu3J0ex4TXUbsoDYMw************
-</code></pre><blockquote>
-<p>[Tip] 암호 변경은 YAML 탭으로 변경후 admin.password: 필드에 base64로 인코딩한 암호를 붙여넣는다.</p>
-</blockquote>
-<h2 id="5-topology로-이동후-argocd-sample-server의-openurl을-선택한다">5. Topology로 이동후 argocd-sample-server의 OpenURL을 선택한다.</h2>
-<pre tabindex="0"><code>Username : admin
-Password : r8BtkSKu3J0ex4TXUbs***********
-</code></pre><figure><img src="/cicd/tutorial8_9.jpg"/>
-</figure>
 
+<div class="notices tip" ><p>암호 변경은 YAML 탭으로 변경후 admin.password: 필드에 base64로 인코딩한 암호를 붙여넣는다.</p>
+</div>
+
+<h2 id="5-topology로-이동후-argocd-sample-server의-openurl을-선택한다">5. Topology로 이동후 argocd-sample-server의 OpenURL을 선택한다.</h2>
+<p>
+<div class="notices info" ><p>Username : admin<br>
+Password : r8BtkSKu3J0ex4TXUbs***********</p>
+</div>
+
+<figure><img src="/cicd/tutorial8_9.jpg"/>
+</figure>
+</p>
 <figure><img src="/cicd/tutorial8_10.jpg"/>
 </figure>
 
@@ -1075,16 +1085,16 @@ Password : r8BtkSKu3J0ex4TXUbs***********
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

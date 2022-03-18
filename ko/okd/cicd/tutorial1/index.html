@@ -12,20 +12,21 @@
     <title>Tutorial1 : 준비 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -656,11 +657,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#okd-cicd-tutorial">OKD CI/CD Tutorial</a></li>
-    <li><a href="#okd-cicd-프로세스">OKD CI/CD 프로세스</a></li>
-    <li><a href="#사전-준비">사전 준비</a></li>
-    <li><a href="#일회성-인스턴스-사용">일회성 인스턴스 사용</a></li>
-    <li><a href="#url-references">URL References</a></li>
+    <li><a href="#1-okd-cicd-소개">1. OKD CI/CD 소개</a>
+      <ul>
+        <li><a href="#2-okd-cicd-프로세스">2. OKD CI/CD 프로세스</a></li>
+        <li><a href="#3-사전-준비">3. 사전 준비</a></li>
+        <li><a href="#4-일회성-인스턴스-사용하는-이유">4. 일회성 인스턴스 사용하는 이유</a></li>
+        <li><a href="#5-url-references">5. URL References</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -685,42 +689,49 @@
         
 
 
-<h2 id="okd-cicd-tutorial">OKD CI/CD Tutorial</h2>
+<h2 id="1-okd-cicd-소개">1. OKD CI/CD 소개</h2>
 <p><figure><img src="/cicd/tutorial1_1.jpg"/><figcaption>
             <h4>CI/CD Flow with Argo CD</h4>
         </figcaption>
 </figure>
 <br>
 [출처] <a href="https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/">https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/</a></p>
-<pre tabindex="0"><code>&#39;GitOps&#39;는 형상 관리 도구인 &#39;Git&#39; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 
-어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말한다.
 
-튜토리얼은 2개의 리파지토리가 필요하다. 
+<div class="notices info" ><p>&lsquo;GitOps&rsquo;는 형상 관리 도구인 &lsquo;Git&rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는
+어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다.
+이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지토리가 필요합니다.</p>
+</div>
 
-어플리케이션 소스를 담고있는 Source Repository
-OKD에 배포설정(manifest files)들을 담고 있는 GitOps Repository
-</code></pre><h2 id="okd-cicd-프로세스">OKD CI/CD 프로세스</h2>
-<pre tabindex="0"><code>1. Source Repo에 변경사항이 Commit
-2. Jenkins에서 변경사항을 감지하고 빌드 수행
-3. Docker Image를 dockerhub에 Push
-4. GitOps Repo의 deployment manifest파일을 업데이트(tag version)
-5. ArgoCD가 변경사항을 감지하고 자동 배포 수행
-</code></pre><h2 id="사전-준비">사전 준비</h2>
-<pre tabindex="0"><code>- GitHub repository
-- Deploy Key
-- dockerhub 계정 및 Repositiry
-- okd 계정
-</code></pre><h2 id="일회성-인스턴스-사용">일회성 인스턴스 사용</h2>
-<pre tabindex="0"><code>프로젝트용 일회성 Jenkins와 ArgoCD 인스턴스를 사용하는 이유
-- 다중 사용자의 경우 관리하기 어렵다. 
-- 여러 플러그인 설치로 인해 충돌 가능성이 높다. 
-</code></pre><h2 id="url-references">URL References</h2>
-<p><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com">Blackwhale OKD</a><br>
-<a href="https://argocd-sample-server-okd-tutorial.apps.blackwhale.cloud.hancom.com/">ArgoCD</a><br>
-<a href="https://github.com/bluewhale-users/okd-tutorial1-src">GitHub Source</a><br>
-<a href="https://github.com/bluewhale-users/okd-tutorial1-gitops">GitHub Gitops</a><br>
-<a href="https://hub.docker.com/">DockerHub</a><br>
-<a href="http://blog-frontend-okd-tutorial.apps.blackwhale.cloud.hancom.com/">Test App</a></p>
+<h3 id="2-okd-cicd-프로세스">2. OKD CI/CD 프로세스</h3>
+<ol>
+<li>Source Repo에 변경사항을 Commit 한다.</li>
+<li>Jenkins에서 변경사항을 감지하고 빌드를 수행한다.</li>
+<li>Docker Image를 dockerhub에 Push한다.</li>
+<li>GitOps Repo의 deployment manifest파일을 업데이트(tag version)한다.</li>
+<li>ArgoCD가 변경사항을 감지하고 자동 배포 수행한다.</li>
+</ol>
+<h3 id="3-사전-준비">3. 사전 준비</h3>
+<ul>
+<li>GitHub repository</li>
+<li>Deploy Key</li>
+<li>dockerhub 계정 및 Repositiry</li>
+<li>okd 계정</li>
+</ul>
+<h3 id="4-일회성-인스턴스-사용하는-이유">4. 일회성 인스턴스 사용하는 이유</h3>
+<p>프로젝트용 일회성 Jenkins와 ArgoCD 인스턴스를 사용하는 이유는 다음과 같습니다.</p>
+<ul>
+<li>다중 사용자의 경우 관리하기 어렵다.</li>
+<li>여러 플러그인 설치로 인해 충돌 가능성이 높다.</li>
+</ul>
+<h3 id="5-url-references">5. URL References</h3>
+<ul>
+<li><a href="https://github.com/bluewhale-users/okd-tutorial1-src">GitHub Source</a></li>
+<li><a href="https://github.com/bluewhale-users/okd-tutorial1-gitops">GitHub Gitops</a></li>
+<li><a href="https://hub.docker.com/">DockerHub</a></li>
+<li><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com">Blackwhale OKD</a></li>
+<li><a href="https://argocd-sample-server-okd-tutorial.apps.blackwhale.cloud.hancom.com/">ArgoCD</a></li>
+<li><a href="http://blog-frontend-okd-tutorial.apps.blackwhale.cloud.hancom.com/">Test App</a></li>
+</ul>
 
 
 <footer class="footline">
@@ -1055,16 +1066,16 @@ OKD에 배포설정(manifest files)들을 담고 있는 GitOps Repository
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

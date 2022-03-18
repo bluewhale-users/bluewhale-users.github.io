@@ -12,20 +12,21 @@
     <title>Tutorial12 : Private Repo 연동방법 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -692,22 +693,25 @@
 
 <h2 id="private-repository-연동">Private Repository 연동</h2>
 <h3 id="1-ssh-키-생성">1. SSH 키 생성</h3>
-<pre tabindex="0"><code>- Git Bash 실행
-- 사용자 폴더로 이동후 .ssh 폴더 생성 및 이동
-- ssh-keygen 실행
-</code></pre><h4 id="11-ssh-keygen-사용시-기본값sha-1은-github에서-더-이상-인증-용도로-사용할-수-없다">1.1 ssh-keygen 사용시 기본값(SHA-1)은 github에서 더 이상 인증 용도로 사용할 수 없다.</h4>
-<p>Update : 2022-01-11<br>
-November 16, 2021	The ECDSA and Ed25519 host keys will start to be fully usable. GitHub’s DSA host key will no longer be supported.</p>
-<pre tabindex="0"><code>Unable to connect SSH repository: unknown error: ERROR: You&#39;re using an RSA key with SHA-1, which is no longer allowed. Please use a newer client or a different key type.
-</code></pre><pre tabindex="0"><code>https://github.blog/2021-09-01-improving-git-protocol-security-github/
+<ul>
+<li>Git Bash 실행</li>
+<li>사용자 폴더로 이동후 .ssh 폴더 생성 및 이동</li>
+<li>ssh-keygen 실행</li>
+</ul>
+<h4 id="11-ssh-keygen-사용시-기본값sha-1은-github에서-더-이상-인증-용도로-사용할-수-없다">1.1 ssh-keygen 사용시 기본값(SHA-1)은 github에서 더 이상 인증 용도로 사용할 수 없다.</h4>
 
-- Removing support for all DSA keys
-- Adding requirements for newly added RSA keys
-- Removing some legacy SSH algorithms (HMAC-SHA-1 and CBC ciphers)
-- Adding ECDSA and Ed25519 host keys for SSH
-Turning off the unencrypted Git protocol
+<div class="notices tip" ><p>Update : 2022-01-11<br>
+November 16, 2021	The ECDSA and Ed25519 host keys will start to be fully usable. GitHub’s DSA host key will no longer be supported.
+Unable to connect SSH repository: unknown error: ERROR: You&rsquo;re using an RSA key with SHA-1, which is no longer allowed. Please use a newer client or a different key type.<br>
+<a href="https://github.blog/2021-09-01-improving-git-protocol-security-github/">https://github.blog/2021-09-01-improving-git-protocol-security-github/</a><br>
+-&gt; Removing support for all DSA keys<br>
+-&gt; Adding requirements for newly added RSA keys<br>
+-&gt; Removing some legacy SSH algorithms (HMAC-SHA-1 and CBC ciphers)<br>
+-&gt; Adding ECDSA and Ed25519 host keys for SSH<br>
+Turning off the unencrypted Git protocol</p>
+</div>
 
-github 지원 타입
+<pre tabindex="0"><code>github 지원 타입
 &#39;ssh-rsa&#39;, &#39;ecdsa-sha2-nistp256&#39;, &#39;ecdsa-sha2-nistp384&#39;, &#39;ecdsa-sha2-nistp521&#39;, &#39;ssh-ed25519&#39;, &#39;sk-ecdsa-sha2-nistp256@openssh.com&#39;, &#39;sk-ssh-ed25519@openssh.com&#39;.  
 
 아래 타입으로 생성
@@ -784,11 +788,14 @@ Receiving objects: 100% (3/3), done.
 <ul>
 <li>Deploy Key 생성</li>
 </ul>
-<pre tabindex="0"><code>SSH 키 생성
-Git Bash 실행
-사용자 폴더로 이동후 .ssh 폴더 생성 및 이동
-ssh-keygen 실행
-</code></pre><h4 id="41-ssh-key-생성">4.1 ssh key 생성</h4>
+
+<div class="notices info" ><p>SSH 키 생성<br>
+Git Bash 실행<br>
+사용자 폴더로 이동후 .ssh 폴더 생성 및 이동<br>
+ssh-keygen 실행</p>
+</div>
+
+<h4 id="41-ssh-key-생성">4.1 ssh key 생성</h4>
 <p><figure><img src="/cicd/tutorial12_8.jpg"/>
 </figure>
 
@@ -804,52 +811,93 @@ ssh-keygen 실행
 </figure>
 
 <h3 id="5-jenkins-설정">5. Jenkins 설정</h3>
-<pre tabindex="0"><code>- Jenkins →  Jenkins 관리 → Manage Credentials 이동
-- (global) 도메인 선택
-</code></pre><figure><img src="/cicd/tutorial12_12.jpg"/>
+<ul>
+<li>Jenkins →  Jenkins 관리 → Manage Credentials 이동</li>
+<li>(global) 도메인 선택</li>
+</ul>
+<figure><img src="/cicd/tutorial12_12.jpg"/>
 </figure>
 
-<pre tabindex="0"><code>Add Credentials 선택
-Kind를 SSH Username with private key 선택
-ID와 Username을 입력
-Privte Key에서 Enter directly를 선택후 Add를 눌러 생성한 Private Key를 메모장으로 열어 모두 복사후 붙여넣는다. 
-</code></pre><figure><img src="/cicd/tutorial12_13.jpg"/>
+<ul>
+<li>
+<p>Add Credentials 선택</p>
+</li>
+<li>
+<p>Kind를 SSH Username with private key 선택</p>
+</li>
+<li>
+<p>ID와 Username을 입력</p>
+</li>
+<li>
+<p>Privte Key에서 Enter directly를 선택후 Add를 눌러 생성한 Private Key를 메모장으로 열어 모두 복사후 붙여넣는다.
+<figure><img src="/cicd/tutorial12_13.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>파이프라인 생성과정은 동일</p>
+</li>
+<li>
+<p>GitHub Repository에서 SSH Clone 주소를 확인한다.</p>
+</li>
+<li>
+<p><a href="mailto:git@github.com">git@github.com</a>:blackwhale-testuser/privatetutorial.git</p>
+</li>
+</ul>
+<figure><img src="/cicd/tutorial12_14.jpg"/>
 </figure>
 
-<pre tabindex="0"><code>파이프라인 생성과정은 동일
-GitHub Repository에서 SSH Clone 주소를 확인한다. 
-git@github.com:blackwhale-testuser/privatetutorial.git
-</code></pre><figure><img src="/cicd/tutorial12_14.jpg"/>
-</figure>
+<p>
+<div class="notices tip" ><p>Pipeline 설정에서 Repository URL을 위에서 확인한 주소로 넣는다.<br>
+Credentials에서 본인이 생성한 Credential을 선택한다.</p>
+</div>
 
-<pre tabindex="0"><code>Pipeline 설정에서 Repository URL을 위에서 확인한 주소로 넣는다. 
-Credentials에서 본인이 생성한 Credential을 선택한다. 
-</code></pre><figure><img src="/cicd/tutorial12_15.jpg"/>
+<figure><img src="/cicd/tutorial12_15.jpg"/>
 </figure>
-
+</p>
 <h3 id="6-argocd-private-repository-설정-방법">6. ArgoCD Private Repository 설정 방법</h3>
 <h4 id="61-argocd-이동후-settings--repositories-이동">6.1 ArgoCD 이동후 Settings → Repositories 이동</h4>
 <figure><img src="/cicd/tutorial12_16.jpg"/>
 </figure>
 
-<pre tabindex="0"><code>- CONNECT REPO USING SSH 선택
-- 로컬에서 생성한 Private Key를 메모장으로 열어 모두 복사후 SSH private key data에 붙여 넣는다. 
-- Skip server verification 체크
-- Enable LFS support(Git only) 체크
-- Connect를 누른다. 
-- Connection Status가 Successful인지 확인
-</code></pre><figure><img src="/cicd/tutorial12_17.jpg"/>
+<ul>
+<li>
+<p>CONNECT REPO USING SSH 선택</p>
+</li>
+<li>
+<p>로컬에서 생성한 Private Key를 메모장으로 열어 모두 복사후 SSH private key data에 붙여 넣는다.</p>
+</li>
+<li>
+<p>Skip server verification 체크</p>
+</li>
+<li>
+<p>Enable LFS support(Git only) 체크</p>
+</li>
+<li>
+<p>Connect를 누른다.</p>
+</li>
+<li>
+<p>Connection Status가 Successful인지 확인
+<figure><img src="/cicd/tutorial12_17.jpg"/>
 </figure>
-
-<pre tabindex="0"><code>GitHub Private repository SSH 주소를 확인한다. 
-git@github.com:blackwhale-testuser/privatetutorial.git
-</code></pre><figure><img src="/cicd/tutorial12_18.jpg"/>
+</p>
+</li>
+<li>
+<p>GitHub Private repository SSH 주소를 확인한다.</p>
+</li>
+<li>
+<p><a href="mailto:git@github.com">git@github.com</a>:blackwhale-testuser/privatetutorial.git
+<figure><img src="/cicd/tutorial12_18.jpg"/>
 </figure>
-
-<pre tabindex="0"><code>App 생성시 Source의 Repository URL에 ssh 주소를 입력한다. 
-</code></pre><figure><img src="/cicd/tutorial12_19.jpg"/>
+</p>
+</li>
+<li>
+<p>App 생성시 Source의 Repository URL에 ssh 주소를 입력한다.
+<figure><img src="/cicd/tutorial12_19.jpg"/>
 </figure>
-
+</p>
+</li>
+</ul>
 
 
 <footer class="footline">
@@ -1187,16 +1235,16 @@ git@github.com:blackwhale-testuser/privatetutorial.git
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

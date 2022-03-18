@@ -12,20 +12,21 @@
     <title>Tutorial4 : Jenkins 설정 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -658,7 +659,7 @@
   <ul>
     <li><a href="#jenkins-설치">Jenkins 설치</a>
       <ul>
-        <li><a href="#1-okd-로그인">1. OKD 로그인</a></li>
+        <li><a href="#1-okd에-로그인">1. OKD에 로그인</a></li>
         <li><a href="#2-project-만들기">2. Project 만들기</a></li>
         <li><a href="#3-역할-전환developer">3. 역할 전환(developer)</a></li>
         <li><a href="#4-jenkins-설치">4. Jenkins 설치</a></li>
@@ -692,20 +693,27 @@
 
 
 <h2 id="jenkins-설치">Jenkins 설치</h2>
-<h3 id="1-okd-로그인">1. OKD 로그인</h3>
-<p><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com/">https://console-openshift-console.apps.blackwhale.cloud.hancom.com/</a></p>
-<figure><img src="/cicd/tutorial4_1.jpg"/>
+<h3 id="1-okd에-로그인">1. OKD에 로그인</h3>
+<ul>
+<li><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com/">okd link</a>
+<figure><img src="/cicd/tutorial4_1.jpg"/><figcaption>
+            <h4>[접속 화면]</h4>
+        </figcaption>
 </figure>
-
+</li>
+</ul>
 <h3 id="2-project-만들기">2. Project 만들기</h3>
 <p><figure><img src="/cicd/tutorial4_2.jpg"/>
 </figure>
 
-<figure><img src="/cicd/tutorial4_3.jpg"/>
+<figure><img src="/cicd/tutorial4_3.jpg"/><figcaption>
+            <h4>[프로젝트 생성 화면]</h4>
+        </figcaption>
 </figure>
 </p>
 <h3 id="3-역할-전환developer">3. 역할 전환(developer)</h3>
-<p><figure><img src="/cicd/tutorial4_4.jpg"/>
+<p>좌측 상단의 역할선택 드롭메뉴에서 developer을 선택합니다.<br>
+<figure><img src="/cicd/tutorial4_4.jpg#floatleft"/>
 </figure>
 
 <figure><img src="/cicd/tutorial4_5.jpg"/>
@@ -1081,16 +1089,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

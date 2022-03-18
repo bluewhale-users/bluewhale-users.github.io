@@ -12,20 +12,21 @@
     <title>Tutorial6 : Buildconfig 설정 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647485279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647485279" rel="stylesheet">
-    <link href="/css/hybrid.css?1647485279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647485279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647485279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647485279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647485279" rel="stylesheet">
-    <link href="/css/theme.css?1647485279" rel="stylesheet">
-    <link href="/css/tabs.css?1647485279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647485279" rel="stylesheet">
+    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
+    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
+    <link href="/css/theme.css?1647583720" rel="stylesheet">
+    <link href="/css/tabs.css?1647583720" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
     
-    
+    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647485279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -85,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647485279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647485279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647485279"></script>
+<script type="text/javascript" src="/js/search.js?1647583720"></script>
 
     
   </div>
@@ -688,23 +689,32 @@
 
 
 <h2 id="okd-buildconfig-설정">OKD Buildconfig 설정</h2>
-<pre tabindex="0"><code>설치한 Jenkins 버전에는 docker를 포함하지 않는다. 
-docker image 빌드를 위해 okd buildconfig를 사용한다. 
-</code></pre><h3 id="1-buildconfig-생성">1. BuildConfig 생성</h3>
-<pre tabindex="0"><code>- okd -&gt; Developer -&gt; Builds
-</code></pre><figure><img src="/cicd/tutorial6_1.jpg"/>
-</figure>
 
+<div class="notices note" ><p>설치한 Jenkins 버전에는 docker를 포함하지 않는다.<br>
+docker image 빌드를 위해 okd buildconfig를 사용한다.</p>
+</div>
+
+<h3 id="1-buildconfig-생성">1. BuildConfig 생성</h3>
+<ul>
+<li>okd -&gt; Developer -&gt; Builds
+<figure><img src="/cicd/tutorial6_1.jpg"/>
+</figure>
+</li>
+</ul>
 <h4 id="11-create-buildconfig-선택">1.1 Create BuildConfig 선택</h4>
 <figure><img src="/cicd/tutorial6_2.jpg"/>
 </figure>
 
-<p><a href="https://github.com/bluewhale-users/okd-tutorial1-src/blob/master/Jenkinsfile">Jenkinsfile 확인</a></p>
-<pre tabindex="0"><code>BuildConfig 이름을 jenkinsfile에 appName 으로 맵핑된다. 
+<ul>
+<li><a href="https://github.com/bluewhale-users/okd-tutorial1-src/blob/master/Jenkinsfile">Jenkinsfile 확인</a></li>
+</ul>
 
-- jenkinsfile의 appName을 BuildConfig의 이름으로 변경한다. 
-appName = &#34;okd-tutorial&#34;
-</code></pre><h4 id="12-아래-내용을-편집해-본인-설정에-맞게-변경한다">1.2 아래 내용을 편집해 본인 설정에 맞게 변경한다.</h4>
+<div class="notices info" ><p>BuildConfig 이름을 jenkinsfile에 appName으로 맵핑된다.<br>
+jenkinsfile의 appName을 BuildConfig의 이름으로 변경한다.<br>
+appName = &ldquo;okd-tutorial&rdquo;</p>
+</div>
+
+<h4 id="12-아래-내용을-편집해-본인-설정에-맞게-변경한다">1.2 아래 내용을 편집해 본인 설정에 맞게 변경한다.</h4>
 <p><a href="https://github.com/bluewhale-users/okd-tutorial1-src/blob/master/openshift-build-example.yml">BuildConfig YAML 샘플</a></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kind: BuildConfig
 </span></span><span style="display:flex;"><span>apiVersion: build.openshift.io/v1
@@ -740,15 +750,20 @@ appName = &#34;okd-tutorial&#34;
 </figure>
 
 <h4 id="22-dockerhub에-가입한-아이디와-패스워드를-입력한다">2.2 dockerhub에 가입한 아이디와 패스워드를 입력한다.</h4>
-<pre tabindex="0"><code>Secret name : dockerio-okdtutorial
-</code></pre><figure><img src="/cicd/tutorial6_6.jpg"/>
+
+<div class="notices info" ><p>Secret name : dockerio-okdtutorial</p>
+</div>
+
+<figure><img src="/cicd/tutorial6_6.jpg"/>
 </figure>
 
 <h3 id="3-serviceaccountbuilder에-secret-추가">3. ServiceAccount(builder)에 secret 추가</h3>
-<pre tabindex="0"><code>- okd -&gt; Administrator -&gt; User Management -&gt; ServiceAccounts 이동
-</code></pre><figure><img src="/cicd/tutorial6_7.jpg"/>
+<ul>
+<li>okd -&gt; Administrator -&gt; User Management -&gt; ServiceAccounts 이동
+<figure><img src="/cicd/tutorial6_7.jpg"/>
 </figure>
-
+</li>
+</ul>
 <h4 id="4-builder-선택">4. builder 선택</h4>
 <figure><img src="/cicd/tutorial6_8.jpg"/>
 </figure>
@@ -1094,16 +1109,16 @@ appName = &#34;okd-tutorial&#34;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647485279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647485279"></script>
-    <script src="/js/jquery.sticky.js?1647485279"></script>
-    <script src="/js/featherlight.min.js?1647485279"></script>
-    <script src="/js/highlight.pack.js?1647485279"></script>
+    <script src="/js/clipboard.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
+    <script src="/js/jquery.sticky.js?1647583720"></script>
+    <script src="/js/featherlight.min.js?1647583720"></script>
+    <script src="/js/highlight.pack.js?1647583720"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647485279"></script>
-    <script src="/js/learn.js?1647485279"></script>
-    <script src="/js/hugo-learn.js?1647485279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
+    <script src="/js/learn.js?1647583720"></script>
+    <script src="/js/hugo-learn.js?1647583720"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
