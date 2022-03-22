@@ -12,21 +12,21 @@
     <title>Tutorial11 : 문제 해결 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1647583720" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1647583720" rel="stylesheet">
-    <link href="/css/hybrid.css?1647583720" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1647583720" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1647583720" rel="stylesheet">
-    <link href="/css/auto-complete.css?1647583720" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1647583720" rel="stylesheet">
-    <link href="/css/theme.css?1647583720" rel="stylesheet">
-    <link href="/css/tabs.css?1647583720" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1647583720" rel="stylesheet">
+    <link href="/css/nucleus.css?1647914467" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1647914467" rel="stylesheet">
+    <link href="/css/hybrid.css?1647914467" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1647914467" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1647914467" rel="stylesheet">
+    <link href="/css/auto-complete.css?1647914467" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1647914467" rel="stylesheet">
+    <link href="/css/theme.css?1647914467" rel="stylesheet">
+    <link href="/css/tabs.css?1647914467" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1647914467" rel="stylesheet">
     
-    <link href="/css/custom.css?1647583720" rel="stylesheet">
+    <link href="/css/custom.css?1647914467" rel="stylesheet">
     <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1647583720"></script>
+    <script src="/js/jquery-3.3.1.min.js?1647914467"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1647583720"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1647583720"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1647914467"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1647914467"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1647583720"></script>
+<script type="text/javascript" src="/js/search.js?1647914467"></script>
 
     
   </div>
@@ -661,7 +661,8 @@
       <ul>
         <li><a href="#1-okd-buildconfig-빌드-확인">1. OKD BuildConfig 빌드 확인</a></li>
         <li><a href="#2-새로-배포한-버전이-이전-이미지를-참고하는-문제">2. 새로 배포한 버전이 이전 이미지를 참고하는 문제</a></li>
-        <li><a href="#3-https-지원">3. https 지원</a></li>
+        <li><a href="#3-buildconfig에서-빌드-번호-자동-업데이트-가능할까">3. BuildConfig에서 빌드 번호 자동 업데이트 가능할까?</a></li>
+        <li><a href="#4-https-지원">4. https 지원</a></li>
       </ul>
     </li>
   </ul>
@@ -711,7 +712,10 @@ DIGEST:sha256:7521223d8a7c54a6c9e5a40b4f4866f4394eefb3494c5de8f47fbf4e536c40e9
 &lt;current&gt;
 spcsenti2023/okdtutorial:latest
 DIGEST:sha256:14480c323c64dd065fa0b71067226ab8995c5f2660a8e7d747795ebc2647e1b8
-</code></pre><p><a href="https://stackoverflow.com/questions/61057627/dynamic-tag-based-on-build-number-in-openshift-buildconfig">BuildConfig에서 빌드 번호 자동 업데이트 가능할까?</a></p>
+</code></pre><h3 id="3-buildconfig에서-빌드-번호-자동-업데이트-가능할까">3. BuildConfig에서 빌드 번호 자동 업데이트 가능할까?</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/61057627/dynamic-tag-based-on-build-number-in-openshift-buildconfig">stackoverflow</a></li>
+</ul>
 <pre tabindex="0"><code>[Asked]
 I am doing CI/CD using openshift buildconfig. I am able to fetch the source code from git and successfully build the docker image and push to internal registry. I want to tag the image built with with build numbers based on Openshift Build config output labels are annotations. How to do that in the YAML, I am using docker build strategy.
 
@@ -726,7 +730,7 @@ Also once this is done, i want to update the image in deployment to get new vers
 The yaml file is resolved when the buildConfig is created, it can&#39;t have references to environment variables or build number information. If you are doing this from a CI/CD pipeline, you could create a different buildConfig in the same CI/CD pipeline, run it, and delete it. But you may have permissions issue to create the buildConfig every time.
 
 Another option I would prefer is to use ImageStreams. With ImageStream a single object keeps track of all versions of the image via sha codes, therefore there is no need to update the yaml every time.
-</code></pre><h3 id="3-https-지원">3. https 지원</h3>
+</code></pre><h3 id="4-https-지원">4. https 지원</h3>
 <pre tabindex="0"><code>[service.yaml]
 ....
   ports:
@@ -1083,16 +1087,16 @@ spec:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1647583720"></script>
-    <script src="/js/perfect-scrollbar.min.js?1647583720"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1647583720"></script>
-    <script src="/js/jquery.sticky.js?1647583720"></script>
-    <script src="/js/featherlight.min.js?1647583720"></script>
-    <script src="/js/highlight.pack.js?1647583720"></script>
+    <script src="/js/clipboard.min.js?1647914468"></script>
+    <script src="/js/perfect-scrollbar.min.js?1647914468"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1647914468"></script>
+    <script src="/js/jquery.sticky.js?1647914468"></script>
+    <script src="/js/featherlight.min.js?1647914468"></script>
+    <script src="/js/highlight.pack.js?1647914468"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1647583720"></script>
-    <script src="/js/learn.js?1647583720"></script>
-    <script src="/js/hugo-learn.js?1647583720"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1647914468"></script>
+    <script src="/js/learn.js?1647914468"></script>
+    <script src="/js/hugo-learn.js?1647914468"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
