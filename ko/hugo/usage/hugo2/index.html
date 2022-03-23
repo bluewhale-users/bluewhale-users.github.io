@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: Documentation for Hugo Learn Theme</title>
+    <title>Hugo2 : 사이트 구축 :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1648000867" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ko/tags/">
+  <body class="" data-url="/ko/hugo/usage/hugo2/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -462,7 +462,7 @@
   
     
     <li data-nav-id="/ko/hugo/" title="Hugo" class="dd-item
-        
+        parent
         
         
         ">
@@ -493,7 +493,7 @@
   
     
     <li data-nav-id="/ko/hugo/usage/" title="Hugo 사용법" class="dd-item
-        
+        parent
         
         
         ">
@@ -542,7 +542,7 @@
  
   
     
-      <li data-nav-id="/ko/hugo/usage/hugo2/" title="Hugo2 : 사이트 구축" class="dd-item ">
+      <li data-nav-id="/ko/hugo/usage/hugo2/" title="Hugo2 : 사이트 구축" class="dd-item active">
         <a href="/ko/hugo/usage/hugo2/">
         Hugo2 : 사이트 구축
         <i class="fas fa-check read-icon"></i>
@@ -623,7 +623,7 @@
     
     <li data-nav-id="/ko/post/" title="Posts" class="dd-item
         
-        active
+        
         
         ">
       <a href="/ko/post/">
@@ -717,22 +717,10 @@
                   
                     
                     
-                      <option id="ko" value="https://bluewhale-users.github.io/ko/tags/" selected>Korean</option>
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/hugo/usage/hugo2/" selected>Korean</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="https://bluewhale-users.github.io/en/tags/">English</option>
-                    
                   
               
           
@@ -773,6 +761,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/hugo/usage/hugo2.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -793,7 +792,19 @@
             
           
           
-            <a href='/ko/'></a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ko/'></a> > <a href='/ko/hugo/'>Hugo</a> > <a href='/ko/hugo/usage/'>Hugo 사용법</a> > Hugo2 : 사이트 구축
+          
+        
+          
+        
           
         
           
@@ -804,7 +815,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-hugo-설치">1. Hugo 설치</a></li>
+        <li><a href="#2-테마-추가">2. 테마 추가</a></li>
+        <li><a href="#3-리파지토리-생성">3. 리파지토리 생성</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -820,24 +841,288 @@
           
             <h1>
               
-                tag ::
-              
-              Tags
+              Hugo2 : 사이트 구축
             </h1>
           
 
         
 
 
-
-
-
+<h3 id="1-hugo-설치">1. Hugo 설치</h3>
 <ul>
-	
+<li><a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick-Start</a></li>
+</ul>
+<h4 id="11-hugo-설치windows-기준-설명">1.1 hugo 설치(windows 기준 설명)</h4>
+<ul>
+<li><a href="https://github.com/gohugoio/hugo/releases">Hugo Download</a></li>
+<li>hugo release에서 최신버전을 다운로드</li>
+<li>C:\Hugo\bin\에 압축 해제</li>
+<li>환경변수에 경로 추가
+<ul>
+<li>window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택</li>
+<li>시스템변수의 Path를 더블클릭한다.</li>
+<li>새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳인 C:\Hugo\bin를 등록</li>
+</ul>
+</li>
+<li>command에서 hugo version을 쳐서 확인</li>
 </ul>
 
 
-<footer class=" footline" >
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="windows"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','windows')"
+         >windows</button>
+    
+        <button
+          data-tab-item="MacOS"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','MacOS')"
+         >MacOS</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="windows" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code class="language-windows" data-lang="windows">C:\Users\user&gt;hugo version
+hugo v0.94.0-63B23660 windows/amd64 BuildDate=2022-03-10T09:46:36Z VendorInfo=gohugoio
+</code></pre>
+        </div>
+        
+        <div data-tab-item="MacOS" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span>brew install hugo
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span>port install hugo
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<h4 id="12-hugo-프로젝트-만들기">1.2 Hugo 프로젝트 만들기</h4>
+<ul>
+<li>hugo new site &lt;프로젝트 이름&gt;</li>
+</ul>
+<pre tabindex="0"><code>$hugo new site bluewhale-hugo
+Congratulations! Your new Hugo site is created in D:\Git\bluewhale\bluewhale-hugo.
+
+Just a few more steps and you&#39;re ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
+2. Perhaps you want to add some content. You can add single files
+   with &#34;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
+
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+</code></pre><ul>
+<li>Directory 구조</li>
+</ul>
+<pre tabindex="0"><code class="language-base" data-lang="base">C:\bluewhale-hugo
+├─archetypes
+├─content
+├─data
+├─layouts
+├─static
+└─themes
+</code></pre><h3 id="2-테마-추가">2. 테마 추가</h3>
+<h4 id="21-hugo-theme-다운로드">2.1 Hugo theme 다운로드</h4>
+<ul>
+<li><a href="https://themes.gohugo.io/">hugo theme</a></li>
+<li><a href="https://github.com/thingsym/hugo-theme-techdoc">techdoc theme : MIT</a></li>
+</ul>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="windows"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','windows')"
+         >windows</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="windows" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code class="language-windows" data-lang="windows">$ cd bluewhale-hugo
+$ git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
+$ git submodule update --remote
+$ git add themes/hugo-theme-techdoc
+</code></pre>
+        </div>
+        
+    </div>
+</div>
+
+<h4 id="22-미리보기">2.2 미리보기</h4>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="windows"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','windows')"
+         >windows</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="windows" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code class="language-windows" data-lang="windows">hugo server -D
+# -D draft 문서도 보여준다. 
+</code></pre>
+        </div>
+        
+    </div>
+</div>
+
+<pre tabindex="0"><code>$ hugo server -D
+port 1313 already in use, attempting to use an available port
+Start building sites … 
+hugo v0.94.0-63B23660 windows/amd64 BuildDate=2022-03-10T09:46:36Z VendorInfo=gohugoio
+
+                   | EN  
+-------------------+-----
+  Pages            | 14  
+  Paginator pages  |  0  
+  Non-page files   |  0  
+  Static files     |  5  
+  Processed images |  0  
+  Aliases          |  0  
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Built in 64 ms
+Watching for changes in D:\Git\bluewhale\bluewhale-hugo\{archetypes,content,data,layouts,static,themes}
+Watching for config changes in D:\Git\bluewhale\bluewhale-hugo\config.toml
+Environment: &#34;development&#34;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:8868/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><h4 id="23-빌드">2.3 빌드</h4>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="windows"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','windows')"
+         >windows</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="windows" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code class="language-windows" data-lang="windows"># hugo -t &lt;테마이름&gt;
+hugo server -t hugo-theme-techdoc
+
+# 출력위치 지정
+# hugo -t hugo-theme-techdoc -d public_html
+</code></pre>
+        </div>
+        
+    </div>
+</div>
+
+<pre tabindex="0"><code>$ hugo server -t hugo-theme-techdoc
+Start building sites …
+hugo v0.94.0-63B23660 windows/amd64 BuildDate=2022-03-10T09:46:36Z VendorInfo=gohugoio
+
+                   | EN
+-------------------+-----
+  Pages            |  7
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  5
+  Processed images |  0
+  Aliases          |  0
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Built in 87 ms
+Watching for changes in D:\Git\bluewhale\bluewhale-hugo\{archetypes,content,data,layouts,static,themes}
+Watching for config changes in D:\Git\bluewhale\bluewhale-hugo\config.toml
+Environment: &#34;development&#34;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><ul>
+<li>
+<p>public 폴더에 추가됨<br>
+<figure><img src="/hugo/hugo1_5.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p><a href="http://localhost:1313">http://localhost:1313</a> 접속 화면
+<figure><img src="/hugo/hugo1_4.jpg"/>
+</figure>
+</p>
+</li>
+</ul>
+<h4 id="24-새-글-추가">2.4 새 글 추가</h4>
+<pre tabindex="0"><code>$ hugo new post/test.md
+Content &#34;D:\\Git\\bluewhale\\bluewhale-hugo\\content\\post\\test.md&#34; created
+</code></pre><h3 id="3-리파지토리-생성">3. 리파지토리 생성</h3>
+<p>2개의 리파지토리를 생성한다.</p>
+<ol>
+<li>전체 컨텐츠를 저장할 곳</li>
+<li>빌드 결과로 github page를 띄울 곳</li>
+</ol>
+<p>첫번째 repository는 &lt;프로젝트 이름&gt;
+두번째 repository는 #USER-ID.github.io로 만들면 된다.</p>
+<ul>
+<li><a href="https://github.com/bluewhale-users/bluewhale-hugo">bluewhale-hugo</a></li>
+<li><a href="https://github.com/bluewhale-users/bluewhale.github.io">bluewhale.github.io</a></li>
+</ul>
+<h4 id="31-git-remote-설정">3.1 git remote 설정</h4>
+<pre tabindex="0"><code>$ cd bluewhale-hugo
+$ git init
+$ git remote add origin https://github.com/bluewhale-users/bluewhale-hugo
+</code></pre><h4 id="32-github-page-리파지토리-연결bluewhalegithubio">3.2 github page 리파지토리 연결(bluewhale.github.io)</h4>
+<pre tabindex="0"><code>$ git submodule add -b master https://github.com/bluewhale-users/bluewhale.github.io.git public
+</code></pre><pre tabindex="0"><code>$ git submodule add -b master https://github.com/bluewhale-users/bluewhale.github.io.git public
+Cloning into &#39;D:/Git/bluewhale/bluewhale-hugo/public&#39;...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory
+</code></pre><h4 id="33-commitpush">3.3 commit/push</h4>
+<pre tabindex="0"><code>$ git commit
+$ git push
+</code></pre>
+<div class="notices warning" ><p>pull 실행시 아래와 같은 에러가 나온다면 히스토리를 리셋한다.</p>
+</div>
+
+<pre tabindex="0"><code>&gt; git pull --tags origin master
+From https://github.com/bluewhale-users/bluewhale-hugo
+ * branch            master     -&gt; FETCH_HEAD
+fatal: refusing to merge unrelated histories
+</code></pre><pre tabindex="0"><code># git pull origin 브런치명 --allow-unrelated-histories
+git pull origin master --allow-unrelated-histories
+</code></pre>
+
+<footer class="footline">
 	
 </footer>
 
@@ -1117,6 +1402,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1132,6 +1418,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1144,6 +1431,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1161,6 +1451,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1176,6 +1467,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1251,8 +1545,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ko/hugo/usage/hugo1/" title="Hugo1 : Hugo 소개"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ko/okd/" title="한컴 클라우드 플랫폼" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ko/hugo/usage/hugo3/" title="Hugo3 : 테마 수정 및 변경" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1284,3 +1580,4 @@
 
   </body>
 </html>
+

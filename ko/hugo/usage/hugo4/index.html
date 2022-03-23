@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: Documentation for Hugo Learn Theme</title>
+    <title>Hugo4 : css 스타일 참조 :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1648000867" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ko/tags/">
+  <body class="" data-url="/ko/hugo/usage/hugo4/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -462,7 +462,7 @@
   
     
     <li data-nav-id="/ko/hugo/" title="Hugo" class="dd-item
-        
+        parent
         
         
         ">
@@ -493,7 +493,7 @@
   
     
     <li data-nav-id="/ko/hugo/usage/" title="Hugo 사용법" class="dd-item
-        
+        parent
         
         
         ">
@@ -584,7 +584,7 @@
  
   
     
-      <li data-nav-id="/ko/hugo/usage/hugo4/" title="Hugo4 : css 스타일 참조" class="dd-item ">
+      <li data-nav-id="/ko/hugo/usage/hugo4/" title="Hugo4 : css 스타일 참조" class="dd-item active">
         <a href="/ko/hugo/usage/hugo4/">
         Hugo4 : css 스타일 참조
         <i class="fas fa-check read-icon"></i>
@@ -623,7 +623,7 @@
     
     <li data-nav-id="/ko/post/" title="Posts" class="dd-item
         
-        active
+        
         
         ">
       <a href="/ko/post/">
@@ -717,22 +717,10 @@
                   
                     
                     
-                      <option id="ko" value="https://bluewhale-users.github.io/ko/tags/" selected>Korean</option>
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/hugo/usage/hugo4/" selected>Korean</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="https://bluewhale-users.github.io/en/tags/">English</option>
-                    
                   
               
           
@@ -773,6 +761,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/hugo/usage/hugo4.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -793,7 +792,19 @@
             
           
           
-            <a href='/ko/'></a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ko/'></a> > <a href='/ko/hugo/'>Hugo</a> > <a href='/ko/hugo/usage/'>Hugo 사용법</a> > Hugo4 : css 스타일 참조
+          
+        
+          
+        
           
         
           
@@ -804,7 +815,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#css-파일-추가">css 파일 추가</a>
+      <ul>
+        <li><a href="#1-configtoml-파일-수정">1. config.toml 파일 수정</a></li>
+        <li><a href="#2-css-파일-추가">2. css 파일 추가</a></li>
+        <li><a href="#3-layoutspartialsheaderhtml-수정">3. layouts/partials/header.html 수정</a></li>
+        <li><a href="#3-css-스타일-참조그림-정렬">3. css 스타일 참조(그림 정렬)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -820,24 +842,101 @@
           
             <h1>
               
-                tag ::
-              
-              Tags
+              Hugo4 : css 스타일 참조
             </h1>
           
 
         
 
 
-
-
-
-<ul>
-	
+<h2 id="css-파일-추가">css 파일 추가</h2>
+<h3 id="1-configtoml-파일-수정">1. config.toml 파일 수정</h3>
+<pre tabindex="0"><code>[params]
+  ...
+  custom_css = [&#34;css/custom.css&#34;]
+  ...
+</code></pre><h3 id="2-css-파일-추가">2. css 파일 추가</h3>
+<pre tabindex="0"><code>static/css/custom.css 파일 추가
+</code></pre><ul>
+<li>custom.css</li>
 </ul>
+<pre tabindex="0"><code>img[src$=&#39;#floatleft&#39;]
+{
+	float:left;
+}
+
+img[src$=&#39;#floatright&#39;]
+{
+	float:right;
+}
+
+figure.floatright {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: right;
+}
+
+figure.floatleft {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: left;
+}
+</code></pre><h3 id="3-layoutspartialsheaderhtml-수정">3. layouts/partials/header.html 수정</h3>
+<pre tabindex="0"><code>....
+{{ range .Site.Params.custom_css -}}
+    ...
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;{{ . | absURL }}&#34;&gt;
+{{- end }}
+....
+</code></pre><h3 id="3-css-스타일-참조그림-정렬">3. css 스타일 참조(그림 정렬)</h3>
 
 
-<footer class=" footline" >
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="기본 정렬"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','기본 정렬')"
+         >기본 정렬</button>
+    
+        <button
+          data-tab-item="왼쪽 정렬"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','왼쪽 정렬')"
+         >왼쪽 정렬</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="기본 정렬" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code>&lt;figure&gt;&lt;img src=&#34;/cicd/tutorial4_4.jpg&#34;/&gt;
+&lt;/figure&gt;
+</code></pre>
+        </div>
+        
+        <div data-tab-item="왼쪽 정렬" data-tab-group="default" class="tab-item ">
+            <pre tabindex="0"><code>&lt;figure&gt;&lt;img src=&#34;/cicd/tutorial4_4.jpg#floatleft&#34;/&gt;
+&lt;/figure&gt;
+</code></pre>
+        </div>
+        
+    </div>
+</div>
+
+<p><figure><img src="/cicd/tutorial4_4.jpg"/>
+</figure>
+
+<figure><img src="/cicd/tutorial4_4.jpg#floatleft"/>
+</figure>
+</p>
+
+
+<footer class="footline">
 	
 </footer>
 
@@ -1117,6 +1216,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1132,6 +1232,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1144,6 +1245,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1193,6 +1297,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1214,6 +1319,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1251,8 +1359,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ko/hugo/usage/hugo3/" title="Hugo3 : 테마 수정 및 변경"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ko/okd/" title="한컴 클라우드 플랫폼" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ko/post/" title="Posts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1284,3 +1394,4 @@
 
   </body>
 </html>
+

@@ -8,6 +8,17 @@
     <language>ko-kr</language>
     <lastBuildDate>Fri, 11 Mar 2022 12:30:26 +0900</lastBuildDate><atom:link href="https://bluewhale-users.github.io/ko/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo1 : Hugo 소개</title>
+      <link>https://bluewhale-users.github.io/ko/hugo/usage/hugo1/</link>
+      <pubDate>Tue, 22 Mar 2022 11:23:48 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/hugo/usage/hugo1/</guid>
+      <description>1. Hugo  gohugo.io github shortcodes  휴고(Hugo)는 Go로 작성된 정적 사이트 생성기입니다. 웹페이지 접속시 실시간으로 페이지를 생성하는 동적웹페이지와는 달리 휴고는 컨텐츠를 만들거나 업데이트시 페이지를 생성합니다. 따라서 휴고로 구축된 웹사이트는 일반적으로 더 빠르고 안전합니다.
+장점
+ 빌드 시간이 매우 빠르다. 다양한 OS에서 쉽게 설치하여 개발할 수 있다. LiveReload 기능을 제공해 변경사항을 즉시 렌더링해 확인할 수 있다. 다양한 테마가 존재한다. 정적 사이트를 렌더링하므로 제한없이 모든곳에서 호스팅할 수 있다.   참고  참고1 : 구축하기 참고2 : 커스터마이징     Dynamic site 그때그때 동적으로 html을 생성해서 보여주는 사이트다.</description>
+    </item>
+    
+    <item>
       <title>Tutorial1 : 준비</title>
       <link>https://bluewhale-users.github.io/ko/okd/cicd/tutorial1/</link>
       <pubDate>Tue, 15 Mar 2022 10:47:32 +0900</pubDate>
@@ -16,6 +27,15 @@
       <description>1. OKD CI/CD 소개  CI/CD Flow with Argo CD   [출처] https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/
 &amp;lsquo;GitOps&amp;rsquo;는 형상 관리 도구인 &amp;lsquo;Git&amp;rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다. 이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지토리가 필요합니다.
 2. OKD CI/CD 프로세스  Source Repo에 변경사항을 Commit 한다. Jenkins에서 변경사항을 감지하고 빌드를 수행한다. Docker Image를 dockerhub에 Push한다.</description>
+    </item>
+    
+    <item>
+      <title>Hugo2 : 사이트 구축</title>
+      <link>https://bluewhale-users.github.io/ko/hugo/usage/hugo2/</link>
+      <pubDate>Tue, 22 Mar 2022 11:24:17 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/hugo/usage/hugo2/</guid>
+      <description>1. Hugo 설치  Hugo Quick-Start  1.1 hugo 설치(windows 기준 설명)  Hugo Download hugo release에서 최신버전을 다운로드 C:\Hugo\bin\에 압축 해제 환경변수에 경로 추가  window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택 시스템변수의 Path를 더블클릭한다. 새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳인 C:\Hugo\bin를 등록   command에서 hugo version을 쳐서 확인  windowsMacOSC:\Users\user&amp;gt;hugo version hugo v0.94.0-63B23660 windows/amd64 BuildDate=2022-03-10T09:46:36Z VendorInfo=gohugoio brew install hugo # or port install hugo 1.</description>
     </item>
     
     <item>
@@ -29,12 +49,32 @@
     </item>
     
     <item>
+      <title>Hugo3 : 테마 수정 및 변경</title>
+      <link>https://bluewhale-users.github.io/ko/hugo/usage/hugo3/</link>
+      <pubDate>Tue, 22 Mar 2022 11:24:20 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/hugo/usage/hugo3/</guid>
+      <description>1. Theme Overriding 테마 수정시 &amp;rsquo;themes&amp;rsquo; 디렉토리의 내용은 수정하지 않는다. 테마구조를 살펴보면 원본 프로젝트 구조와 유사한 것을 확인할 수 있다. (archetypes, layouts, static, &amp;hellip;), 즉 테마도 hugo 프로젝트이다.
+테마 프로젝트의 layouts 파일들을 원본 프로젝트 layouts 폴더에 복사하여 이를 수정함으로써 테마를 오버라이딩하여 사용할 수 있다.
+ \layouts\partials\header.html이 존재하면 \layouts\partials\header.html을 적용한다. 존재하지 않으면 \themes&amp;lt;테마 이름&amp;gt;\layouts\partials\header.html을 적용한다  2. 아래 링크를 참고하여 테마를 수정해 보자.  hugo-theme-techdoc exampleSite  config.tomlbaseURL = &amp;#39;https://bluewhale-users.</description>
+    </item>
+    
+    <item>
       <title>Tutorial3 : DockerHub 설정</title>
       <link>https://bluewhale-users.github.io/ko/okd/cicd/tutorial3/</link>
       <pubDate>Tue, 15 Mar 2022 11:31:20 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial3/</guid>
       <description>DockerHub 설정 1. docker hub에 계정 생성  dockerhub link   2.리파지토리를 생성 name : okdtutorial visibility : public   [생성화면]   </description>
+    </item>
+    
+    <item>
+      <title>Hugo4 : css 스타일 참조</title>
+      <link>https://bluewhale-users.github.io/ko/hugo/usage/hugo4/</link>
+      <pubDate>Tue, 22 Mar 2022 11:24:21 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/hugo/usage/hugo4/</guid>
+      <description>css 파일 추가 1. config.toml 파일 수정 [params] ... custom_css = [&amp;#34;css/custom.css&amp;#34;] ... 2. css 파일 추가 static/css/custom.css 파일 추가  custom.css  img[src$=&amp;#39;#floatleft&amp;#39;] { float:left; } img[src$=&amp;#39;#floatright&amp;#39;] { float:right; } figure.floatright { max-width: 30%; width: auto\9*0.3; /* ie8 */ height: auto; float: right; } figure.floatleft { max-width: 30%; width: auto\9*0.3; /* ie8 */ height: auto; float: left; } 3. layouts/partials/header.html 수정 .... {{ range .Site.Params.custom_css -}} ... &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;{{ .</description>
     </item>
     
     <item>
