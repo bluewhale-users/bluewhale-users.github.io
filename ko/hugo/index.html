@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tutorial10 : GitHub Webhook 추가 :: Documentation for Hugo Learn Theme</title>
+    <title>Hugo :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1647998175" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ko/okd/cicd/tutorial10/">
+  <body class="" data-url="/ko/hugo/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
   
     
     <li data-nav-id="/ko/okd/" title="한컴 클라우드 플랫폼" class="dd-item
-        parent
+        
         
         
         ">
@@ -144,7 +144,7 @@
   
     
     <li data-nav-id="/ko/okd/cicd/" title="CI/CD 튜토리얼" class="dd-item
-        parent
+        
         
         
         ">
@@ -361,7 +361,7 @@
  
   
     
-      <li data-nav-id="/ko/okd/cicd/tutorial10/" title="Tutorial10 : GitHub Webhook 추가" class="dd-item active">
+      <li data-nav-id="/ko/okd/cicd/tutorial10/" title="Tutorial10 : GitHub Webhook 추가" class="dd-item ">
         <a href="/ko/okd/cicd/tutorial10/">
         Tutorial10 : GitHub Webhook 추가
         <i class="fas fa-check read-icon"></i>
@@ -462,8 +462,8 @@
   
     
     <li data-nav-id="/ko/hugo/" title="Hugo" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/ko/hugo/">
@@ -623,7 +623,7 @@
                   
                     
                     
-                      <option id="ko" value="https://bluewhale-users.github.io/ko/okd/cicd/tutorial10/" selected>Korean</option>
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/hugo/" selected>Korean</option>
                     
                   
               
@@ -671,7 +671,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/okd/cicd/tutorial10.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/hugo/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -698,19 +698,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/ko/'></a> > <a href='/ko/okd/'>한컴 클라우드 플랫폼</a> > <a href='/ko/okd/cicd/'>CI/CD 튜토리얼</a> > Tutorial10 : GitHub Webhook 추가
-          
-        
-          
-        
+            <a href='/ko/'></a> > Hugo
           
         
           
@@ -721,16 +709,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#cicd">CI/CD</a>
-      <ul>
-        <li><a href="#1-github-source-repository에-webhook-추가">1. GitHub Source Repository에 Webhook 추가</a></li>
-        <li><a href="#2-argocd-auto-sync">2. ArgoCD Auto-Sync</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -746,58 +725,20 @@
           
             <h1>
               
-              Tutorial10 : GitHub Webhook 추가
+              Hugo
             </h1>
           
 
         
 
 
-<h2 id="cicd">CI/CD</h2>
-<h3 id="1-github-source-repository에-webhook-추가">1. GitHub Source Repository에 Webhook 추가</h3>
-<ul>
-<li><a href="https://github.com/blackwhale-testuser/okd-tutorial1-src">Source Repositoy</a></li>
-</ul>
-<h4 id="11-settings---webhooks-이동후-add-webhook-선택">1.1 Settings -&gt; Webhooks 이동후 Add Webhook 선택</h4>
-<figure><img src="/cicd/tutorial10_1.jpg"/>
-</figure>
 
-<h4 id="12-jenkins-주소를-확인후-payload-url에-입력">1.2 jenkins 주소를 확인후 payload url에 입력</h4>
-<figure><img src="/cicd/tutorial10_2.jpg"/>
-</figure>
+	
 
 
-<div class="notices info" ><p>Payload URL : <a href="https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/">https://jenkins-okd-tutorial.apps.blackwhale.cloud.hancom.com/github-webhook/</a><br>
-Content type : application/json<br>
-Trigger : Juste the push event</p>
-</div>
-
-<h4 id="13-소스-수정후-commit">1.3 소스 수정후 commit</h4>
-<p>
-<div class="notices tip" ><p>Jenkinsfile의 태그를 업데이트 해야 GitOps Repo로 Commit 할 수 있다.<br>
-sed -i &rsquo;s/MY_BUILD_TAG/$BUILD_NUMBER/&rsquo; testblog-deployment.yaml<br>
-BUILD_NUMBER가 정상적으로 셋팅되는지 확인</p>
-</div>
-
-<figure><img src="/cicd/tutorial10_3.jpg"/>
-</figure>
-</p>
-<h4 id="14-jenkins-빌드가-자동으로-동작하는지-확인">1.4 Jenkins 빌드가 자동으로 동작하는지 확인</h4>
-<figure><img src="/cicd/tutorial10_4.jpg"/>
-</figure>
-
-<h3 id="2-argocd-auto-sync">2. ArgoCD Auto-Sync</h3>
-<p>
-<div class="notices info" ><p>Applications -&gt; &ldquo;Your Application&rdquo; 이동후 App Details 선택<br>
-SYNC-POLICY : Enable Auto-Sync 선택</p>
-</div>
-
-<figure><img src="/cicd/tutorial10_5.jpg"/>
-</figure>
-</p>
 
 
-<footer class="footline">
+<footer class=" footline" >
 	
 </footer>
 
@@ -832,6 +773,8 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -848,7 +791,6 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
             
                 
                     
-                    
                 
                 
 
@@ -856,25 +798,6 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1009,26 +932,6 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1072,6 +975,38 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1082,6 +1017,7 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
             
             
                 
+                    
                     
                 
                 
@@ -1097,6 +1033,9 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1153,10 +1092,10 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ko/okd/cicd/tutorial9/" title="Tutorial9 : ArgoCD를 이용한 배포"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ko/okd/cicd/tutorial13/" title="Tutorial13 : BuildConfig 사용 예"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ko/okd/cicd/tutorial11/" title="Tutorial11 : 문제 해결" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ko/hugo/usage/" title="Hugo 사용법" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1188,4 +1127,3 @@ SYNC-POLICY : Enable Auto-Sync 선택</p>
 
   </body>
 </html>
-

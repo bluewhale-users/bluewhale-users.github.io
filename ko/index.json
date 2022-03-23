@@ -14,6 +14,13 @@
 	"content": "1. OKD CI/CD 소개  CI/CD Flow with Argo CD   [출처] https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/\n\u0026lsquo;GitOps\u0026rsquo;는 형상 관리 도구인 \u0026lsquo;Git\u0026rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다. 이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지토리가 필요합니다.\n\r2. OKD CI/CD 프로세스  Source Repo에 변경사항을 Commit 한다. Jenkins에서 변경사항을 감지하고 빌드를 수행한다. Docker Image를 dockerhub에 Push한다. GitOps Repo의 deployment manifest파일을 업데이트(tag version)한다. ArgoCD가 변경사항을 감지하고 자동 배포 수행한다.  3. 사전 준비  GitHub repository Deploy Key dockerhub 계정 및 Repositiry okd 계정  4. 일회성 인스턴스 사용하는 이유 프로젝트용 일회성 Jenkins와 ArgoCD 인스턴스를 사용하는 이유는 다음과 같습니다.\n 다중 사용자의 경우 관리하기 어렵다. 여러 플러그인 설치로 인해 충돌 가능성이 높다.  5. URL References  GitHub Source GitHub Gitops DockerHub  "
 },
 {
+	"uri": "https://bluewhale-users.github.io/ko/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://bluewhale-users.github.io/ko/okd/cicd/tutorial2/",
 	"title": "Tutorial2 : 리파지토리 생성",
 	"tags": [],
@@ -124,6 +131,13 @@
 	"tags": [],
 	"description": "",
 	"content": "CI/CD Tutorial1 : 준비 CI/CD Tutorial2 : 레파지토리 생성 CI/CD Tutorial3 : DockerHub 설정 CI/CD Tutorial4 : Jenkins 설정 CI/CD Tutorial5 : Jenkins Pipeline 구성 CI/CD Tutorial6 : Buildconfig 설정 CI/CD Tutorial7 : 테스트 빌드 CI/CD Tutorial8 : ArgoCD 설정 CI/CD Tutorial9 : ArgoCD를 이용한 배포 CI/CD Tutorial10 : GitHub Webhook 추가 CI/CD Tutorial11 : 문제 해결 CI/CD Tutorial12 : Private 레파지토리 연동방법 CI/CD Tutorial13 : Buildconifg 사용 예 "
+},
+{
+	"uri": "https://bluewhale-users.github.io/ko/hugo/usage/",
+	"title": "Hugo 사용법",
+	"tags": [],
+	"description": "",
+	"content": "Hugo1 Hugo2 Hugo3 Hugo4 "
 },
 {
 	"uri": "https://bluewhale-users.github.io/ko/categories/",
