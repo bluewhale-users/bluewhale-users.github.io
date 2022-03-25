@@ -11,7 +11,7 @@
 	"title": "Hugo1 : Hugo 소개",
 	"tags": [],
 	"description": "",
-	"content": "1. Hugo  gohugo.io github shortcodes  휴고(Hugo)는 Go로 작성된 정적 사이트 생성기입니다. 웹페이지 접속시 실시간으로 페이지를 생성하는 동적웹페이지와는 달리 휴고는 컨텐츠를 만들거나 업데이트시 페이지를 생성합니다. 따라서 휴고로 구축된 웹사이트는 일반적으로 더 빠르고 안전합니다.\n장점\n 빌드 시간이 매우 빠르다. 다양한 OS에서 쉽게 설치하여 개발할 수 있다. LiveReload 기능을 제공해 변경사항을 즉시 렌더링해 확인할 수 있다. 다양한 테마가 존재한다. 정적 사이트를 렌더링하므로 제한없이 모든곳에서 호스팅할 수 있다.   참고  참고1 : 구축하기 참고2 : 커스터마이징     Dynamic site 그때그때 동적으로 html을 생성해서 보여주는 사이트다. 즉, dynamic site의 화면은 같은 주소라도 지속적으로 변할 수 있다.\n  static site는 고정된 html을 그냥 뿌려주는 사이트이다. 따라서 static site를 쓴다면 언제 들어간다고 해도 항상 같은 화면만 나온다.\n  "
+	"content": "1. Hugo  gohugo.io hugo github shortcodes  휴고(Hugo)는 Go로 작성된 정적 사이트1 생성기입니다. 웹페이지 접속시 실시간으로 페이지를 생성하는 동적사이트2와 달리 휴고는 컨텐츠를 만들거나 업데이트시 페이지를 생성합니다. 따라서 휴고로 구축된 웹사이트는 일반적으로 더 빠르고 안전합니다.\n장점\n 빌드 시간이 매우 빠르다. 다양한 OS에서 쉽게 설치하여 개발할 수 있다. LiveReload 기능을 제공해 변경사항을 즉시 렌더링해 확인할 수 있다. 다양한 테마가 존재한다. 정적 사이트를 렌더링하므로 제한없이 모든곳에서 호스팅할 수 있다.    static site는 고정된 html을 그냥 뿌려주는 사이트이다. 따라서 static site를 쓴다면 언제 들어간다고 해도 항상 같은 화면만 나온다.\u0026#160;\u0026#x21a9;\u0026#xfe0e;\n Dynamic site 그때그때 동적으로 html을 생성해서 보여주는 사이트다. 즉, dynamic site의 화면은 같은 주소라도 지속적으로 변할 수 있다.\u0026#160;\u0026#x21a9;\u0026#xfe0e;\n   "
 },
 {
 	"uri": "https://bluewhale-users.github.io/ko/okd/cicd/tutorial1/",
@@ -165,7 +165,7 @@
 	"title": "Hugo 사용법",
 	"tags": [],
 	"description": "",
-	"content": "Hugo1 Hugo2 Hugo3 Hugo4 "
+	"content": "Hugo1 : Hugo 소개 Hugo2 : 사이트 구축 Hugo3 : 테마 수정 및 변경 Hugo4 : css 스타일 참조 "
 },
 {
 	"uri": "https://bluewhale-users.github.io/ko/categories/",
