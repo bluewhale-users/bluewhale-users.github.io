@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.94.0" />
+    <meta name="description" content="Documentation for Hugo Learn Theme">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Apigee9 : Apigee 환경에 배포하기 :: Documentation for Hugo Learn Theme</title>
+
+    
+    <link href="/css/nucleus.css?1648532719" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1648532719" rel="stylesheet">
+    <link href="/css/hybrid.css?1648532719" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1648532719" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1648532719" rel="stylesheet">
+    <link href="/css/auto-complete.css?1648532719" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1648532719" rel="stylesheet">
+    <link href="/css/theme.css?1648532719" rel="stylesheet">
+    <link href="/css/tabs.css?1648532719" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1648532719" rel="stylesheet">
+    
+    <link href="/css/custom.css?1648532719" rel="stylesheet">
+    <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
+
+    <script src="/js/jquery-3.3.1.min.js?1648532719"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/ko/apigee/usage/apigee9/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='/ko'>
+
+<svg id="grav-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="60%" height="60%"  viewBox="-153 -46 652 452" xml:space="preserve">
+<g>
+	<path class="st0" d="M-131.6,314.1h7v23.2h30.3v-23.2h7v53.3h-7v-23.3h-30.3v23.3h-7 M-53.5,314.1h-7.9l-20.2,53.3h7.4l7.1-19h19.3
+	l7.1,19h7.4 M-64.5,341.6l7.1-19l7.1,19H-64.5z M21.2,367.4v-53.3h-7v41.1l-35.6-41.1h-6.1v53.3h7v-41.7l36.1,41.7 M30.3,340.8
+	c0,15.3,12.6,27.8,27.8,27.8c7.3,0,14.4-3,19.6-8.2l-4.9-4.9c-3.9,3.9-9.2,6.1-14.7,6.1c-11.4,0-20.7-9.4-20.7-20.9
+	c0-11.4,9.3-20.8,20.7-20.8c5.5,0,10.8,2.2,14.7,6.1l4.9-4.9c-5.2-5.2-12.3-8.1-19.6-8.1C42.9,313.1,30.3,325.5,30.3,340.8
+	 M81.2,340.8c0,14.7,12.8,27.7,27.8,27.7c15.8,0,27.8-13.1,27.8-27.7c0-15.3-12.7-27.7-27.8-27.7C93.8,313.1,81.2,325.6,81.2,340.8
+	 M129.8,340.8c0,11.4-9.4,20.9-20.8,20.9c-11.4,0-20.7-9.5-20.7-20.9c0-11.4,9.4-20.8,20.7-20.8C120.4,320,129.8,329.7,129.8,340.8
+	 M193.8,367.4h6.9v-53.3h-10.2l-17.3,43.8l-17.2-43.8h-10.2v53.3h6.9v-43.2l17,43.2h7l17-43.2 M228.4,367.4h7v-53.3h-7V367.4z
+	 M277.8,367.4v-21.2c0-8.5-6.7-15-14.8-15c-4.3,0-8,1.8-10.6,4.5V332h-7v35.4h7v-21.2c0.2-5,4.3-8.9,9.3-8.9c5,0,9.2,4.1,9.2,9.2
+	v20.9 M304,368.5c5.4,0,10.8-2.1,14.5-6.3l-5.3-4.5c-2.3,2.6-5.6,4.2-9.2,4.2c-6.7,0-11.9-5.5-11.9-12.1c0-6.7,5.2-12.1,11.9-12.1
+	c3.6,0,7,1.6,9.2,4.2l5.3-4.5c-3.7-4.3-9.1-6.3-14.5-6.3c-10.6,0-19.2,8.2-19.2,18.8C284.8,360.3,293.4,368.5,304,368.5
+	 M330.1,367.9c2.4,0,4.5-2.1,4.5-4.5c0-2.6-2.1-4.6-4.5-4.6c-2.7,0-4.6,2.1-4.6,4.6C325.5,365.8,327.4,367.9,330.1,367.9"/>
+<path class="st1" d="M12,184.1l-51,101.4H62.8 M12,212.3L42.4,273h-60.9L12,212.3z"/>
+<path class="st2" d="M223.5,273.5v-72.6c11.1,1.9,20.9,8.9,26.3,19.2l11.4-5.8c-4.3-7.9-10.4-14.6-18.1-19.2
+	c-7.7-4.9-16.8-7.5-25.9-7.5c-13.3,0-25.7,5.2-35,14.6c-9.4,9.3-14.4,21.8-14.4,35c0,13.3,5,25.7,14.4,35c9.3,9.4,21.7,14.5,35,14.5
+	c9.2,0,18.2-2.5,25.9-7.4c7.6-4.6,13.8-11.4,18.1-19.2l-11.4-5.8C244.4,264.5,234.6,271.6,223.5,273.5 M210.9,273.5
+	c-17.4-3-30.6-18.1-30.6-36.4c0-18.2,13.2-33.4,30.6-36.4V273.5z"/>
+<path class="st3" d="M-57.2,188.6v24.1h-61.7v-24.1h-12.6v96.9h12.6v-24h61.7v24h12.8v-96.9 M-57.2,248.9h-61.7v-23.4h61.7V248.9z"
+	/>
+<path class="st4" d="M420.1,232.9l-48.4-48.3v100.9h96.8V184.6 M384.3,214.6l27,27.1l-27,27V214.6z M455.8,273.2h-58.7l58.7-58.6
+	V273.2z"/>
+<path class="st5" d="M109.1,188.6v35.1l-40.8-38.3v100.1h53.4v-32.6l38.5,36V188.6 M109.1,273H80.9v-58.5l28.1,26.4V273z
+	 M147.5,259.7l-25.8-24.1v-34.3h25.8V259.7z"/>
+<path class="st6" d="M314.5,187.5c-27.4,0-49.6,22.2-49.6,49.6c0,27.4,22.2,49.6,49.6,49.6c27.4,0,49.6-22.2,49.6-49.6
+	C364.1,209.7,341.9,187.5,314.5,187.5 M314.5,273.9c-20.4,0-36.9-16.5-36.9-36.9c0-20.4,16.5-36.9,36.9-36.9
+	c20.4,0,36.9,16.5,36.9,36.9C351.4,257.4,334.9,273.9,314.5,273.9"/>
+</g>
+</svg> 
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1648532719"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1648532719"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1648532719"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/okd/" title="한컴 클라우드 플랫폼" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ko/okd/">
+          한컴 클라우드 플랫폼
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/okd/cicd/" title="CI/CD 튜토리얼" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ko/okd/cicd/">
+          CI/CD 튜토리얼
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial1/" title="Tutorial1 : 준비" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial1/">
+        Tutorial1 : 준비
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial2/" title="Tutorial2 : 리파지토리 생성" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial2/">
+        Tutorial2 : 리파지토리 생성
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial3/" title="Tutorial3 : DockerHub 설정" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial3/">
+        Tutorial3 : DockerHub 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial4/" title="Tutorial4 : Jenkins 설정" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial4/">
+        Tutorial4 : Jenkins 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial5/" title="Tutorial5 : Jenkins Pipeline 구성" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial5/">
+        Tutorial5 : Jenkins Pipeline 구성
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial6/" title="Tutorial6 : Buildconfig 설정" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial6/">
+        Tutorial6 : Buildconfig 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial7/" title="Tutorial7 : 테스트 빌드" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial7/">
+        Tutorial7 : 테스트 빌드
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial8/" title="Tutorial8 : ArgoCD 설정" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial8/">
+        Tutorial8 : ArgoCD 설정
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial9/" title="Tutorial9 : ArgoCD를 이용한 배포" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial9/">
+        Tutorial9 : ArgoCD를 이용한 배포
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial10/" title="Tutorial10 : GitHub Webhook 추가" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial10/">
+        Tutorial10 : GitHub Webhook 추가
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial11/" title="Tutorial11 : 문제 해결" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial11/">
+        Tutorial11 : 문제 해결
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial12/" title="Tutorial12 : Private Repo 연동방법" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial12/">
+        Tutorial12 : Private Repo 연동방법
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/okd/cicd/tutorial13/" title="Tutorial13 : BuildConfig 사용 예" class="dd-item ">
+        <a href="/ko/okd/cicd/tutorial13/">
+        Tutorial13 : BuildConfig 사용 예
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/hugo/" title="Hugo" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ko/hugo/">
+          Hugo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/hugo/usage/" title="Hugo 사용법" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ko/hugo/usage/">
+          Hugo 사용법
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/hugo/usage/hugo1/" title="Hugo1 : Hugo 소개" class="dd-item ">
+        <a href="/ko/hugo/usage/hugo1/">
+        Hugo1 : Hugo 소개
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/hugo/usage/hugo2/" title="Hugo2 : 사이트 구축" class="dd-item ">
+        <a href="/ko/hugo/usage/hugo2/">
+        Hugo2 : 사이트 구축
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/hugo/usage/hugo3/" title="Hugo3 : 테마 수정 및 변경" class="dd-item ">
+        <a href="/ko/hugo/usage/hugo3/">
+        Hugo3 : 테마 수정 및 변경
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/hugo/usage/hugo4/" title="Hugo4 : css 스타일 참조" class="dd-item ">
+        <a href="/ko/hugo/usage/hugo4/">
+        Hugo4 : css 스타일 참조
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/apigee/" title="Apigees" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/ko/apigee/">
+          Apigees
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/apigee/usage/" title="Usage" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/ko/apigee/usage/">
+          Usage
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee1/" title="Apigee1 : 소개" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee1/">
+        Apigee1 : 소개
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee2/" title="Apigee2 : 무료로 사용해보기" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee2/">
+        Apigee2 : 무료로 사용해보기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee3/" title="Apigee3 : API Reverse Proxy" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee3/">
+        Apigee3 : API Reverse Proxy
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee4/" title="Apigee4 : 개발자 포털1" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee4/">
+        Apigee4 : 개발자 포털1
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee5/" title="Apigee5 : 개발자 포털2" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee5/">
+        Apigee5 : 개발자 포털2
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee6/" title="Apigee6 : 개발자 포털3" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee6/">
+        Apigee6 : 개발자 포털3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee7/" title="Apigee7 : API Proxies Demo" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee7/">
+        Apigee7 : API Proxies Demo
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee8/" title="Apigee8 : VS Code에서 Apigee를 사용해 API 프록시 빌드하기" class="dd-item ">
+        <a href="/ko/apigee/usage/apigee8/">
+        Apigee8 : VS Code에서 Apigee를 사용해 API 프록시 빌드하기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/apigee/usage/apigee9/" title="Apigee9 : Apigee 환경에 배포하기" class="dd-item active">
+        <a href="/ko/apigee/usage/apigee9/">
+        Apigee9 : Apigee 환경에 배포하기
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ko/post/" title="Posts" class="dd-item
+        
+        
+        
+        ">
+      <a href="/ko/post/">
+          Posts
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ko/post/test/" title="Test" class="dd-item ">
+        <a href="/ko/post/test/">
+        Test
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub 저장소</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://bluewhale-users.github.io/ko/showcase"><i class='fas fa-fw fa-camera'></i> Showcases</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo 문서</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://bluewhale-users.github.io/ko/credits"><i class='fas fa-fw fa-bullhorn'></i> Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/apigee/usage/apigee9/" selected>Korean</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> </a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/apigee/usage/apigee9.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ko/'></a> > <a href='/ko/apigee/'>Apigees</a> > <a href='/ko/apigee/usage/'>Usage</a> > Apigee9 : Apigee 환경에 배포하기
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-apigee-조직에-새로운-dev-환경을-만들고-배포-유형으로-archive를-사용-설정합니다">1. Apigee 조직에 새로운 dev 환경을 만들고 배포 유형으로 Archive를 사용 설정합니다.</a></li>
+        <li><a href="#2-환경-그룹-연결">2. 환경 그룹 연결</a></li>
+        <li><a href="#3-apigee-환경에-api-프록시-구성-아카이브-파일을-배포">3. Apigee 환경에 API 프록시 구성 아카이브 파일을 배포</a></li>
+        <li><a href="#4-api-테스트">4. API 테스트</a></li>
+        <li><a href="#5-api-키-가져오기">5. API 키 가져오기</a></li>
+        <li><a href="#6-개발자-추가">6. 개발자 추가</a></li>
+        <li><a href="#7-앱-등록">7. 앱 등록</a></li>
+        <li><a href="#8-curl-호출-확인">8. curl 호출 확인</a></li>
+        <li><a href="#2-환경-그룹">2. 환경 그룹</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Apigee9 : Apigee 환경에 배포하기
+            </h1>
+          
+
+        
+
+
+<p><a href="https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-test">참고</a></p>
+<blockquote>
+<p>Google Cloud SDK와 gcloud beta apigee 구성요소 설치</p>
+</blockquote>
+<ul>
+<li>gcloud beta 구성요소 설치</li>
+</ul>
+<pre tabindex="0"><code>gcloud components install beta
+</code></pre><ul>
+<li>베타 구성요소 설치 확인</li>
+</ul>
+<pre tabindex="0"><code>$ gcloud components list
+
+Your current Google Cloud CLI version is: 373.0.0
+The latest available version is: 373.0.0
+
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                 Components                                                 │
+├───────────────┬──────────────────────────────────────────────────────┬──────────────────────────┬──────────┤
+│     Status    │                         Name                         │            ID            │   Size   │
+├───────────────┼──────────────────────────────────────────────────────┼──────────────────────────┼──────────┤
+│ Not Installed │ App Engine Go Extensions                             │ app-engine-go            │  4.2 MiB │
+│ Not Installed │ Appctl                                               │ appctl                   │ 18.7 MiB │
+│ Not Installed │ Cloud Bigtable Command Line Tool                     │ cbt                      │  8.4 MiB │
+│ Not Installed │ Cloud Bigtable Emulator                              │ bigtable                 │  5.9 MiB │
+│ Not Installed │ Cloud Datalab Command Line Tool                      │ datalab                  │  &lt; 1 MiB │
+│ Not Installed │ Cloud Datastore Emulator                             │ cloud-datastore-emulator │ 18.4 MiB │
+│ Not Installed │ Cloud Firestore Emulator                             │ cloud-firestore-emulator │ 40.5 MiB │
+│ Not Installed │ Cloud Pub/Sub Emulator                               │ pubsub-emulator          │ 60.7 MiB │
+│ Not Installed │ Cloud SQL Proxy                                      │ cloud_sql_proxy          │  7.4 MiB │
+│ Not Installed │ Google Container Registry&#39;s Docker credential helper │ docker-credential-gcr    │  1.8 MiB │
+│ Not Installed │ anthos-auth                                          │ anthos-auth              │ 18.1 MiB │
+│ Not Installed │ config-connector                                     │ config-connector         │ 49.7 MiB │
+│ Not Installed │ gcloud Alpha Commands                                │ alpha                    │  &lt; 1 MiB │
+│ Not Installed │ gcloud app Java Extensions                           │ app-engine-java          │ 51.6 MiB │
+│ Not Installed │ gcloud app PHP Extensions                            │ app-engine-php           │ 19.1 MiB │
+│ Not Installed │ gcloud app Python Extensions                         │ app-engine-python        │  7.8 MiB │
+│ Not Installed │ gcloud app Python Extensions (Extra Libraries)       │ app-engine-python-extras │ 26.4 MiB │
+│ Not Installed │ kubectl-oidc                                         │ kubectl-oidc             │ 18.1 MiB │
+│ Not Installed │ pkg                                                  │ pkg                      │          │
+│ Installed     │ BigQuery Command Line Tool                           │ bq                       │  1.0 MiB │
+│ Installed     │ Cloud Storage Command Line Tool                      │ gsutil                   │  8.1 MiB │
+│ Installed     │ Google Cloud CLI Core Libraries                      │ core                     │ 22.2 MiB │
+│ Installed     │ Minikube                                             │ minikube                 │ 27.3 MiB │
+│ Installed     │ Skaffold                                             │ skaffold                 │ 17.8 MiB │
+│ Installed     │ gcloud Beta Commands                                 │ beta                     │  &lt; 1 MiB │
+│ Installed     │ kubectl                                              │ kubectl                  │  &lt; 1 MiB │
+└───────────────┴──────────────────────────────────────────────────────┴──────────────────────────┴──────────┘
+To install or remove components at your current SDK version [373.0.0], run:
+  $ gcloud components install COMPONENT_ID
+  $ gcloud components remove COMPONENT_ID
+
+To update your SDK installation to the latest version [373.0.0], run:
+  $ gcloud components update
+</code></pre><ul>
+<li>gcloud에 대한 액세스 권한 승인(Cloud SDK 초기화의 설명에 따라 계정을 인증하고 액세스 권한을 부여하고 Cloud SDK 설치를 초기화합니다.)</li>
+</ul>
+<pre tabindex="0"><code>$ gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Your current configuration has been set to: [default]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.
+Reachability Check passed.
+Network diagnostic passed (1/1 checks passed).
+
+You must log in to continue. Would you like to log in (Y/n)?  y
+
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?response_type=code&amp;client_id=32555940559.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&amp;scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&amp;state=EEOOAQ5tPUJqdDcPn3scJTRVd38L4T&amp;access_type=offline&amp;code_challenge=v3xratBRwmNAVE5x1vb25t8q-5PVSvAj4pnbVoFtBTs&amp;code_challenge_method=S256
+
+You are logged in as: [spcsenti2023@gmail.com].
+
+Pick cloud project to use: 
+ [1] pure-fold-339305
+ [2] Enter a project ID
+ [3] Create a new project
+Please enter numeric choice or text value (must exactly match list item):  PS D:\Git\apigee\myapigeeworkspace&gt; gcloud init
+Please enter a value between 1 and 3, or a value present in the list:  Welcome! This command will take you through the configuration of gcloud.
+Please enter a value between 1 and 3, or a value present in the list:
+Please enter a value between 1 and 3, or a value present in the list:  Your current configuration has been set to: [default]
+Please enter a value between 1 and 3, or a value present in the list:
+Please enter a value between 1 and 3, or a value present in the list:  You can skip diagnostics next time by using the following flag:
+Please enter a value between 1 and 3, or a value present in the list:    gcloud init --skip-diagnostics
+Please enter a value between 1 and 3, or a value present in the list:
+Please enter a value between 1 and 3, or a value present in the list:  Network diagnostic detects and fixes local network connection issues.
+Please enter a value between 1 and 3, or a value present in the list:  Checking network connection...done.
+Please enter a value between 1 and 3, or a value present in the list:  Reachability Check passed.
+Please enter a value between 1 and 3, or a value present in the list:  Network diagnostic passed (1/1 checks passed).
+Please enter a value between 1 and 3, or a value present in the list:
+Please enter a value between 1 and 3, or a value present in the list:  You must log in to continue. Would you like to log in (Y/n)?  y
+Please enter a value between 1 and 3, or a value present in the list:  1
+
+Your current project has been set to: [pure-fold-339305].
+
+Do you want to configure a default Compute Region and Zone? (Y/n)?  y
+
+Which Google Compute Engine zone would you like to use as project default?
+If you do not specify a zone via a command line flag while working with Compute Engine resources, the default is assumed.
+ [1] us-east1-b
+ [2] us-east1-c
+ [3] us-east1-d
+ [4] us-east4-c
+ [5] us-east4-b
+ [6] us-east4-a
+ [7] us-central1-c
+ [8] us-central1-a
+ [9] us-central1-f
+ [10] us-central1-b
+ [11] us-west1-b
+ [12] us-west1-c
+ [13] us-west1-a
+ [14] europe-west4-a
+ [15] europe-west4-b
+ [16] europe-west4-c
+ [17] europe-west1-b
+ [18] europe-west1-d
+ [19] europe-west1-c
+ [20] europe-west3-c
+ [21] europe-west3-a
+ [22] europe-west3-b
+ [23] europe-west2-c
+ [24] europe-west2-b
+ [25] europe-west2-a
+ [26] asia-east1-b
+ [27] asia-east1-a
+ [28] asia-east1-c
+ [29] asia-southeast1-b
+ [30] asia-southeast1-a
+ [31] asia-southeast1-c
+ [32] asia-northeast1-b
+ [33] asia-northeast1-c
+ [34] asia-northeast1-a
+ [35] asia-south1-c
+ [36] asia-south1-b
+ [37] asia-south1-a
+ [38] australia-southeast1-b
+ [39] australia-southeast1-c
+ [40] australia-southeast1-a
+ [41] southamerica-east1-b
+ [42] southamerica-east1-c
+ [43] southamerica-east1-a
+ [44] asia-east2-a
+ [45] asia-east2-b
+ [46] asia-east2-c
+ [47] asia-northeast2-a
+ [48] asia-northeast2-b
+ [49] asia-northeast2-c
+ [50] asia-northeast3-a
+Did not print [39] options.
+Too many options [89]. Enter &#34;list&#34; at prompt to print choices fully.
+Please enter numeric choice or text value (must exactly match list item):  27
+
+Your project default Compute Engine zone has been set to [asia-east1-a].
+You can change it by running [gcloud config set compute/zone NAME].
+
+Your project default Compute Engine region has been set to [asia-east1].
+You can change it by running [gcloud config set compute/region NAME].
+
+Created a default .boto configuration file at [C:\Users\user\.boto]. See this file and
+[https://cloud.google.com/storage/docs/gsutil/commands/config] for more
+information about configuring Google Cloud Storage.
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use spcsenti2023@gmail.com by default
+* Commands will reference project `pure-fold-339305` by default
+* Compute Engine commands will use region `asia-east1` by default
+* Compute Engine commands will use zone `asia-east1-a` by default
+
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+* Run `gcloud cheat-sheet` to see a roster of go-to `gcloud` commands.
+</code></pre><ul>
+<li>추가 설정을 수행하지 않고 액세스 승인</li>
+</ul>
+<pre tabindex="0"><code>PS D:\Git\apigee\myapigeeworkspace&gt; gcloud auth login
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?response_type=code&amp;client_id=32555940559.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&amp;scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&amp;state=8vekqoeRbLfEc9a1RMdtKuAGKoQsHk&amp;access_type=offline&amp;code_challenge=dKREWjk04tSgbIgnh-vIjtdZI8zYXXafijjRZ4h9OFg&amp;code_challenge_method=S256
+
+
+You are now logged in as [spcsenti2023@gmail.com].
+Your current project is [pure-fold-339305].  You can change this setting by running:
+  $ gcloud config set project PROJECT_ID
+</code></pre><p><figure><img src="/apigee/apigee-tutorial7_4.jpg"/>
+</figure>
+
+<figure><img src="/apigee/apigee-tutorial7_5.jpg"/>
+</figure>
+</p>
+<h3 id="1-apigee-조직에-새로운-dev-환경을-만들고-배포-유형으로-archive를-사용-설정합니다">1. Apigee 조직에 새로운 dev 환경을 만들고 배포 유형으로 Archive를 사용 설정합니다.</h3>
+<ul>
+<li>
+<p>Apigee 웹콘솔의 Admin - Environments - Overview 이동(우측 상단의 +Environment 선택)
+<figure><img src="/apigee/apigee-tutorial7_1.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>이름 dev, 배포유형 Archive를 사용 설정
+<figure><img src="/apigee/apigee-tutorial7_2.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>새 환경 추가
+<figure><img src="/apigee/apigee-tutorial7_3.jpg"/>
+</figure>
+</p>
+</li>
+</ul>
+<pre tabindex="0"><code>새 환경을 만든 후 다음을 수행해야 합니다.
+- 새 환경을 인스턴스에 연결합니다. 
+- UI에서는 이 작업을 수행할 수 없습니다. 
+- 대신 Instances attachment create API를 사용하여 인스턴스에 환경을 연결합니다. 
+  이를 수행하는 방법에 대한 예시는 명령줄 프로비저닝 문서에서 환경 만들기를 참조하세요.
+- 새 환경을 환경 그룹에 할당합니다. 
+  그룹에 할당되지 않은 환경에는 자신을 가리키는 호스트 이름이 없으므로 액세스할 수 없습니다. 
+  자세한 내용은 환경 그룹 만들기를 참조하세요.
+</code></pre><ul>
+<li>
+<p>인스턴스 연결
+<figure><img src="/apigee/apigee-tutorial7_16.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>dev를 체크하고 save를 선택한다.(몇분 정도 걸린다.)
+<figure><img src="/apigee/apigee-tutorial7_17.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>연결 완료
+<figure><img src="/apigee/apigee-tutorial7_18.jpg"/>
+</figure>
+</p>
+</li>
+</ul>
+<h3 id="2-환경-그룹-연결">2. 환경 그룹 연결</h3>
+<ul>
+<li>Groups에 기존 eval-group을 연결
+<figure><img src="/apigee/apigee-tutorial7_19.jpg"/>
+</figure>
+</li>
+</ul>
+<h3 id="3-apigee-환경에-api-프록시-구성-아카이브-파일을-배포">3. Apigee 환경에 API 프록시 구성 아카이브 파일을 배포</h3>
+<pre tabindex="0"><code># 터미널탭에서 myapigeeworkspace 디렉토리로 이동
+$ cd myapigeeworkspace
+
+
+# 다음 명령을 실행
+gcloud beta apigee archives deploy --environment=dev --labels=release=052021
+
+# 실행 응답
+Waiting for operation [0ef6eb0a-b5a6-41fb-9c86-13c1dc0a751c] to complete...done.
+</code></pre><h3 id="4-api-테스트">4. API 테스트</h3>
+<pre tabindex="0"><code>curl https://INTERNAL_LOAD_BALANCER_IP/helloworld /
+  -H &#34;Host: ENV_GROUP_HOSTNAME&#34; 
+</code></pre><ul>
+<li>다음과 같은 오류 메시지를 확인할 수 있다.</li>
+</ul>
+<pre tabindex="0"><code>$ curl https://spsenti2023.duckdns.org/helloworld -H &#34;Host: pure-fold-339305-eval.apigee.net&#34; 
+
+{&#34;fault&#34;:{&#34;faultstring&#34;:&#34;Failed to resolve API Key variable request.queryparam.apikey&#34;,&#34;detail&#34;:{&#34;errorcode&#34;:&#34;steps.oauth.v2.FailedToResolveAPIKey&#34;}}}
+</code></pre><p>helloworld API를 포함하는 API 제품을 만든 후 API 제품을 사용해 개발자를 만들고 등록해야 API 키를 가져올 수 있다.</p>
+<h3 id="5-api-키-가져오기">5. API 키 가져오기</h3>
+<ul>
+<li>
+<p>Publish - API Products 이동
+<figure><img src="/apigee/apigee-tutorial7_20.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>CREATE를 선택
+<figure><img src="/apigee/apigee-tutorial7_21.jpg"/>
+</figure>
+</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Name: myproduct
+Display name: myproduct
+Environment: dev
+Access: public
+Quota: 공란
+Allowed OAuth scope: 공란
+</code></pre><ul>
+<li>Operations 항목에서 Add an operation을 선택
+<figure><img src="/apigee/apigee-tutorial7_22.jpg"/>
+</figure>
+</li>
+</ul>
+<pre tabindex="0"><code>- API 프록시 드롭다운 메뉴에서 helloworld 선택
+- 경로 필드에 &#34;/&#34; 입력
+- 다른 필드는 기본값 그대로 사용
+- 저장을 눌러 API 제품을 저장
+</code></pre><figure><img src="/apigee/apigee-tutorial7_23.jpg"/>
+</figure>
+
+<ul>
+<li>저장 완료
+<figure><img src="/apigee/apigee-tutorial7_24.jpg"/>
+</figure>
+</li>
+</ul>
+<h3 id="6-개발자-추가">6. 개발자 추가</h3>
+<ul>
+<li>Publish - Developers로 이동하여 개발자를 등록한다.
+<figure><img src="/apigee/apigee-tutorial7_25.jpg"/>
+</figure>
+</li>
+</ul>
+<h3 id="7-앱-등록">7. 앱 등록</h3>
+<ul>
+<li>
+<p>Publish -&gt; Apps로 이동하여 +App을 눌러 추가
+<figure><img src="/apigee/apigee-tutorial7_26.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>New App
+<figure><img src="/apigee/apigee-tutorial7_27.jpg"/>
+</figure>
+</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Name: myapp
+Display name: myapp
+Developer name: hskim@hancom.com
+Callback URL: 공란
+Notes: 공란
+Expiry: Never
+Product: myproduct
+Custom attributes: 공란
+</code></pre><ul>
+<li>
+<p>추가 화면
+<figure><img src="/apigee/apigee-tutorial7_28.jpg"/>
+</figure>
+</p>
+</li>
+<li>
+<p>API키를 복사한다.</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Key: 8mE1cvb3NFcp9S5dkz1tuWxyCAVpX66nPcGpCAWDZvbNTjPm
+Secret: EYUeAtwGTky4XMOT2T0yI2tpXrZyNKFbWWyfU59ayOjP1ht591**************
+</code></pre><h3 id="8-curl-호출-확인">8. curl 호출 확인</h3>
+<pre tabindex="0"><code>curl -v https://$PUBLIC_FACING_IP/helloworld?apikey=ZQA5euYtNeJ7ZCGCJMpvd6F2BZOmxOzY
+</code></pre><pre tabindex="0"><code>$ curl -v https://spsenti2023.duckdns.org/helloworld?apikey=8mE1cvb3NFcp9S5dkz1tuWxyCAVpX66nPcGpCAWDZvbNTjPm
+*   Trying 34.117.255.14:443...
+* Connected to spsenti2023.duckdns.org (34.117.255.14) port 443 (#0)
+* schannel: disabled automatic use of client certificate
+* schannel: ALPN, offering http/1.1
+* schannel: ALPN, server accepted to use http/1.1
+&gt; GET /helloworld?apikey=8mE1cvb3NFcp9S5dkz1tuWxyCAVpX66nPcGpCAWDZvbNTjPm HTTP/1.1
+&gt; Host: spsenti2023.duckdns.org
+&gt; User-Agent: curl/7.79.1
+&gt; Accept: */*
+&gt; 
+* Mark bundle as not supporting multiuse
+&lt; HTTP/1.1 200 OK
+&lt; x-powered-by: Apigee
+&lt; access-control-allow-origin: *
+&lt; x-frame-options: ALLOW-FROM RESOURCE-URL
+&lt; x-xss-protection: 1
+&lt; x-content-type-options: nosniff
+&lt; content-type: application/json;charset=UTF-8
+&lt; content-length: 77
+&lt; etag: W/&#34;8d-/7TqkgBKcDi8Ug3uWWUJpw&#34;
+&lt; date: Thu, 03 Mar 2022 06:44:20 GMT
+&lt; alt-svc: clear
+&lt; x-request-id: ca4e02c3-7ef5-4367-9d1d-48c3f5a8f896
+&lt; Via: 1.1 google, 1.1 google
+&lt; Alt-Svc: h3=&#34;:443&#34;; ma=2592000,h3-29=&#34;:443&#34;; ma=2592000
+&lt;
+{&#34;root&#34;:{&#34;city&#34;:&#34;San Jose&#34;,&#34;firstName&#34;:&#34;John&#34;,&#34;lastName&#34;:&#34;Doe&#34;,&#34;state&#34;:&#34;CA&#34;}}* Connection #0 to host spsenti2023.duckdns.org left intact
+</code></pre><blockquote>
+<p>API archive가 Apigee 환경에 성공적으로 배포되었습니다.</p>
+</blockquote>
+<hr>
+<h3 id="2-환경-그룹">2. 환경 그룹</h3>
+<pre tabindex="0"><code>curl -i -H &#34;$AUTH&#34; -H &#34;Content-Type:application/json&#34; &#34;https://apigee.googleapis.com/v1/organizations/$PROJECT_ID/environments/dev&#34;
+</code></pre><p>[인증 에러]</p>
+<pre tabindex="0"><code>$ curl -i -H &#34;$AUTH&#34; -H &#34;Content-Type:application/json&#34; &#34;https://apigee.googleapis.com/v1/organizations/pure-fold-339305/environments/dev&#34;
+HTTP/2 401 
+www-authenticate: Bearer realm=&#34;https://accounts.google.com/&#34;
+vary: X-Origin
+vary: Referer
+vary: Origin,Accept-Encoding
+content-type: application/json; charset=UTF-8
+date: Thu, 24 Feb 2022 06:00:30 GMT
+server: ESF
+cache-control: private
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+alt-svc: h3=&#34;:443&#34;; ma=2592000,h3-29=&#34;:443&#34;; ma=2592000,h3-Q050=&#34;:443&#34;; ma=2592000,h3-Q046=&#34;:443&#34;; ma=2592000,h3-Q043=&#34;:443&#34;; ma=2592000,quic=&#34;:443&#34;; ma=2592000; v=&#34;46,43&#34;
+accept-ranges: none
+
+{
+  &#34;error&#34;: {
+    &#34;code&#34;: 401,
+    &#34;message&#34;: &#34;Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.&#34;,
+    &#34;status&#34;: &#34;UNAUTHENTICATED&#34;,
+    &#34;details&#34;: [
+      {
+        &#34;@type&#34;: &#34;type.googleapis.com/google.rpc.ErrorInfo&#34;,
+        &#34;reason&#34;: &#34;CREDENTIALS_MISSING&#34;,
+        &#34;domain&#34;: &#34;googleapis.com&#34;,
+        &#34;metadata&#34;: {
+          &#34;service&#34;: &#34;apigee.googleapis.com&#34;,
+          &#34;method&#34;: &#34;google.cloud.apigee.v1.EnvironmentService.GetEnvironment&#34;
+        }
+      }
+    ]
+  }
+}
+</code></pre><p><a href="https://developers.google.com/identity/sign-in/web/sign-in">오류확인</a></p>
+<blockquote>
+<p>액세스 토큰 확인</p>
+</blockquote>
+<pre tabindex="0"><code>$ gcloud auth application-default print-access-token   
+ya29.A0ARrdaM8TiVeqbSujEaiw59ZtMo0N-jgOxWEO5SZoRFpB4BweBlak6C35aKe9BrBgM4E5kKfIOmY2kwZFJDgukeVA52AjKUhRuGfpHafj2iH46PBEAaBZwijK5erBG94VgIO1Qgb1R**************************
+
+
+curl -s -H &#34;Content-Type: application/json&#34; -H &#34;Authorization: Bearer &#34;$(gcloud auth application-default print-access-token)   https://apigee.googleapis.com/v1/organizations/pure-fold-339305/environments/dev -d @sync-request.json
+</code></pre><p><a href="https://developers.google.com/oauthplayground/">Google Developers</a></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/ko/apigee/usage/apigee8/" title="Apigee8 : VS Code에서 Apigee를 사용해 API 프록시 빌드하기"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/ko/post/" title="Posts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1648532719"></script>
+    <script src="/js/perfect-scrollbar.min.js?1648532719"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1648532719"></script>
+    <script src="/js/jquery.sticky.js?1648532719"></script>
+    <script src="/js/featherlight.min.js?1648532719"></script>
+    <script src="/js/highlight.pack.js?1648532719"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1648532719"></script>
+    <script src="/js/learn.js?1648532719"></script>
+    <script src="/js/hugo-learn.js?1648532719"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+
