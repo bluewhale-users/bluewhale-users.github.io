@@ -12,21 +12,21 @@
     <title>Tutorial1 : 준비 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1648603511" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1648603511" rel="stylesheet">
-    <link href="/css/hybrid.css?1648603511" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1648603511" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1648603511" rel="stylesheet">
-    <link href="/css/auto-complete.css?1648603511" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1648603511" rel="stylesheet">
-    <link href="/css/theme.css?1648603511" rel="stylesheet">
-    <link href="/css/tabs.css?1648603511" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1648603511" rel="stylesheet">
+    <link href="/css/nucleus.css?1648614565" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1648614565" rel="stylesheet">
+    <link href="/css/hybrid.css?1648614565" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1648614565" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1648614565" rel="stylesheet">
+    <link href="/css/auto-complete.css?1648614565" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1648614565" rel="stylesheet">
+    <link href="/css/theme.css?1648614565" rel="stylesheet">
+    <link href="/css/tabs.css?1648614565" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1648614565" rel="stylesheet">
     
-    <link href="/css/custom.css?1648603511" rel="stylesheet">
+    <link href="/css/custom.css?1648614565" rel="stylesheet">
     <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1648603511"></script>
+    <script src="/js/jquery-3.3.1.min.js?1648614565"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1648603511"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1648603511"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1648614565"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1648614565"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1648603511"></script>
+<script type="text/javascript" src="/js/search.js?1648614565"></script>
 
     
   </div>
@@ -193,9 +193,9 @@
  
   
     
-      <li data-nav-id="/ko/okd/cicd/tutorial2/" title="Tutorial2 : 리파지토리 생성" class="dd-item ">
+      <li data-nav-id="/ko/okd/cicd/tutorial2/" title="Tutorial2 : 리파지터리 생성" class="dd-item ">
         <a href="/ko/okd/cicd/tutorial2/">
-        Tutorial2 : 리파지토리 생성
+        Tutorial2 : 리파지터리 생성
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1030,7 +1030,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/okd/cicd/tutorial1.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/bluewhale-users/bluewhale-hugo/edit/master/content/okd/cicd/tutorial1.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -1124,15 +1124,15 @@
 
 <div class="notices info" ><p>&lsquo;GitOps&rsquo;는 형상 관리 도구인 &lsquo;Git&rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는
 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다.
-이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지토리가 필요합니다.</p>
+이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지터리가 필요합니다.</p>
 </div>
 
 <h3 id="2-okd-cicd-프로세스">2. OKD CI/CD 프로세스</h3>
 <ol>
-<li>Source Repo에 변경사항을 Commit 한다.</li>
+<li>Source 리파지터리에 변경사항을 Commit 한다.</li>
 <li>Jenkins에서 변경사항을 감지하고 빌드를 수행한다.</li>
 <li>Docker Image를 dockerhub에 Push한다.</li>
-<li>GitOps Repo의 deployment manifest파일을 업데이트(tag version)한다.</li>
+<li>GitOps 리파지터리의 deployment manifest파일을 업데이트(tag version)한다.</li>
 <li>ArgoCD가 변경사항을 감지하고 자동 배포 수행한다.</li>
 </ol>
 <h3 id="3-사전-준비">3. 사전 준비</h3>
@@ -1754,7 +1754,7 @@
 			<a class="nav nav-prev" href="/ko/okd/cicd/" title="CI/CD 튜토리얼"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ko/okd/cicd/tutorial2/" title="Tutorial2 : 리파지토리 생성" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ko/okd/cicd/tutorial2/" title="Tutorial2 : 리파지터리 생성" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1764,16 +1764,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1648603511"></script>
-    <script src="/js/perfect-scrollbar.min.js?1648603511"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1648603511"></script>
-    <script src="/js/jquery.sticky.js?1648603511"></script>
-    <script src="/js/featherlight.min.js?1648603511"></script>
-    <script src="/js/highlight.pack.js?1648603511"></script>
+    <script src="/js/clipboard.min.js?1648614565"></script>
+    <script src="/js/perfect-scrollbar.min.js?1648614565"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1648614565"></script>
+    <script src="/js/jquery.sticky.js?1648614565"></script>
+    <script src="/js/featherlight.min.js?1648614565"></script>
+    <script src="/js/highlight.pack.js?1648614565"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1648603511"></script>
-    <script src="/js/learn.js?1648603511"></script>
-    <script src="/js/hugo-learn.js?1648603511"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1648614565"></script>
+    <script src="/js/learn.js?1648614565"></script>
+    <script src="/js/hugo-learn.js?1648614565"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

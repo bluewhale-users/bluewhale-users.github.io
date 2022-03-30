@@ -35,8 +35,8 @@
       
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial1/</guid>
       <description>1. OKD CI/CD 소개  CI/CD Flow with Argo CD   [출처] https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/
-&amp;lsquo;GitOps&amp;rsquo;는 형상 관리 도구인 &amp;lsquo;Git&amp;rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다. 이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지토리가 필요합니다.
-2. OKD CI/CD 프로세스  Source Repo에 변경사항을 Commit 한다. Jenkins에서 변경사항을 감지하고 빌드를 수행한다. Docker Image를 dockerhub에 Push한다.</description>
+&amp;lsquo;GitOps&amp;rsquo;는 형상 관리 도구인 &amp;lsquo;Git&amp;rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다. 이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지터리가 필요합니다.
+2. OKD CI/CD 프로세스  Source 리파지터리에 변경사항을 Commit 한다. Jenkins에서 변경사항을 감지하고 빌드를 수행한다. Docker Image를 dockerhub에 Push한다.</description>
     </item>
     
     <item>
@@ -58,12 +58,12 @@
     </item>
     
     <item>
-      <title>Tutorial2 : 리파지토리 생성</title>
+      <title>Tutorial2 : 리파지터리 생성</title>
       <link>https://bluewhale-users.github.io/ko/okd/cicd/tutorial2/</link>
       <pubDate>Tue, 15 Mar 2022 11:27:51 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial2/</guid>
-      <description>GitHub Repository 준비 origin repository  src gitops  1. 2개 리파지토리를 본인 계정으로 fork   src fork repo gitops fork repo  2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지토리에 commit을 수행하기 위해 deploy key를 등록합니다.
+      <description>GitHub Repository 준비 origin repository  src gitops  1. 2개 리파지터리를 본인 계정으로 fork   src fork repo gitops fork repo  2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지터리에 commit을 수행하기 위해 deploy key를 등록합니다.
 2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성 user@DESKTOP-1RAT70A MINGW64 ~/.ssh $ ssh-keygen Generating public/private rsa key pair. Enter file in which to save the key (/c/Users/user/.ssh/id_rsa): okd-tutorial-deploykey Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in okd-tutorial-deploykey.</description>
     </item>
     
@@ -93,7 +93,7 @@
       <pubDate>Tue, 15 Mar 2022 11:31:20 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial3/</guid>
-      <description>DockerHub 설정 1. docker hub에 계정 생성  dockerhub link   2.리파지토리를 생성 name : okdtutorial visibility : public   [생성화면]   </description>
+      <description>DockerHub 설정 1. docker hub에 계정 생성  dockerhub link   2. 리파지터리를 생성 name : okdtutorial visibility : public   [생성화면]   </description>
     </item>
     
     <item>
@@ -219,7 +219,7 @@ kind: BuildConfig apiVersion: build.openshift.io/v1 metadata:  name: okd-tutoria
       
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial9/</guid>
       <description>ArgoCD App 배포하기 1. image registry 주소 변경   GitOps Repo
-  아래 2개의 yaml파일을 편집해 이미지 경로를 본인 dockerhub의 계정과 리파지토리로 변경한다.
+  아래 2개의 yaml파일을 편집해 이미지 경로를 본인 dockerhub의 계정과 리파지터리로 변경한다.
 &amp;ndash; base/deployment-sample.yaml
 &amp;ndash; okd-deploy/testblog-deployment.yaml
   image: docker.io/spcsenti/testblog:latest &amp;ndash;&amp;gt; image: docker.io/spcsenti2023/okdtutorial:latest
