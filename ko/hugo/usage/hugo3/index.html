@@ -12,21 +12,21 @@
     <title>Hugo3 : 테마 수정 및 변경 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1648603066" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1648603066" rel="stylesheet">
-    <link href="/css/hybrid.css?1648603066" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1648603066" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1648603066" rel="stylesheet">
-    <link href="/css/auto-complete.css?1648603066" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1648603066" rel="stylesheet">
-    <link href="/css/theme.css?1648603066" rel="stylesheet">
-    <link href="/css/tabs.css?1648603066" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1648603066" rel="stylesheet">
+    <link href="/css/nucleus.css?1648603511" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1648603511" rel="stylesheet">
+    <link href="/css/hybrid.css?1648603511" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1648603511" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1648603511" rel="stylesheet">
+    <link href="/css/auto-complete.css?1648603511" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1648603511" rel="stylesheet">
+    <link href="/css/theme.css?1648603511" rel="stylesheet">
+    <link href="/css/tabs.css?1648603511" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1648603511" rel="stylesheet">
     
-    <link href="/css/custom.css?1648603066" rel="stylesheet">
+    <link href="/css/custom.css?1648603511" rel="stylesheet">
     <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1648603066"></script>
+    <script src="/js/jquery-3.3.1.min.js?1648603511"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1648603066"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1648603066"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1648603511"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1648603511"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1648603066"></script>
+<script type="text/javascript" src="/js/search.js?1648603511"></script>
 
     
   </div>
@@ -1094,7 +1094,7 @@
         <li><a href="#1-기존-테마-제거">1. 기존 테마 제거</a></li>
         <li><a href="#2-새로운-테마-설치">2. 새로운 테마 설치</a></li>
         <li><a href="#3-빌드">3. 빌드</a></li>
-        <li><a href="#4-오류">4. 오류</a></li>
+        <li><a href="#4-submodule-추가시-오류">4. submodule 추가시 오류</a></li>
         <li><a href="#5-front-matter">5. front matter</a></li>
       </ul>
     </li>
@@ -1336,7 +1336,7 @@ $ git clone https://github.com/matcornic/hugo-theme-learn.git
 $ hugo server --themesDir ../..
 </code></pre><h3 id="3-빌드">3. 빌드</h3>
 <pre tabindex="0"><code>$ hugo -t hugo-theme-learn
-</code></pre><h3 id="4-오류">4. 오류</h3>
+</code></pre><h3 id="4-submodule-추가시-오류">4. submodule 추가시 오류</h3>
 <pre tabindex="0"><code>PS D:\Git\bluewhale\bluewhale-hugo&gt; git submodule add -b master https://github.com/bluewhale-users/bluewhale.github.io.git public --force
 A git directory for &#39;public&#39; is found locally with remote(s):
   origin        https://github.com/bluewhale-users/bluewhale.github.io.git
@@ -1344,10 +1344,14 @@ If you want to reuse this local git directory instead of cloning again from
   https://github.com/bluewhale-users/bluewhale.github.io.git
 use the &#39;--force&#39; option. If the local git directory is not the correct repo
 or you are unsure what this means choose another name with the &#39;--name&#39; option.
+</code></pre>
+<div class="notices tip" ><p>.git/modules/ 폴더 삭제후 다시 시도</p>
+</div>
 
-.git/modules/ 폴더 삭제
-</code></pre><h3 id="5-front-matter">5. front matter</h3>
-<p><a href="https://gohugo.io/content-management/front-matter/">spec</a></p>
+<h3 id="5-front-matter">5. front matter</h3>
+<ul>
+<li><a href="https://gohugo.io/content-management/front-matter/">Front Matter Formats</a></li>
+</ul>
 
 
 <footer class="footline">
@@ -1964,16 +1968,16 @@ or you are unsure what this means choose another name with the &#39;--name&#39; 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1648603066"></script>
-    <script src="/js/perfect-scrollbar.min.js?1648603066"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1648603066"></script>
-    <script src="/js/jquery.sticky.js?1648603066"></script>
-    <script src="/js/featherlight.min.js?1648603066"></script>
-    <script src="/js/highlight.pack.js?1648603066"></script>
+    <script src="/js/clipboard.min.js?1648603511"></script>
+    <script src="/js/perfect-scrollbar.min.js?1648603511"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1648603511"></script>
+    <script src="/js/jquery.sticky.js?1648603511"></script>
+    <script src="/js/featherlight.min.js?1648603511"></script>
+    <script src="/js/highlight.pack.js?1648603511"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1648603066"></script>
-    <script src="/js/learn.js?1648603066"></script>
-    <script src="/js/hugo-learn.js?1648603066"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1648603511"></script>
+    <script src="/js/learn.js?1648603511"></script>
+    <script src="/js/hugo-learn.js?1648603511"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
