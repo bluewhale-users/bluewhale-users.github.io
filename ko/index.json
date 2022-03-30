@@ -32,7 +32,7 @@
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Test "
 },
 {
 	"uri": "https://bluewhale-users.github.io/ko/apigee/usage/apigee2/",
@@ -196,6 +196,13 @@
 	"content": "orca-harbor + buildconfig 1. image pull secret 추가 Secret name : orca-harbor-secret\nRegistry server address : orca-harbor.cloud.hancom.com\nUsername : \u0026ldquo;이름\u0026rdquo;\nPassword : harbor 접속후 CLI secret 확인\n\r 2. User Profile을 눌러 CLI secret 복사후 사용  3. BuildConfig 사용 예제1 apiVersion: build.openshift.io/v1 kind: BuildConfig metadata:  name: testblog  namespace: okd-tutorial  labels:  app.kubernetes.io/name: testblog spec:  nodeSelector: null  output:  to:  kind: DockerImage  name: \u0026#39;image 경로\u0026#39;  pushSecret:  name: \u0026#39;orca-harbor-secret\u0026#39;  source:  git:  ref: master  uri: \u0026#39;https://github.com/bluewhale-users/okd-tutorial1-src.git\u0026#39;  type: Git  strategy:  type: Docker  dockerStrategy:  dockerfilePath: Dockerfile  triggers:  - type: ImageChange  imageChange: {}  - type: ConfigChange 4. BuildConfig 사용 예제2 apiVersion: build.openshift.io/v1 kind: BuildConfig metadata:  name: standardterm  namespace: okd-externaladdin  labels:  app.kubernetes.io/name: standardterm spec:  nodeSelector: null  output:  to:  kind: DockerImage  name: \u0026#39;image 경로\u0026#39;  pushSecret:  name: \u0026#39;orca-harbor-usetoken\u0026#39;  type: Git  strategy:  type: Docker  dockerStrategy:  dockerfilePath: Dockerfile  postCommit: {}  source:  type: Binary  binary: {}  runPolicy: Serial  triggers:  - type: ImageChange  imageChange: {}  - type: ConfigChange "
 },
 {
+	"uri": "https://bluewhale-users.github.io/ko/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": "Contents  Tutorial site  "
+},
+{
 	"uri": "https://bluewhale-users.github.io/ko/apigee/",
 	"title": "Apigees",
 	"tags": [],
@@ -208,13 +215,6 @@
 	"tags": [],
 	"description": "",
 	"content": "apigee1 : 소개 apigee2 : 무료로 사용해보기 apigee3 : API Reverse Proxy apigee4 : 개발자포털1 apigee5 : 개발자포털2 apigee6 : 개발자포털3 apigee7 : API Proxies Demo apigee8 : VS Code 사용 apigee9 : 배포하기 "
-},
-{
-	"uri": "https://bluewhale-users.github.io/ko/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://bluewhale-users.github.io/ko/post/",
