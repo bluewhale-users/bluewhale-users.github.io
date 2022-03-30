@@ -50,10 +50,8 @@
       <pubDate>Tue, 29 Mar 2022 13:44:59 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/apigee/usage/apigee5/</guid>
-      <description>개발자 포털 Open-API-Specification
-샘플
-1. API Document 추가  API catalog 선택    2. Portals -&amp;gt; Pages 이동  API 선택(okd-api-sample)    3. 우측의 연필 모양 클릭해 편집모드로 변경  4. API Documentation   Source API sepc 리스트박스 선택(Select OpenAPI Spec)    JSON 파일 업로드     [sample json]
-{  &amp;#34;openapi&amp;#34;: &amp;#34;3.0.1&amp;#34;,  &amp;#34;info&amp;#34;: {  &amp;#34;title&amp;#34;: &amp;#34;okd-sample-API Service&amp;#34;,  &amp;#34;version&amp;#34;: &amp;#34;v1&amp;#34;  },  &amp;#34;servers&amp;#34;: [  {  &amp;#34;url&amp;#34;: &amp;#34;https://dotnetexample-okd-tutorial.</description>
+      <description>개발자 포털  Open-API-Specification  1. API Document 추가  API catalog 선택    2. Portals -&amp;gt; Pages 이동  API 선택(okd-api-sample)    3. 우측의 연필 모양 클릭해 편집모드로 변경  4. API Documentation   Source API sepc 리스트박스 선택(Select OpenAPI Spec)    JSON 파일 업로드     json sample
+  {  &amp;#34;openapi&amp;#34;: &amp;#34;3.0.1&amp;#34;,  &amp;#34;info&amp;#34;: {  &amp;#34;title&amp;#34;: &amp;#34;okd-sample-API Service&amp;#34;,  &amp;#34;version&amp;#34;: &amp;#34;v1&amp;#34;  },  &amp;#34;servers&amp;#34;: [  {  &amp;#34;url&amp;#34;: &amp;#34;https://dotnetexample-okd-tutorial.</description>
     </item>
     
     <item>
@@ -62,7 +60,7 @@
       <pubDate>Tue, 29 Mar 2022 13:45:01 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/apigee/usage/apigee6/</guid>
-      <description>1. 페이지 추가(+Page 선택)  2. 페이지 이름 입력(경록 확인 : test)  3. 페이지 편집  Publish 선택    4. 메뉴 추가  5. 메뉴 이름 입력(Page Path 입력 : test)  6. Publish 선택  7. Live Portal 확인  </description>
+      <description>1. 페이지 추가(&amp;quot;+Page&amp;quot; 선택)  2. 페이지 이름 입력(경록 확인 : test)  3. 페이지 편집  Publish 선택    4. 메뉴 추가  5. 메뉴 이름 입력(Page Path 입력 : test)  6. Publish 선택  7. Live Portal 확인  </description>
     </item>
     
     <item>
@@ -71,7 +69,7 @@
       <pubDate>Tue, 29 Mar 2022 13:45:03 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/apigee/usage/apigee7/</guid>
-      <description>Create New  Reverse Proxy 선택  Proxy details  Name: okd-api Base path: okd-api Target: https://dotnetexample-okd-tutorial.apps.blackwhale.cloud.hancom.com/Document  Security(Authorization) : API Key Quota: Impose quotas per App Security(Browser) : Add CORS headers Summary  Edit Proxy  Overview  eval(개발환경) deploy   Deploy 선택    DEVELOP 탭 확인  PreFlow [Policies] - Add CORS - Impose Quota - Remove Query Param apikey - Verify API Key  API Products 추가(Create New 선택)  Product details 입력  Name: okd-api-product Display Name: Demo API Environment: eval Access: Public Oprations 추가(ADD AN OPERATION)  API Proxy : okd-api Operation: /okd-api Methods: 모두 선택 Save를 눌러 저장한다.</description>
+      <description>1. Create New  2. Reverse Proxy 선택  3. Proxy details  Name: okd-api Base path: okd-api Target: https://dotnetexample-okd-tutorial.apps.blackwhale.cloud.hancom.com/Document  Security(Authorization) : API Key Quota: Impose quotas per App Security(Browser) : Add CORS headers 4. Summary  5. Edit Proxy  6. Overview  7. eval(개발환경) deploy   Deploy 선택    8. DEVELOP 탭 확인  9. PreFlow [Policies] - Add CORS - Impose Quota - Remove Query Param apikey - Verify API Key  10.</description>
     </item>
     
     <item>
@@ -80,8 +78,7 @@
       <pubDate>Tue, 29 Mar 2022 13:45:07 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/apigee/usage/apigee8/</guid>
-      <description>참고
-순서  Apigee 작업공간을 만들어 Apigee를 사용하는 로컬 개발에 필요한 디렉터리 구조를 설정합니다. API 프록시를 만듭니다. API 프록시를 모의 대상 엔드포인트에 연결하여 작동 방식을 확인할 수 있습니다. 새 API 프록시가 포함된 환경을 구성하고 배포합니다. API를 테스트합니다. 테스트 리소스를 빌드하고 내보내고 API를 테스트하기 위해 API 키를 사용하여 인증하는 방법을 알아봅니다. API 프록시에서 XML 데이터를 반환하도록 대상 엔드포인트를 변경합니다. 정책을 연결하여 응답을 XML에서 JSON으로 변환합니다. Apigee 환경에 배포합니다. 보관 파일을 프로덕션으로 승격합니다.</description>
+      <description>작업 순서  Apigee 작업공간을 만들어 Apigee를 사용하는 로컬 개발에 필요한 디렉터리 구조를 설정합니다. API 프록시를 만듭니다. API 프록시를 모의 대상 엔드포인트에 연결하여 작동 방식을 확인할 수 있습니다. 새 API 프록시가 포함된 환경을 구성하고 배포합니다. API를 테스트합니다. 테스트 리소스를 빌드하고 내보내고 API를 테스트하기 위해 API 키를 사용하여 인증하는 방법을 알아봅니다. API 프록시에서 XML 데이터를 반환하도록 대상 엔드포인트를 변경합니다. 정책을 연결하여 응답을 XML에서 JSON으로 변환합니다. Apigee 환경에 배포합니다. 보관 파일을 프로덕션으로 승격합니다.</description>
     </item>
     
     <item>
@@ -90,9 +87,7 @@
       <pubDate>Tue, 29 Mar 2022 13:45:10 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/apigee/usage/apigee9/</guid>
-      <description>참고
- Google Cloud SDK와 gcloud beta apigee 구성요소 설치
-  gcloud beta 구성요소 설치  gcloud components install beta  베타 구성요소 설치 확인  $ gcloud components list Your current Google Cloud CLI version is: 373.0.0 The latest available version is: 373.0.0 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ Components │ ├───────────────┬──────────────────────────────────────────────────────┬──────────────────────────┬──────────┤ │ Status │ Name │ ID │ Size │ ├───────────────┼──────────────────────────────────────────────────────┼──────────────────────────┼──────────┤ │ Not Installed │ App Engine Go Extensions │ app-engine-go │ 4.</description>
+      <description>0. Google Cloud SDK와 gcloud beta apigee 구성요소 설치  gcloud beta 구성요소 설치  gcloud components install beta  베타 구성요소 설치 확인  $ gcloud components list Your current Google Cloud CLI version is: 373.0.0 The latest available version is: 373.0.0 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │ Components │ ├───────────────┬──────────────────────────────────────────────────────┬──────────────────────────┬──────────┤ │ Status │ Name │ ID │ Size │ ├───────────────┼──────────────────────────────────────────────────────┼──────────────────────────┼──────────┤ │ Not Installed │ App Engine Go Extensions │ app-engine-go │ 4.2 MiB │ │ Not Installed │ Appctl │ appctl │ 18.</description>
     </item>
     
   </channel>

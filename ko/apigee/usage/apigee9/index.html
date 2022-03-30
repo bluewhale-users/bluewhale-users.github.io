@@ -12,21 +12,21 @@
     <title>Apigee9 : Apigee 환경에 배포하기 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1648544533" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1648544533" rel="stylesheet">
-    <link href="/css/hybrid.css?1648544533" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1648544533" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1648544533" rel="stylesheet">
-    <link href="/css/auto-complete.css?1648544533" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1648544533" rel="stylesheet">
-    <link href="/css/theme.css?1648544533" rel="stylesheet">
-    <link href="/css/tabs.css?1648544533" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1648544533" rel="stylesheet">
+    <link href="/css/nucleus.css?1648603066" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1648603066" rel="stylesheet">
+    <link href="/css/hybrid.css?1648603066" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1648603066" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1648603066" rel="stylesheet">
+    <link href="/css/auto-complete.css?1648603066" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1648603066" rel="stylesheet">
+    <link href="/css/theme.css?1648603066" rel="stylesheet">
+    <link href="/css/tabs.css?1648603066" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1648603066" rel="stylesheet">
     
-    <link href="/css/custom.css?1648544533" rel="stylesheet">
+    <link href="/css/custom.css?1648603066" rel="stylesheet">
     <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1648544533"></script>
+    <script src="/js/jquery-3.3.1.min.js?1648603066"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1648544533"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1648544533"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1648603066"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1648603066"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1648544533"></script>
+<script type="text/javascript" src="/js/search.js?1648603066"></script>
 
     
   </div>
@@ -1084,6 +1084,7 @@
   <ul>
     <li>
       <ul>
+        <li></li>
         <li><a href="#1-apigee-조직에-새로운-dev-환경을-만들고-배포-유형으로-archive를-사용-설정합니다">1. Apigee 조직에 새로운 dev 환경을 만들고 배포 유형으로 Archive를 사용 설정합니다.</a></li>
         <li><a href="#2-환경-그룹-연결">2. 환경 그룹 연결</a></li>
         <li><a href="#3-apigee-환경에-api-프록시-구성-아카이브-파일을-배포">3. Apigee 환경에 API 프록시 구성 아카이브 파일을 배포</a></li>
@@ -1119,10 +1120,7 @@
         
 
 
-<p><a href="https://cloud.google.com/apigee/docs/api-platform/local-development/vscode/tutorial-test">참고</a></p>
-<blockquote>
-<p>Google Cloud SDK와 gcloud beta apigee 구성요소 설치</p>
-</blockquote>
+<h4 id="0-google-cloud-sdk와-gcloud-beta-apigee-구성요소-설치">0. Google Cloud SDK와 gcloud beta apigee 구성요소 설치</h4>
 <ul>
 <li>gcloud beta 구성요소 설치</li>
 </ul>
@@ -1341,16 +1339,6 @@ Your current project is [pure-fold-339305].  You can change this setting by runn
 </figure>
 </p>
 </li>
-</ul>
-<pre tabindex="0"><code>새 환경을 만든 후 다음을 수행해야 합니다.
-- 새 환경을 인스턴스에 연결합니다. 
-- UI에서는 이 작업을 수행할 수 없습니다. 
-- 대신 Instances attachment create API를 사용하여 인스턴스에 환경을 연결합니다. 
-  이를 수행하는 방법에 대한 예시는 명령줄 프로비저닝 문서에서 환경 만들기를 참조하세요.
-- 새 환경을 환경 그룹에 할당합니다. 
-  그룹에 할당되지 않은 환경에는 자신을 가리키는 호스트 이름이 없으므로 액세스할 수 없습니다. 
-  자세한 내용은 환경 그룹 만들기를 참조하세요.
-</code></pre><ul>
 <li>
 <p>인스턴스 연결
 <figure><img src="/apigee/apigee-tutorial7_16.jpg"/>
@@ -2177,16 +2165,16 @@ curl -s -H &#34;Content-Type: application/json&#34; -H &#34;Authorization: Beare
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1648544533"></script>
-    <script src="/js/perfect-scrollbar.min.js?1648544533"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1648544533"></script>
-    <script src="/js/jquery.sticky.js?1648544533"></script>
-    <script src="/js/featherlight.min.js?1648544533"></script>
-    <script src="/js/highlight.pack.js?1648544533"></script>
+    <script src="/js/clipboard.min.js?1648603066"></script>
+    <script src="/js/perfect-scrollbar.min.js?1648603066"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1648603066"></script>
+    <script src="/js/jquery.sticky.js?1648603066"></script>
+    <script src="/js/featherlight.min.js?1648603066"></script>
+    <script src="/js/highlight.pack.js?1648603066"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1648544533"></script>
-    <script src="/js/learn.js?1648544533"></script>
-    <script src="/js/hugo-learn.js?1648544533"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1648603066"></script>
+    <script src="/js/learn.js?1648603066"></script>
+    <script src="/js/hugo-learn.js?1648603066"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
