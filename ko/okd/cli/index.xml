@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CLI on Documentation for Hugo Learn Theme</title>
+    <link>https://bluewhale-users.github.io/ko/okd/cli/</link>
+    <description>Recent content in CLI on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 31 Mar 2022 15:37:54 +0900</lastBuildDate><atom:link href="https://bluewhale-users.github.io/ko/okd/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CLI : oc 설정</title>
+      <link>https://bluewhale-users.github.io/ko/okd/cli/cli1/</link>
+      <pubDate>Thu, 31 Mar 2022 15:22:13 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/cli/cli1/</guid>
+      <description>okd github okd documentation oc download  1. oc download  oc download OS에 맞게 실행파일을 다운로드한다.  2. 압축 해제  적당한 경로에 압축을 해제한다.  3. 환경변수 편집  환경변수에 경로 추가  window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택 시스템변수의 Path를 더블클릭한다. 새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳의 경로를 등록   command에서 oc version을 쳐서 확인  windowsMacOSC:\Users\user&amp;gt;oc version Client Version: 4.</description>
+    </item>
+    
+    <item>
+      <title>Cli2 : Basic Commands</title>
+      <link>https://bluewhale-users.github.io/ko/okd/cli/cli2/</link>
+      <pubDate>Thu, 31 Mar 2022 15:53:12 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/cli/cli2/</guid>
+      <description>No Command Description     1 new-project Request a new Project   2 new-app Request a new application   3 projects Display existing project   4 project Switch to another project    1. new-project C:\Users\user&amp;gt;oc new-project --help Create a new project for yourself. If your administrator allows self-service, this command will create a new project for you and assign you as the project admin.</description>
+    </item>
+    
+  </channel>
+</rss>

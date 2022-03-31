@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Documentation for Hugo Learn Theme</title>
+    <title>CLI : oc 설정 :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1648711780" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ko/categories/">
+  <body class="" data-url="/ko/okd/cli/cli1/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
   
     
     <li data-nav-id="/ko/okd/" title="한컴 클라우드 플랫폼" class="dd-item
-        
+        parent
         
         
         ">
@@ -144,7 +144,7 @@
   
     
     <li data-nav-id="/ko/okd/cli/" title="CLI" class="dd-item
-        
+        parent
         
         
         ">
@@ -172,7 +172,7 @@
  
   
     
-      <li data-nav-id="/ko/okd/cli/cli1/" title="CLI : oc 설정" class="dd-item ">
+      <li data-nav-id="/ko/okd/cli/cli1/" title="CLI : oc 설정" class="dd-item active">
         <a href="/ko/okd/cli/cli1/">
         CLI : oc 설정
         <i class="fas fa-check read-icon"></i>
@@ -703,7 +703,7 @@
     
     <li data-nav-id="/ko/apigee/" title="Apigees" class="dd-item
         
-        active
+        
         
         ">
       <a href="/ko/apigee/">
@@ -968,7 +968,7 @@
     
     <li data-nav-id="/ko/post/" title="Posts" class="dd-item
         
-        active
+        
         
         ">
       <a href="/ko/post/">
@@ -1062,22 +1062,10 @@
                   
                     
                     
-                      <option id="ko" value="https://bluewhale-users.github.io/ko/categories/" selected>Korean</option>
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/okd/cli/cli1/" selected>Korean</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="https://bluewhale-users.github.io/en/categories/">English</option>
-                    
                   
               
           
@@ -1118,6 +1106,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/bluewhale-users/bluewhale-hugo/edit/master/content/okd/cli/cli1.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -1138,7 +1137,19 @@
             
           
           
-            <a href='/ko/'>Home</a> > Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ko/'>Home</a> > <a href='/ko/okd/'>한컴 클라우드 플랫폼</a> > <a href='/ko/okd/cli/'>CLI</a> > CLI : oc 설정
+          
+        
+          
+        
           
         
           
@@ -1149,7 +1160,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-oc-download">1. oc download</a></li>
+        <li><a href="#2-압축-해제">2. 압축 해제</a></li>
+        <li><a href="#3-환경변수-편집">3. 환경변수 편집</a></li>
+        <li><a href="#4-로그인">4. 로그인</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1165,24 +1187,117 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              CLI : oc 설정
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li><a href="https://github.com/openshift/okd">okd github</a></li>
+<li><a href="https://docs.okd.io/latest/cli_reference/openshift_cli/getting-started-cli.html#cli-getting-started">okd documentation</a></li>
+<li><a href="https://github.com/openshift/okd/releases">oc download</a></li>
+</ul>
+<h3 id="1-oc-download">1. oc download</h3>
+<ul>
+<li><a href="https://github.com/openshift/okd/releases">oc download</a></li>
+<li>OS에 맞게 실행파일을 다운로드한다.</li>
+</ul>
+<h3 id="2-압축-해제">2. 압축 해제</h3>
+<ul>
+<li>적당한 경로에 압축을 해제한다.</li>
+</ul>
+<h3 id="3-환경변수-편집">3. 환경변수 편집</h3>
+<ul>
+<li>환경변수에 경로 추가
+<ul>
+<li>window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택</li>
+<li>시스템변수의 Path를 더블클릭한다.</li>
+<li>새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳의 경로를 등록</li>
+</ul>
+</li>
+<li>command에서 oc version을 쳐서 확인</li>
 </ul>
 
 
-<footer class=" footline" >
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="windows"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','windows')"
+         >windows</button>
+    
+        <button
+          data-tab-item="MacOS"
+          data-tab-group="default"
+          class="tab-nav-button btn "
+          onclick="switchTab('default','MacOS')"
+         >MacOS</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="windows" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code class="language-windows" data-lang="windows">C:\Users\user&gt;oc version
+Client Version: 4.8.0-0.okd-2021-11-14-052418
+error: You must be logged in to the server (Unauthorized)
+</code></pre>
+        </div>
+        
+        <div data-tab-item="MacOS" data-tab-group="default" class="tab-item ">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span>brew install openshift-cli
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<h3 id="4-로그인">4. 로그인</h3>
+<pre tabindex="0"><code>oc login [URL] [options]
+</code></pre>
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="windows"
+          data-tab-group="default"
+          class="tab-nav-button btn active"
+          onclick="switchTab('default','windows')"
+         >windows</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="windows" data-tab-group="default" class="tab-item active">
+            <pre tabindex="0"><code class="language-windows" data-lang="windows">C:\Users\user&gt;oc login --token=sha256~HH2JyDxeBpYgftntfZ267WREYlSv1tXJFyw7PGuT1wc --server=https://api.your-okd.com:6443
+Logged into &#34;api.your-okd.com:6443&#34; as &#34;user@your-okd.com&#34; using the token provided.
+
+You have access to 97 projects, the list has been suppressed. You can list all projects with &#39;oc projects&#39;
+
+Using project &#34;okd-tutorial&#34;.
+</code></pre>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="notices tip" ><p>-p, &ndash;password = &quot; − Password, will prompt if not provided<br>
+-u, &ndash;username = &quot; − Username, will prompt if not provided<br>
+&ndash;certificate-authority = &quot; − Path to a cert. file for the certificate authority<br>
+&ndash;insecure-skip-tls-verify = false − If true, the server&rsquo;s certificate will not be checked for validity. This will make your HTTPS connections insecure<br>
+&ndash;token = &quot; − Bearer token for authentication to the API server<br>
+To get the complete details regarding any command, use the oc <!-- raw HTML omitted --> &ndash;help command.</p>
+</div>
+
+
+
+<footer class="footline">
 	
 </footer>
 
@@ -1217,8 +1332,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1235,6 +1348,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1247,6 +1361,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1263,6 +1378,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1822,8 +1940,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ko/okd/cli/" title="CLI"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ko/okd/" title="한컴 클라우드 플랫폼" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ko/okd/cli/cli2/" title="Cli2 : Basic Commands" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1855,3 +1975,4 @@
 
   </body>
 </html>
+

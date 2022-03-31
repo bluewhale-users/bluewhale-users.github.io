@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Documentation for Hugo Learn Theme</title>
+    <title>Cli2 : Basic Commands :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1648711780" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ko/categories/">
+  <body class="" data-url="/ko/okd/cli/cli2/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
   
     
     <li data-nav-id="/ko/okd/" title="한컴 클라우드 플랫폼" class="dd-item
-        
+        parent
         
         
         ">
@@ -144,7 +144,7 @@
   
     
     <li data-nav-id="/ko/okd/cli/" title="CLI" class="dd-item
-        
+        parent
         
         
         ">
@@ -193,7 +193,7 @@
  
   
     
-      <li data-nav-id="/ko/okd/cli/cli2/" title="Cli2 : Basic Commands" class="dd-item ">
+      <li data-nav-id="/ko/okd/cli/cli2/" title="Cli2 : Basic Commands" class="dd-item active">
         <a href="/ko/okd/cli/cli2/">
         Cli2 : Basic Commands
         <i class="fas fa-check read-icon"></i>
@@ -703,7 +703,7 @@
     
     <li data-nav-id="/ko/apigee/" title="Apigees" class="dd-item
         
-        active
+        
         
         ">
       <a href="/ko/apigee/">
@@ -968,7 +968,7 @@
     
     <li data-nav-id="/ko/post/" title="Posts" class="dd-item
         
-        active
+        
         
         ">
       <a href="/ko/post/">
@@ -1062,22 +1062,10 @@
                   
                     
                     
-                      <option id="ko" value="https://bluewhale-users.github.io/ko/categories/" selected>Korean</option>
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/okd/cli/cli2/" selected>Korean</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="https://bluewhale-users.github.io/en/categories/">English</option>
-                    
                   
               
           
@@ -1118,6 +1106,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/bluewhale-users/bluewhale-hugo/edit/master/content/okd/cli/cli2.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -1138,7 +1137,19 @@
             
           
           
-            <a href='/ko/'>Home</a> > Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ko/'>Home</a> > <a href='/ko/okd/'>한컴 클라우드 플랫폼</a> > <a href='/ko/okd/cli/'>CLI</a> > Cli2 : Basic Commands
+          
+        
+          
+        
           
         
           
@@ -1149,7 +1160,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-new-project">1. new-project</a></li>
+        <li><a href="#2-new-app">2. new-app</a></li>
+        <li><a href="#3-projects">3. projects</a></li>
+        <li><a href="#4-project">4. project</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1165,24 +1187,263 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              Cli2 : Basic Commands
             </h1>
           
 
         
 
 
+<table>
+<thead>
+<tr>
+<th style="text-align:left">No</th>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">new-project</td>
+<td style="text-align:left">Request a new Project</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">new-app</td>
+<td style="text-align:left">Request a new application</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">projects</td>
+<td style="text-align:left">Display existing project</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">project</td>
+<td style="text-align:left">Switch to another project</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-new-project">1. new-project</h3>
+<pre tabindex="0"><code class="language-command" data-lang="command">C:\Users\user&gt;oc new-project --help
+Create a new project for yourself.
 
+ If your administrator allows self-service, this command will create a new project for you and assign you as the project
+admin.
 
+ After your project is created it will become the default project in your config.
 
-<ul>
-	
-</ul>
+Usage:
+  oc new-project NAME [--display-name=DISPLAYNAME] [--description=DESCRIPTION] [flags]
 
+Examples:
+  # Create a new project with minimal information
+  oc new-project web-team-dev
 
-<footer class=" footline" >
+  # Create a new project with a display name and description
+  oc new-project web-team-dev --display-name=&#34;Web Team Development&#34; --description=&#34;Development project for the web
+team.&#34;
+
+Options:
+      --description=&#39;&#39;: Project description
+      --display-name=&#39;&#39;: Project display name
+      --skip-config-write=false: If true, the project will not be set as a cluster entry in kubeconfig after being
+created
+
+Use &#34;oc options&#34; for a list of global command-line options (applies to all commands).
+</code></pre><h3 id="2-new-app">2. new-app</h3>
+<pre tabindex="0"><code class="language-command" data-lang="command">C:\Users\user&gt;oc new-app --help
+Create a new application by specifying source code, templates, and/or images.
+
+ This command will try to build up the components of an application using images, templates, or code that has a public
+repository. It will look up the images on the local Docker installation (if available), a container image registry, an
+integrated image stream, or stored templates.
+
+ If you specify a source code URL, it will set up a build that takes your source code and converts it into an image that
+can run inside of a pod. Local source must be in a git repository that has a remote repository that the server can see.
+The images will be deployed via a deployment or deployment configuration, and a service will be connected to the first
+public port of the app. You may either specify components using the various existing flags or let oc new-app autodetect
+what kind of components you have provided.
+
+ If you provide source code, a new build will be automatically triggered. You can use &#39;oc status&#39; to check the progress.
+
+Usage:
+  oc new-app (IMAGE | IMAGESTREAM | TEMPLATE | PATH | URL ...) [flags]
+
+Examples:
+  # List all local templates and image streams that can be used to create an app
+  oc new-app --list
+
+  # Create an application based on the source code in the current git repository (with a public remote) and a Docker
+image
+  oc new-app . --docker-image=registry/repo/langimage
+
+  # Create an application myapp with Docker based build strategy expecting binary input
+  oc new-app  --strategy=docker --binary --name myapp
+
+  # Create a Ruby application based on the provided [image]~[source code] combination
+  oc new-app centos/ruby-25-centos7~https://github.com/sclorg/ruby-ex.git
+
+  # Use the public Docker Hub MySQL image to create an app. Generated artifacts will be labeled with db=mysql
+  oc new-app mysql MYSQL_USER=user MYSQL_PASSWORD=pass MYSQL_DATABASE=testdb -l db=mysql
+
+  # Use a MySQL image in a private registry to create an app and override application artifacts&#39; names
+  oc new-app --docker-image=myregistry.com/mycompany/mysql --name=private
+
+  # Create an application from a remote repository using its beta4 branch
+  oc new-app https://github.com/openshift/ruby-hello-world#beta4
+
+  # Create an application based on a stored template, explicitly setting a parameter value
+  oc new-app --template=ruby-helloworld-sample --param=MYSQL_USER=admin
+
+  # Create an application from a remote repository and specify a context directory
+  oc new-app https://github.com/youruser/yourgitrepo --context-dir=src/build
+
+  # Create an application from a remote private repository and specify which existing secret to use
+  oc new-app https://github.com/youruser/yourgitrepo --source-secret=yoursecret
+
+  # Create an application based on a template file, explicitly setting a parameter value
+  oc new-app --file=./example/myapp/template.json --param=MYSQL_USER=admin
+
+  # Search all templates, image streams, and Docker images for the ones that match &#34;ruby&#34;
+  oc new-app --search ruby
+
+  # Search for &#34;ruby&#34;, but only in stored templates (--template, --image-stream and --docker-image
+  # can be used to filter search results)
+  oc new-app --search --template=ruby
+
+  # Search for &#34;ruby&#34; in stored templates and print the output as YAML
+  oc new-app --search --template=ruby --output=yaml
+
+Options:
+      --allow-missing-images=false: If true, indicates that referenced Docker images that cannot be found locally or in
+a registry should still be used.
+      --allow-missing-imagestream-tags=false: If true, indicates that image stream tags that don&#39;t exist should still be
+used.
+      --allow-missing-template-keys=false: If true, ignore any errors in templates when a field or map key is missing in
+the template. Only applies to golang and jsonpath output formats.
+      --as-deployment-config=false: If true create this application as a deployment config, which allows for hooks and
+custom strategies.
+      --as-test=false: If true create this application as a test deployment, which validates that the deployment
+succeeds and then scales down.
+      --binary=false: Instead of expecting a source URL, set the build to expect binary contents. Will disable triggers.
+      --build-env=[]: Specify a key-value pair for an environment variable to set into each build image.
+      --build-env-file=[]: File containing key-value pairs of environment variables to set into each build image.
+      --code=[]: Source code to use to build this application.
+      --context-dir=&#39;&#39;: Context directory to be used for the build.
+      --docker-image=[]: Name of a Docker image to include in the app.  Note:  not specifying a registry or repository
+means defaults in place for client image pulls are employed.
+      --dry-run=false: If true, show the result of the operation without performing it.
+  -e, --env=[]: Specify a key-value pair for an environment variable to set into each container.
+      --env-file=[]: File containing key-value pairs of environment variables to set into each container.
+  -f, --file=[]: Path to a template file to use for the app.
+      --grant-install-rights=false: If true, a component that requires access to your account may use your token to
+install software into your project. Only grant images you trust the right to run with your token.
+      --group=[]: Indicate components that should be grouped together as &lt;comp1&gt;+&lt;comp2&gt;.
+      --ignore-unknown-parameters=false: If true, will not stop processing if a provided parameter does not exist in the
+template.
+  -i, --image-stream=[]: Name of an image stream to use in the app.
+      --insecure-registry=false: If true, indicates that the referenced Docker images are on insecure registries and
+should bypass certificate checking
+  -l, --labels=&#39;&#39;: Label to set in all resources for this application.
+  -L, --list=false: List all local templates and image streams that can be used to create.
+      --name=&#39;&#39;: Set name to use for generated application artifacts
+      --no-install=false: Do not attempt to run images that describe themselves as being installable
+  -o, --output=&#39;&#39;: Output format. One of:
+json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+      --output-version=&#39;&#39;: The preferred API versions of the output objects
+  -p, --param=[]: Specify a key-value pair (e.g., -p FOO=BAR) to set/override a parameter value in the template.
+      --param-file=[]: File containing parameter values to set/override in the template.
+  -S, --search=false: Search all templates, image streams, and Docker images that match the arguments provided.
+  -a, --show-all=true: When printing, show all resources (false means hide terminated pods.)
+      --show-labels=false: When printing, show all labels as the last column (default hide labels column)
+      --show-managed-fields=false: If true, keep the managedFields when printing objects in JSON or YAML format.
+      --sort-by=&#39;&#39;: If non-empty, sort list types using this field specification.  The field specification is expressed
+as a JSONPath expression (e.g. &#39;{.metadata.name}&#39;). The field in the API resource specified by this JSONPath expression
+must be an integer or a string.
+      --source-secret=&#39;&#39;: The name of an existing secret that should be used for cloning a private git repository.
+      --strategy=: Specify the build strategy to use if you don&#39;t want to detect (docker|pipeline|source). NOTICE: the
+pipeline strategy is deprecated; consider using Jenkinsfiles directly on Jenkins or OpenShift Pipelines.
+      --template=[]: Name of a stored template to use in the app.
+
+Use &#34;oc options&#34; for a list of global command-line options (applies to all commands).
+</code></pre><h3 id="3-projects">3. projects</h3>
+<pre tabindex="0"><code class="language-command" data-lang="command">C:\Users\user&gt;oc projects
+You have access to the following projects and can switch between them with &#39; project &lt;projectname&gt;&#39;:
+
+    openshift
+    openshift-apiserver
+    openshift-apiserver-operator
+    openshift-authentication
+    openshift-authentication-operator
+    openshift-cloud-controller-manager
+    openshift-cloud-controller-manager-operator
+    openshift-cloud-credential-operator
+    openshift-cluster-csi-drivers
+    openshift-cluster-machine-approver
+    openshift-cluster-node-tuning-operator
+    openshift-cluster-samples-operator
+    openshift-cluster-storage-operator
+    openshift-cluster-version
+    openshift-config
+    openshift-config-managed
+    openshift-config-operator
+    openshift-console
+    openshift-console-operator
+    openshift-console-user-settings
+    openshift-controller-manager
+    openshift-controller-manager-operator
+    openshift-dns
+    openshift-dns-operator
+    openshift-etcd
+    openshift-etcd-operator
+    openshift-host-network
+    openshift-image-registry
+    openshift-infra
+    openshift-ingress
+    openshift-ingress-canary
+    openshift-ingress-operator
+    openshift-insights
+    openshift-kni-infra
+    openshift-kube-apiserver
+    openshift-kube-apiserver-operator
+    openshift-kube-controller-manager
+    openshift-kube-controller-manager-operator
+    openshift-kube-scheduler
+    openshift-kube-scheduler-operator
+    openshift-kube-storage-version-migrator
+    openshift-kube-storage-version-migrator-operator
+    openshift-kubevirt-infra
+    openshift-machine-api
+    openshift-machine-config-operator
+    openshift-marketplace
+    openshift-monitoring
+    openshift-multus
+    openshift-network-diagnostics
+    openshift-network-operator
+    openshift-node
+    openshift-oauth-apiserver
+    openshift-openstack-infra
+    openshift-operator-lifecycle-manager
+    openshift-operators
+    openshift-ovirt-infra
+    openshift-ovn-kubernetes
+    openshift-service-ca
+    openshift-service-ca-operator
+    openshift-terminal
+    openshift-user-workload-monitoring
+    openshift-vsphere-infra
+    podnaming-test
+    quay
+
+Using project &#34;okd-tutorial&#34; on server &#34;https://api.your-okd.com:6443&#34;.
+</code></pre><h3 id="4-project">4. project</h3>
+<pre tabindex="0"><code>C:\Users\user&gt;oc project openshift-operators
+Now using project &#34;openshift-operators&#34; on server &#34;https://api.your-okd.com:6443&#34;.
+</code></pre>
+
+<footer class="footline">
 	
 </footer>
 
@@ -1217,8 +1478,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1235,6 +1494,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1247,6 +1507,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1264,6 +1527,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1282,6 +1546,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1822,8 +2089,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ko/okd/cli/cli1/" title="CLI : oc 설정"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ko/okd/" title="한컴 클라우드 플랫폼" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ko/okd/cicd/" title="CI/CD 튜토리얼" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1855,3 +2124,4 @@
 
   </body>
 </html>
+

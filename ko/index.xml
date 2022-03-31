@@ -8,6 +8,15 @@
     <language>ko-kr</language>
     <lastBuildDate>Wed, 30 Mar 2022 13:52:05 +0900</lastBuildDate><atom:link href="https://bluewhale-users.github.io/ko/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>CLI : oc 설정</title>
+      <link>https://bluewhale-users.github.io/ko/okd/cli/cli1/</link>
+      <pubDate>Thu, 31 Mar 2022 15:22:13 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/cli/cli1/</guid>
+      <description>okd github okd documentation oc download  1. oc download  oc download OS에 맞게 실행파일을 다운로드한다.  2. 압축 해제  적당한 경로에 압축을 해제한다.  3. 환경변수 편집  환경변수에 경로 추가  window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택 시스템변수의 Path를 더블클릭한다. 새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳의 경로를 등록   command에서 oc version을 쳐서 확인  windowsMacOSC:\Users\user&amp;gt;oc version Client Version: 4.</description>
+    </item>
+    
+    <item>
       <title>Apigee1 : 소개</title>
       <link>https://bluewhale-users.github.io/ko/apigee/usage/apigee1/</link>
       <pubDate>Tue, 29 Mar 2022 13:44:42 +0900</pubDate>
@@ -37,6 +46,15 @@
       <description>1. OKD CI/CD 소개  CI/CD Flow with Argo CD   [출처] https://www.gspann.com/resources/blogs/continuous-delivery-for-kubernetes-with-gitops-and-argo-cd/
 &amp;lsquo;GitOps&amp;rsquo;는 형상 관리 도구인 &amp;lsquo;Git&amp;rsquo; 을 통해 개발자에게 익숙한 방식으로 인프라 또는 어플리케이션의 선언적인 설정파일을 관리하고 배포하는 일련의 프로세스를 말합니다. 이 튜토리얼은 어플리케이션 소스를 담고있는 Source Repository와 OKD에 배포를 위한 설정(manifest files)들을 담고 있는 GitOps Repository 2개의 리파지터리가 필요합니다.
 2. OKD CI/CD 프로세스  Source 리파지터리에 변경사항을 Commit 한다. Jenkins에서 변경사항을 감지하고 빌드를 수행한다. Docker Image를 dockerhub에 Push한다.</description>
+    </item>
+    
+    <item>
+      <title>Cli2 : Basic Commands</title>
+      <link>https://bluewhale-users.github.io/ko/okd/cli/cli2/</link>
+      <pubDate>Thu, 31 Mar 2022 15:53:12 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/cli/cli2/</guid>
+      <description>No Command Description     1 new-project Request a new Project   2 new-app Request a new application   3 projects Display existing project   4 project Switch to another project    1. new-project C:\Users\user&amp;gt;oc new-project --help Create a new project for yourself. If your administrator allows self-service, this command will create a new project for you and assign you as the project admin.</description>
     </item>
     
     <item>
