@@ -13,7 +13,8 @@
       <pubDate>Thu, 31 Mar 2022 15:22:13 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/cli/cli1/</guid>
-      <description>okd github okd documentation oc download  1. oc download  oc download OS에 맞게 실행파일을 다운로드한다.  2. 압축 해제  적당한 경로에 압축을 해제한다.  3. 환경변수 편집  환경변수에 경로 추가  window + Q로 검색창을 연 뒤 환경 변수를 검색해서 환경 변수 선택 시스템변수의 Path를 더블클릭한다. 새로 만들기를 클릭한 다음 아까 압축을 풀었던 곳의 경로를 등록   command에서 oc version을 쳐서 확인  windowsMacOSC:\Users\user&amp;gt;oc version Client Version: 4.</description>
+      <description>okd github okd documentation oc download  Kubernetes의 명령줄 인터페이스(CLI) kubectl는 Kubernetes 클러스터에 대해 명령을 실행하는 데 사용됩니다. OKD는 Kubernetes 클러스터 위에서 실행되기 때문에 kubectl도 oc CLI에 포함됩니다.
+1. oc download  oc download  OS에 맞게 실행파일을 다운로드한다.   OKD web-console에서 직접 다운로드  우측 상단의 about 링크를 눌러 Command line tools로 이동해 다운로드 받을 수 있다.      2. 압축 해제  적당한 경로에 압축을 해제한다.</description>
     </item>
     
     <item>
