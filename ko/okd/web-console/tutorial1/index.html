@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tutorial4 : Jenkins 설정 :: Documentation for Hugo Learn Theme</title>
+    <title>Tutorial1 : Overview :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1649236395" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ko/okd/cicd/tutorial4/">
+  <body class="" data-url="/ko/okd/web-console/tutorial1/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -144,7 +144,7 @@
   
     
     <li data-nav-id="/ko/okd/web-console/" title="Web Console : Overview" class="dd-item
-        
+        parent
         
         
         ">
@@ -172,7 +172,7 @@
  
   
     
-      <li data-nav-id="/ko/okd/web-console/tutorial1/" title="Tutorial1 : Overview" class="dd-item ">
+      <li data-nav-id="/ko/okd/web-console/tutorial1/" title="Tutorial1 : Overview" class="dd-item active">
         <a href="/ko/okd/web-console/tutorial1/">
         Tutorial1 : Overview
         <i class="fas fa-check read-icon"></i>
@@ -283,7 +283,7 @@
   
     
     <li data-nav-id="/ko/okd/cicd/" title="CI/CD 튜토리얼" class="dd-item
-        parent
+        
         
         
         ">
@@ -374,7 +374,7 @@
  
   
     
-      <li data-nav-id="/ko/okd/cicd/tutorial4/" title="Tutorial4 : Jenkins 설정" class="dd-item active">
+      <li data-nav-id="/ko/okd/cicd/tutorial4/" title="Tutorial4 : Jenkins 설정" class="dd-item ">
         <a href="/ko/okd/cicd/tutorial4/">
         Tutorial4 : Jenkins 설정
         <i class="fas fa-check read-icon"></i>
@@ -1121,7 +1121,7 @@
                   
                     
                     
-                      <option id="ko" value="https://bluewhale-users.github.io/ko/okd/cicd/tutorial4/" selected>Korean</option>
+                      <option id="ko" value="https://bluewhale-users.github.io/ko/okd/web-console/tutorial1/" selected>Korean</option>
                     
                   
               
@@ -1169,7 +1169,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/bluewhale-users/bluewhale-hugo/edit/master/content/okd/cicd/tutorial4.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/bluewhale-users/bluewhale-hugo/edit/master/content/okd/web-console/tutorial1.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -1204,7 +1204,7 @@
             
           
           
-            <a href='/ko/'>Home</a> > <a href='/ko/okd/'>한컴 클라우드 플랫폼</a> > <a href='/ko/okd/cicd/'>CI/CD 튜토리얼</a> > Tutorial4 : Jenkins 설정
+            <a href='/ko/'>Home</a> > <a href='/ko/okd/'>한컴 클라우드 플랫폼</a> > <a href='/ko/okd/web-console/'>Web Console : Overview</a> > Tutorial1 : Overview
           
         
           
@@ -1221,15 +1221,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#jenkins-설치">Jenkins 설치</a>
+    <li>
       <ul>
-        <li><a href="#1-okd에-로그인">1. OKD에 로그인</a></li>
-        <li><a href="#2-project-만들기">2. Project 만들기</a></li>
-        <li><a href="#3-역할-전환developer">3. 역할 전환(developer)</a></li>
-        <li><a href="#4-jenkins-설치">4. Jenkins 설치</a></li>
-        <li><a href="#5-openurl-아이콘을-선택해-jenkins-서비스-접속">5. OpenURL 아이콘을 선택해 jenkins 서비스 접속</a></li>
-        <li><a href="#6-allow-selected-permissions-선택">6. Allow selected permissions 선택</a></li>
-        <li><a href="#7-접속-완료-화면">7. 접속 완료 화면</a></li>
+        <li><a href="#1-web-console-접속-화면">1. Web-Console 접속 화면</a></li>
       </ul>
     </li>
   </ul>
@@ -1249,73 +1243,44 @@
           
             <h1>
               
-              Tutorial4 : Jenkins 설정
+              Tutorial1 : Overview
             </h1>
           
 
         
 
 
-<h2 id="jenkins-설치">Jenkins 설치</h2>
-<h3 id="1-okd에-로그인">1. OKD에 로그인</h3>
+<h3 id="1-web-console-접속-화면">1. Web-Console 접속 화면</h3>
+<figure><img src="/web-console/tutorial1_1.jpg"/>
+</figure>
+
+<p>웹 콘솔은 브라우져를 통해 OKD를 액세스할 수 있는 사용자 인터페이스입니다.<br>
+사용자는 웹 콘솔을 통해 프로젝트의 내용을 시각적으로 관리할 수 있습니다.</p>
+<p>웹 콘솔은 Administrator/Developer 두가지 관점을 제공합니다.<br>
+개발자관점은 개발과 관련된 워크플로를 제공합니다.</p>
 <ul>
-<li><a href="https://console-openshift-console.apps.blackwhale.cloud.hancom.com/">okd link</a>
-<figure><img src="/cicd/tutorial4_1.jpg"/><figcaption>
-            <h4>[접속 화면]</h4>
-        </figcaption>
+<li>애플리케이션 배포</li>
+<li>프로젝트의 애플리케이션및 구성요소의 시각화</li>
+<li>배포 및 빌드 상태 모니터링</li>
+<li>구성요소 그룹화</li>
+</ul>
+<h4 id="11-개발자-관점-액세스">1.1 개발자 관점 액세스</h4>
+<ul>
+<li>좌측 상단의 전환 기능을 선택해 Developer로 변경한다.</li>
+</ul>
+<figure><img src="/web-console/tutorial1_2.jpg"/>
+</figure>
+
+<ul>
+<li>프로젝트에 워크로드 또는 애플리케이션이 없는 경우 Topology 뷰에는 사용 가능한 옵션이 표시됩니다.
+<figure><img src="/web-console/tutorial1_4.jpg"/>
 </figure>
 </li>
 </ul>
-<h3 id="2-project-만들기">2. Project 만들기</h3>
-<p><figure><img src="/cicd/tutorial4_2.jpg"/>
-</figure>
-
-<figure><img src="/cicd/tutorial4_3.jpg"/><figcaption>
-            <h4>[프로젝트 생성 화면]</h4>
-        </figcaption>
+<p>워크로드가 있는 경우 Topology 뷰는 워크로드 노드를 그래픽 요소로 표시합니다.
+<figure><img src="/web-console/tutorial1_3.jpg"/>
 </figure>
 </p>
-<h3 id="3-역할-전환developer">3. 역할 전환(developer)</h3>
-<p>좌측 상단의 역할선택 드롭메뉴에서 developer을 선택합니다.<br>
-<figure><img src="/cicd/tutorial4_4.jpg#floatleft"/>
-</figure>
-
-<figure><img src="/cicd/tutorial4_5.jpg"/>
-</figure>
-</p>
-<h3 id="4-jenkins-설치">4. Jenkins 설치</h3>
-<pre tabindex="0"><code>OKD-&gt;Developer-&gt;Add
-</code></pre><h4 id="41-all-services-선택">4.1 All services 선택</h4>
-<figure><img src="/cicd/tutorial4_6.jpg"/>
-</figure>
-
-<h4 id="42-jenkins-로-검색">4.2 jenkins 로 검색</h4>
-<figure><img src="/cicd/tutorial4_7.jpg"/>
-</figure>
-
-<h4 id="43-jenkins-v003-helm-charts-버전-설치-기본-설정-사용">4.3 Jenkins v0.0.3 Helm Charts 버전 설치 (기본 설정 사용)</h4>
-<p><figure><img src="/cicd/tutorial4_8.jpg"/>
-</figure>
-
-<figure><img src="/cicd/tutorial4_9.jpg"/>
-</figure>
-</p>
-<h4 id="44-설치-완료pods의-상태가-running으로-바뀔때까지-대기">4.4 설치 완료(Pods의 상태가 Running으로 바뀔때까지 대기)</h4>
-<figure><img src="/cicd/tutorial4_10.jpg"/>
-</figure>
-
-<h3 id="5-openurl-아이콘을-선택해-jenkins-서비스-접속">5. OpenURL 아이콘을 선택해 jenkins 서비스 접속</h3>
-<figure><img src="/cicd/tutorial4_11.jpg"/>
-</figure>
-
-<h3 id="6-allow-selected-permissions-선택">6. Allow selected permissions 선택</h3>
-<figure><img src="/cicd/tutorial4_12.jpg"/>
-</figure>
-
-<h3 id="7-접속-완료-화면">7. 접속 완료 화면</h3>
-<figure><img src="/cicd/tutorial4_13.jpg"/>
-</figure>
-
 
 
 <footer class="footline">
@@ -1369,6 +1334,40 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1379,6 +1378,22 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1411,74 +1426,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1517,7 +1464,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1534,8 +1480,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1999,10 +1958,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ko/okd/cicd/tutorial3/" title="Tutorial3 : DockerHub 설정"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ko/okd/web-console/" title="Web Console : Overview"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ko/okd/cicd/tutorial5/" title="Tutorial5 : Jenkins Pipeline 구성" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ko/okd/cli/" title="CLI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
