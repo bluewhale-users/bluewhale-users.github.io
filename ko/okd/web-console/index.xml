@@ -26,7 +26,7 @@
       <pubDate>Thu, 07 Apr 2022 12:11:44 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/web-console/tutorial2/</guid>
-      <description>1. 프로젝트 만들기  Administrator -&amp;gt; Home -&amp;gt; Projects 이동    2. Create Project 선택  Name, Display name, Description 입력    3. 프로젝트 생성 화면  4. 개발자(Developer)관점 보기로 전환  5. 토폴로지 화면  현재 빈프로젝트이기 때문에 아무것도 보이지 않는다.    5. Application 배포해보기  화면에서 우클릭하여 메뉴 확인(Samples 선택)    6. 미리 준비된 코드 샘플을 사용하여 어플리케이션을 생성  Node.</description>
+      <description>1. 프로젝트 만들기  Administrator -&amp;gt; Home -&amp;gt; Projects 이동    2. Create Project 선택  Name, Display name, Description 입력    3. 프로젝트 생성 화면  4. 개발자(Developer)관점 보기로 전환  5. 토폴로지 화면  현재 빈프로젝트이기 때문에 아무것도 보이지 않는다.    5. Application 배포해보기  화면에서 우클릭하여 메뉴 확인(Samples 선택)    6. 코드 샘플을 사용하여 어플리케이션을 생성(Nginx)  Nginx 선택    7.</description>
     </item>
     
   </channel>

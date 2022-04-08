@@ -12,21 +12,21 @@
     <title>Tutorial2 : 프로젝트 만들기 :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1649318177" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1649318177" rel="stylesheet">
-    <link href="/css/hybrid.css?1649318177" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1649318177" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1649318177" rel="stylesheet">
-    <link href="/css/auto-complete.css?1649318177" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1649318177" rel="stylesheet">
-    <link href="/css/theme.css?1649318177" rel="stylesheet">
-    <link href="/css/tabs.css?1649318177" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1649318177" rel="stylesheet">
+    <link href="/css/nucleus.css?1649402247" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649402247" rel="stylesheet">
+    <link href="/css/hybrid.css?1649402247" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649402247" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649402247" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649402247" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1649402247" rel="stylesheet">
+    <link href="/css/theme.css?1649402247" rel="stylesheet">
+    <link href="/css/tabs.css?1649402247" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1649402247" rel="stylesheet">
     
-    <link href="/css/custom.css?1649318177" rel="stylesheet">
+    <link href="/css/custom.css?1649402247" rel="stylesheet">
     <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1649318177"></script>
+    <script src="/js/jquery-3.3.1.min.js?1649402247"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1649318177"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1649318177"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1649402247"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1649402247"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1649318177"></script>
+<script type="text/javascript" src="/js/search.js?1649402247"></script>
 
     
   </div>
@@ -1250,13 +1250,18 @@
         <li><a href="#4-개발자developer관점-보기로-전환">4. 개발자(Developer)관점 보기로 전환</a></li>
         <li><a href="#5-토폴로지-화면">5. 토폴로지 화면</a></li>
         <li><a href="#5-application-배포해보기">5. Application 배포해보기</a></li>
-        <li><a href="#6-미리-준비된-코드-샘플을-사용하여-어플리케이션을-생성">6. 미리 준비된 코드 샘플을 사용하여 어플리케이션을 생성</a></li>
-        <li><a href="#7-샘플-어플리케이션-생성-화면">7. 샘플 어플리케이션 생성 화면</a></li>
+        <li><a href="#6-코드-샘플을-사용하여-어플리케이션을-생성nginx">6. 코드 샘플을 사용하여 어플리케이션을 생성(Nginx)</a></li>
+        <li><a href="#7-name-입력my-nginx-sample">7. Name 입력(my-nginx-sample)</a></li>
         <li><a href="#8-빌드중-상태가-종료될때까지-대기한다">8. 빌드중 상태가 종료될때까지 대기한다.</a></li>
         <li><a href="#9-빌드-성공">9. 빌드 성공</a></li>
         <li><a href="#10-openurl을-통해-서비스에-접속">10. OpenURL을 통해 서비스에 접속</a></li>
-        <li><a href="#11-db-연결">11. DB 연결</a></li>
-        <li><a href="#12-mongodb-배포-화면">12. mongodb 배포 화면</a></li>
+        <li><a href="#11-코드-샘플을-사용하여-어플리케이션을-생성nodejs">11. 코드 샘플을 사용하여 어플리케이션을 생성(node.js)</a></li>
+        <li><a href="#12-샘플-어플리케이션-생성-화면">12. 샘플 어플리케이션 생성 화면</a></li>
+        <li><a href="#13-빌드중-상태가-종료될때까지-대기한다">13. 빌드중 상태가 종료될때까지 대기한다.</a></li>
+        <li><a href="#14-빌드-성공">14. 빌드 성공</a></li>
+        <li><a href="#15-openurl을-통해-서비스에-접속">15. OpenURL을 통해 서비스에 접속</a></li>
+        <li><a href="#16-db-연결">16. DB 연결</a></li>
+        <li><a href="#17-mongodb-배포-화면">17. mongodb 배포 화면</a></li>
       </ul>
     </li>
   </ul>
@@ -1307,7 +1312,7 @@
 
 <h3 id="5-토폴로지-화면">5. 토폴로지 화면</h3>
 <ul>
-<li>현재 빈프로젝트이기 때문에 아무것도 보이지 않는다.
+<li>현재 빈프로젝트이기 때문에 아무것도 보이지 않는다. 
 <figure><img src="/web-console/tutorial2_5.jpg"/>
 </figure>
 </li>
@@ -1319,7 +1324,40 @@
 </figure>
 </li>
 </ul>
-<h3 id="6-미리-준비된-코드-샘플을-사용하여-어플리케이션을-생성">6. 미리 준비된 코드 샘플을 사용하여 어플리케이션을 생성</h3>
+<h3 id="6-코드-샘플을-사용하여-어플리케이션을-생성nginx">6. 코드 샘플을 사용하여 어플리케이션을 생성(Nginx)</h3>
+<ul>
+<li>Nginx 선택
+<figure><img src="/web-console/tutorial2_19.jpg"/>
+</figure>
+</li>
+</ul>
+<h3 id="7-name-입력my-nginx-sample">7. Name 입력(my-nginx-sample)</h3>
+<ul>
+<li><a href="https://github.com/sclorg/nginx-ex">source github</a>
+<figure><img src="/web-console/tutorial2_20.jpg"/>
+</figure>
+</li>
+</ul>
+<h3 id="8-빌드중-상태가-종료될때까지-대기한다">8. 빌드중 상태가 종료될때까지 대기한다.</h3>
+<figure><img src="/web-console/tutorial2_21.jpg"/>
+</figure>
+
+<h3 id="9-빌드-성공">9. 빌드 성공</h3>
+<figure><img src="/web-console/tutorial2_22.jpg"/>
+</figure>
+
+<h3 id="10-openurl을-통해-서비스에-접속">10. OpenURL을 통해 서비스에 접속</h3>
+<figure><img src="/web-console/tutorial2_23.jpg"/>
+</figure>
+
+<ul>
+<li>접속 화면
+<figure><img src="/web-console/tutorial2_24.jpg"/>
+</figure>
+</li>
+</ul>
+<hr>
+<h3 id="11-코드-샘플을-사용하여-어플리케이션을-생성nodejs">11. 코드 샘플을 사용하여 어플리케이션을 생성(node.js)</h3>
 <ul>
 <li>Node.js 선택</li>
 <li><a href="https://github.com/sclorg/nodejs-ex">source github</a>
@@ -1327,22 +1365,22 @@
 </figure>
 </li>
 </ul>
-<h3 id="7-샘플-어플리케이션-생성-화면">7. 샘플 어플리케이션 생성 화면</h3>
+<h3 id="12-샘플-어플리케이션-생성-화면">12. 샘플 어플리케이션 생성 화면</h3>
 <ul>
-<li>이름변경(나머지는 기본값 사용)후 create를 클릭한다.
+<li>이름변경(나머지는 기본값 사용)후 create를 클릭한다. 
 <figure><img src="/web-console/tutorial2_8.jpg"/>
 </figure>
 </li>
 </ul>
-<h3 id="8-빌드중-상태가-종료될때까지-대기한다">8. 빌드중 상태가 종료될때까지 대기한다.</h3>
+<h3 id="13-빌드중-상태가-종료될때까지-대기한다">13. 빌드중 상태가 종료될때까지 대기한다.</h3>
 <figure><img src="/web-console/tutorial2_9.jpg"/>
 </figure>
 
-<h3 id="9-빌드-성공">9. 빌드 성공</h3>
+<h3 id="14-빌드-성공">14. 빌드 성공</h3>
 <figure><img src="/web-console/tutorial2_10.jpg"/>
 </figure>
 
-<h3 id="10-openurl을-통해-서비스에-접속">10. OpenURL을 통해 서비스에 접속</h3>
+<h3 id="15-openurl을-통해-서비스에-접속">15. OpenURL을 통해 서비스에 접속</h3>
 <figure><img src="/web-console/tutorial2_11.jpg"/>
 </figure>
 
@@ -1352,10 +1390,10 @@
 </figure>
 </li>
 </ul>
-<h3 id="11-db-연결">11. DB 연결</h3>
+<h3 id="16-db-연결">16. DB 연결</h3>
 <ul>
 <li>
-<p>방문 횟수가 카운트되어 보여야 하지만 DB 연결 실패 메시지가 출력된다.
+<p>방문 횟수가 카운트되어 보여야 하지만 DB 연결 실패 메시지가 출력된다. 
 <figure><img src="/web-console/tutorial2_13.jpg"/>
 </figure>
 </p>
@@ -1540,7 +1578,7 @@ HTTPS_PROXY=
 NO_PROXY=
 # pods/my-nodejs-sample-7598dc4c8d-htfk6, container my-nodejs-sample
 MONGO_URL=&#39;mongodb://admin:secret@172.30.127.231:27017/mongo_db&#39;
-</code></pre><h3 id="12-mongodb-배포-화면">12. mongodb 배포 화면</h3>
+</code></pre><h3 id="17-mongodb-배포-화면">17. mongodb 배포 화면</h3>
 <figure><img src="/web-console/tutorial2_18.jpg"/>
 </figure>
 
@@ -2253,16 +2291,16 @@ MONGO_URL=&#39;mongodb://admin:secret@172.30.127.231:27017/mongo_db&#39;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1649318177"></script>
-    <script src="/js/perfect-scrollbar.min.js?1649318177"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1649318177"></script>
-    <script src="/js/jquery.sticky.js?1649318177"></script>
-    <script src="/js/featherlight.min.js?1649318177"></script>
-    <script src="/js/highlight.pack.js?1649318177"></script>
+    <script src="/js/clipboard.min.js?1649402247"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649402247"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1649402247"></script>
+    <script src="/js/jquery.sticky.js?1649402247"></script>
+    <script src="/js/featherlight.min.js?1649402247"></script>
+    <script src="/js/highlight.pack.js?1649402247"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1649318177"></script>
-    <script src="/js/learn.js?1649318177"></script>
-    <script src="/js/hugo-learn.js?1649318177"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1649402247"></script>
+    <script src="/js/learn.js?1649402247"></script>
+    <script src="/js/hugo-learn.js?1649402247"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
