@@ -109,6 +109,17 @@
     </item>
     
     <item>
+      <title>Tutorial3 : 프로젝트 삭제</title>
+      <link>https://bluewhale-users.github.io/ko/okd/web-console/tutorial3/</link>
+      <pubDate>Mon, 11 Apr 2022 09:33:10 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/web-console/tutorial3/</guid>
+      <description>1. 프로젝트 삭제   삭제할 Application을 선택한다.    마우스 우클릭을 하여 &amp;lsquo;Delete Application&amp;rsquo;을 선택한다.    확인용 app 이름을 타이핑해 넣는다.
+(연결된 모든 Deployments, Routes, Builds, Pipelines, Storage/PCVs, Secret 및 ConfigMap 이 삭제됩니다.)    삭제 완료    이 단계를 거치지 않고 리소스를 부분적으로 삭제하게 되면 남아 있는 리소스들을 수동으로 삭제해야 한다.
+</description>
+    </item>
+    
+    <item>
       <title>Apigee3 : API Reverse Proxy</title>
       <link>https://bluewhale-users.github.io/ko/apigee/usage/apigee3/</link>
       <pubDate>Tue, 29 Mar 2022 13:44:51 +0900</pubDate>
@@ -135,6 +146,19 @@
       
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial3/</guid>
       <description>DockerHub 설정 1. docker hub에 계정 생성  dockerhub link   2. 리파지터리를 생성 name : okdtutorial visibility : public   [생성화면]   </description>
+    </item>
+    
+    <item>
+      <title>Tutorial4 : 사용자 Git 리파지터리 소스로부터 애플리케이션 배포해보기</title>
+      <link>https://bluewhale-users.github.io/ko/okd/web-console/tutorial4/</link>
+      <pubDate>Mon, 11 Apr 2022 09:50:05 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/web-console/tutorial4/</guid>
+      <description>Sample Github
+1. 프로젝트에 추가  우클릭하여 &amp;lsquo;Add to Project -&amp;gt; From Git&amp;rsquo; 선택    Sample Git Repo
+https://github.com/bluewhale-users/okd-tutorial2-src  Git Repo URL에 Sample URL을 입력한다.    URL 입력후 하단에 &amp;lsquo;Validated&amp;rsquo; 메시지가 보인다면 연결이 가능한 상태이다.
+소스 리파티터리 분석후 빌드 이미지를 자동 검출한다. (샘플의 경우 Node.js)
+ 아래로 스크롤해 Application name과 Name을 입력후 Create 버튼을 누른다. (다른 옵션은 기본값 사용)  Builder Image version : 14-ubi7 Application name : okd-tutorial-2-src-app Name : okd-tutorial-1-src Resources : Deployment Create a route to the Applicaiton : Checked   Advanced options의 &amp;ldquo;Show advanced Routing options&amp;quot;을 확장해 Target port를 &amp;ldquo;3000&amp;quot;으로 변경한다.</description>
     </item>
     
     <item>
