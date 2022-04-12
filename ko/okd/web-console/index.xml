@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Web Console : Overview on Documentation for Hugo Learn Theme</title>
+    <title>Web Console on Documentation for Hugo Learn Theme</title>
     <link>https://bluewhale-users.github.io/ko/okd/web-console/</link>
-    <description>Recent content in Web Console : Overview on Documentation for Hugo Learn Theme</description>
+    <description>Recent content in Web Console on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Wed, 06 Apr 2022 15:26:14 +0900</lastBuildDate><atom:link href="https://bluewhale-users.github.io/ko/okd/web-console/index.xml" rel="self" type="application/rss+xml" />
@@ -41,7 +41,7 @@
     </item>
     
     <item>
-      <title>Tutorial4 : 사용자 Git 리파지터리 소스로부터 애플리케이션 배포해보기</title>
+      <title>Tutorial4 : Add From Git</title>
       <link>https://bluewhale-users.github.io/ko/okd/web-console/tutorial4/</link>
       <pubDate>Mon, 11 Apr 2022 09:50:05 +0900</pubDate>
       
@@ -50,7 +50,7 @@
 1. 프로젝트에 추가  우클릭하여 &amp;lsquo;Add to Project -&amp;gt; From Git&amp;rsquo; 선택    Sample Git Repo
 https://github.com/bluewhale-users/okd-tutorial2-src  Git Repo URL에 Sample URL을 입력한다.    URL 입력후 하단에 &amp;lsquo;Validated&amp;rsquo; 메시지가 보인다면 연결이 가능한 상태이다.
 소스 리파티터리 분석후 빌드 이미지를 자동 검출한다. (샘플의 경우 Node.js)
- 아래로 스크롤해 Application name과 Name을 입력후 Create 버튼을 누른다. (다른 옵션은 기본값 사용)  Builder Image version : 14-ubi7 Application name : okd-tutorial-2-src-app Name : okd-tutorial-1-src Resources : Deployment Create a route to the Applicaiton : Checked   Advanced options의 &amp;ldquo;Show advanced Routing options&amp;quot;을 확장해 Target port를 &amp;ldquo;3000&amp;quot;으로 변경한다.</description>
+ 아래로 스크롤해 Application name과 Name을 입력한다.  Builder Image version : 14-ubi7 Application name : okd-tutorial-2-src-app Name : okd-tutorial-2-src Resources : Deployment Create a route to the Applicaiton : Checked   Advanced options의 &amp;ldquo;Show advanced Routing options&amp;quot;을 확장해 Target port를 &amp;ldquo;3000&amp;quot;으로 변경한다.</description>
     </item>
     
   </channel>
