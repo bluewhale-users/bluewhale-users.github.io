@@ -72,7 +72,7 @@
     </item>
     
     <item>
-      <title>Cli2 : Basic Commands</title>
+      <title>CLI2 : Basic Commands</title>
       <link>https://bluewhale-users.github.io/ko/okd/cli/cli2/</link>
       <pubDate>Thu, 31 Mar 2022 15:53:12 +0900</pubDate>
       
@@ -106,6 +106,16 @@
       <guid>https://bluewhale-users.github.io/ko/okd/cicd/tutorial2/</guid>
       <description>GitHub Repository 준비 origin repository  src gitops  1. 2개 리파지터리를 본인 계정으로 fork   src fork repo gitops fork repo  2. Deploy Key 생성 및 등록 jenkins 빌드후 gitops 리파지터리에 commit을 수행하기 위해 deploy key를 등록합니다.
 2.1 Gitbash를 실행하여 ssh-keygen을 통해 deploy key를 생성 user@DESKTOP-1RAT70A MINGW64 ~/.ssh $ ssh-keygen Generating public/private rsa key pair. Enter file in which to save the key (/c/Users/user/.ssh/id_rsa): okd-tutorial-deploykey Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in okd-tutorial-deploykey.</description>
+    </item>
+    
+    <item>
+      <title>CLI3 : oc apply</title>
+      <link>https://bluewhale-users.github.io/ko/okd/cli/cli3/</link>
+      <pubDate>Wed, 13 Apr 2022 09:35:35 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/cli/cli3/</guid>
+      <description>oc apply는 파일 또는 stdin을 통해 리소스 구성을 적용합니다.
+&amp;gt;oc apply --help Apply a configuration to a resource by filename or stdin. The resource name must be specified. This resource will be created if it doesn&amp;#39;t exist yet. To use &amp;#39;apply&amp;#39;, always create the resource initially with either &amp;#39;apply&amp;#39; or &amp;#39;create --save-config&amp;#39;. JSON and YAML formats are accepted. Alpha Disclaimer: the --prune functionality is not yet complete. Do not use unless you are aware of what the current state is.</description>
     </item>
     
     <item>

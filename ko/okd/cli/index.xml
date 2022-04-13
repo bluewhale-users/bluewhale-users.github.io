@@ -18,12 +18,22 @@
     </item>
     
     <item>
-      <title>Cli2 : Basic Commands</title>
+      <title>CLI2 : Basic Commands</title>
       <link>https://bluewhale-users.github.io/ko/okd/cli/cli2/</link>
       <pubDate>Thu, 31 Mar 2022 15:53:12 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/cli/cli2/</guid>
       <description>No Command Description     1 new-project Request a new Project   2 new-app Request a new application   3 projects Display existing project   4 project Switch to another project    1. new-project C:\Users\user&amp;gt;oc new-project --help Create a new project for yourself. If your administrator allows self-service, this command will create a new project for you and assign you as the project admin.</description>
+    </item>
+    
+    <item>
+      <title>CLI3 : oc apply</title>
+      <link>https://bluewhale-users.github.io/ko/okd/cli/cli3/</link>
+      <pubDate>Wed, 13 Apr 2022 09:35:35 +0900</pubDate>
+      
+      <guid>https://bluewhale-users.github.io/ko/okd/cli/cli3/</guid>
+      <description>oc apply는 파일 또는 stdin을 통해 리소스 구성을 적용합니다.
+&amp;gt;oc apply --help Apply a configuration to a resource by filename or stdin. The resource name must be specified. This resource will be created if it doesn&amp;#39;t exist yet. To use &amp;#39;apply&amp;#39;, always create the resource initially with either &amp;#39;apply&amp;#39; or &amp;#39;create --save-config&amp;#39;. JSON and YAML formats are accepted. Alpha Disclaimer: the --prune functionality is not yet complete. Do not use unless you are aware of what the current state is.</description>
     </item>
     
   </channel>
