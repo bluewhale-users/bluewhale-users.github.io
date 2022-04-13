@@ -12,21 +12,21 @@
     <title>CLI3 : oc apply :: Documentation for Hugo Learn Theme</title>
 
     
-    <link href="/css/nucleus.css?1649816577" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1649816577" rel="stylesheet">
-    <link href="/css/hybrid.css?1649816577" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1649816577" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1649816577" rel="stylesheet">
-    <link href="/css/auto-complete.css?1649816577" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1649816577" rel="stylesheet">
-    <link href="/css/theme.css?1649816577" rel="stylesheet">
-    <link href="/css/tabs.css?1649816577" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1649816577" rel="stylesheet">
+    <link href="/css/nucleus.css?1649824213" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1649824213" rel="stylesheet">
+    <link href="/css/hybrid.css?1649824213" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1649824213" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1649824213" rel="stylesheet">
+    <link href="/css/auto-complete.css?1649824213" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1649824213" rel="stylesheet">
+    <link href="/css/theme.css?1649824213" rel="stylesheet">
+    <link href="/css/tabs.css?1649824213" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1649824213" rel="stylesheet">
     
-    <link href="/css/custom.css?1649816577" rel="stylesheet">
+    <link href="/css/custom.css?1649824213" rel="stylesheet">
     <link rel="stylesheet" href="https://bluewhale-users.github.io/css/custom.css">
 
-    <script src="/js/jquery-3.3.1.min.js?1649816577"></script>
+    <script src="/js/jquery-3.3.1.min.js?1649824213"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1649816577"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1649816577"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1649824213"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1649824213"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/bluewhale-users.github.io\/\/ko";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1649816577"></script>
+<script type="text/javascript" src="/js/search.js?1649824213"></script>
 
     
   </div>
@@ -1335,6 +1335,7 @@
         <li><a href="#6-service-적용">6. service 적용</a></li>
         <li><a href="#7-route-적용">7. route 적용</a></li>
         <li><a href="#8-동작-확인">8. 동작 확인</a></li>
+        <li><a href="#9-생성-리소스-삭제">9. 생성 리소스 삭제</a></li>
       </ul>
     </li>
   </ul>
@@ -1455,6 +1456,17 @@ remote: Compressing objects: 100% (14/14), done.
 remote: Total 16 (delta 4), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (16/16), done.
 Resolving deltas: 100% (4/4), done.
+</code></pre><ul>
+<li>폴더 구조</li>
+</ul>
+<pre tabindex="0"><code>D:\GIT\OKD-TUTORIAL3
+|   LICENSE
+|   README.md
+|
+\---manifests
+        deployment.yml
+        route.yml
+        service.yml
 </code></pre><h3 id="2-oc-login후-작업-프로젝트-확인okd-tutorials">2. oc login후 작업 프로젝트 확인(okd-tutorials)</h3>
 <pre tabindex="0"><code>&gt;oc login --token=sha256~5xJaXd-nYyZcB5-2ckPv******************** --server=https://api.your-okd.com:6443
 Logged into &#34;https://api.your-okd.com:6443&#34; as &#34;user@your-okd.com&#34; using the token provided.
@@ -1549,6 +1561,119 @@ spec:
 </ul>
 <h3 id="8-동작-확인">8. 동작 확인</h3>
 <figure><img src="/cli/cli3_3.jpg"/>
+</figure>
+
+<h3 id="9-생성-리소스-삭제">9. 생성 리소스 삭제</h3>
+<pre tabindex="0"><code>oc delete ([-f FILENAME] | [-k DIRECTORY] | TYPE [(NAME | -l label | --all)]) [flags]
+</code></pre><pre tabindex="0"><code>&gt;oc delete --help
+Delete resources by filenames, stdin, resources and names, or by resources and label selector.
+
+ JSON and YAML formats are accepted. Only one type of the arguments may be specified: filenames, resources and names, or
+resources and label selector.
+
+ Some resources, such as pods, support graceful deletion. These resources define a default period before they are
+forcibly terminated (the grace period) but you may override that value with the --grace-period flag, or pass --now to
+set a grace-period of 1. Because these resources often represent entities in the cluster, deletion may not be
+acknowledged immediately. If the node hosting a pod is down or cannot reach the API server, termination may take
+significantly longer than the grace period. To force delete a resource, you must specify the --force flag. Note: only a
+subset of resources support graceful deletion. In absence of the support, --grace-period is ignored.
+
+ IMPORTANT: Force deleting pods does not wait for confirmation that the pod&#39;s processes have been terminated, which can
+leave those processes running until the node detects the deletion and completes graceful deletion. If your processes use
+shared storage or talk to a remote API and depend on the name of the pod to identify themselves, force deleting those
+pods may result in multiple processes running on different machines using the same identification which may lead to data
+corruption or inconsistency. Only force delete pods when you are sure the pod is terminated, or if your application can
+tolerate multiple copies of the same pod running at once. Also, if you force delete pods the scheduler may place new
+pods on those nodes before the node has released those resources and causing those pods to be evicted immediately.
+
+ Note that the delete command does NOT do resource version checks, so if someone submits an update to a resource right
+when you submit a delete, their update will be lost along with the rest of the resource.
+
+Usage:
+  oc delete ([-f FILENAME] | [-k DIRECTORY] | TYPE [(NAME | -l label | --all)]) [flags]
+
+Examples:
+  # Delete a pod using the type and name specified in pod.json.
+  oc delete -f ./pod.json
+
+  # Delete resources from a directory containing kustomization.yaml - e.g. dir/kustomization.yaml.
+  oc delete -k dir
+
+  # Delete a pod based on the type and name in the JSON passed into stdin.
+  cat pod.json | oc delete -f -
+
+  # Delete pods and services with same names &#34;baz&#34; and &#34;foo&#34;
+  oc delete pod,service baz foo
+
+  # Delete pods and services with label name=myLabel.
+  oc delete pods,services -l name=myLabel
+
+  # Delete a pod with minimal delay
+  oc delete pod foo --now
+
+  # Force delete a pod on a dead node
+  oc delete pod foo --force
+
+  # Delete all pods
+  oc delete pods --all
+
+Options:
+      --all=false: Delete all resources, including uninitialized ones, in the namespace of the specified resource types.
+  -A, --all-namespaces=false: If present, list the requested object(s) across all namespaces. Namespace in current
+context is ignored even if specified with --namespace.
+      --cascade=&#39;background&#39;: Must be &#34;background&#34;, &#34;orphan&#34;, or &#34;foreground&#34;. Selects the deletion cascading strategy
+for the dependents (e.g. Pods created by a ReplicationController). Defaults to background.
+      --dry-run=&#39;none&#39;: Must be &#34;none&#34;, &#34;server&#34;, or &#34;client&#34;. If client strategy, only print the object that would be
+sent, without sending it. If server strategy, submit server-side request without persisting the resource.
+      --field-selector=&#39;&#39;: Selector (field query) to filter on, supports &#39;=&#39;, &#39;==&#39;, and &#39;!=&#39;.(e.g. --field-selector
+key1=value1,key2=value2). The server only supports a limited number of field queries per type.
+  -f, --filename=[]: containing the resource to delete.
+      --force=false: If true, immediately remove resources from API and bypass graceful deletion. Note that immediate
+deletion of some resources may result in inconsistency or data loss and requires confirmation.
+      --grace-period=-1: Period of time in seconds given to the resource to terminate gracefully. Ignored if negative.
+Set to 1 for immediate shutdown. Can only be set to 0 when --force is true (force deletion).
+      --ignore-not-found=false: Treat &#34;resource not found&#34; as a successful delete. Defaults to &#34;true&#34; when --all is
+specified.
+  -k, --kustomize=&#39;&#39;: Process a kustomization directory. This flag can&#39;t be used together with -f or -R.
+      --now=false: If true, resources are signaled for immediate shutdown (same as --grace-period=1).
+  -o, --output=&#39;&#39;: Output mode. Use &#34;-o name&#34; for shorter output (resource/name).
+      --raw=&#39;&#39;: Raw URI to DELETE to the server.  Uses the transport specified by the kubeconfig file.
+  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage
+related manifests organized within the same directory.
+  -l, --selector=&#39;&#39;: Selector (label query) to filter on, not including uninitialized ones.
+      --timeout=0s: The length of time to wait before giving up on a delete, zero means determine a timeout from the
+size of the object
+      --wait=true: If true, wait for resources to be gone before returning. This waits for finalizers.
+
+Use &#34;oc options&#34; for a list of global command-line options (applies to all commands).
+</code></pre><ul>
+<li>deployment 삭제</li>
+</ul>
+<pre tabindex="0"><code>&gt;oc delete -f deployment.yml
+deployment.apps &#34;tutorial-frontend&#34; deleted
+</code></pre><figure><img src="/cli/cli3_4.jpg"/>
+</figure>
+
+<ul>
+<li>service 삭제
+<figure><img src="/cli/cli3_5.jpg"/>
+</figure>
+</li>
+</ul>
+<pre tabindex="0"><code>&gt;oc delete -f service.yml
+service &#34;tutorial-frontend&#34; deleted
+</code></pre><figure><img src="/cli/cli3_6.jpg"/>
+</figure>
+
+<ul>
+<li>route 삭제</li>
+</ul>
+<figure><img src="/cli/cli3_7.jpg"/>
+</figure>
+
+<pre tabindex="0"><code>&gt;oc delete -f route.yml
+route.route.openshift.io &#34;tutorial-frontend&#34; deleted
+</code></pre><figure><img src="/cli/cli3_8.jpg"/>
 </figure>
 
 
@@ -2327,16 +2452,16 @@ spec:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1649816577"></script>
-    <script src="/js/perfect-scrollbar.min.js?1649816577"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1649816577"></script>
-    <script src="/js/jquery.sticky.js?1649816577"></script>
-    <script src="/js/featherlight.min.js?1649816577"></script>
-    <script src="/js/highlight.pack.js?1649816577"></script>
+    <script src="/js/clipboard.min.js?1649824213"></script>
+    <script src="/js/perfect-scrollbar.min.js?1649824213"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1649824213"></script>
+    <script src="/js/jquery.sticky.js?1649824213"></script>
+    <script src="/js/featherlight.min.js?1649824213"></script>
+    <script src="/js/highlight.pack.js?1649824213"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1649816577"></script>
-    <script src="/js/learn.js?1649816577"></script>
-    <script src="/js/hugo-learn.js?1649816577"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1649824213"></script>
+    <script src="/js/learn.js?1649824213"></script>
+    <script src="/js/hugo-learn.js?1649824213"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
