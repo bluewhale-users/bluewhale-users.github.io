@@ -195,7 +195,7 @@ https://github.com/bluewhale-users/okd-tutorial2-src  Git Repo URL에 Sample URL
       <pubDate>Tue, 12 Apr 2022 15:10:00 +0900</pubDate>
       
       <guid>https://bluewhale-users.github.io/ko/okd/web-console/tutorial5/</guid>
-      <description>sample github  1. Sample Code Clone windows&amp;gt; git clone git@github.com:bluewhale-users/okd-tutorial2-src.git Cloning into &amp;#39;okd-tutorial2-src&amp;#39;... remote: Enumerating objects: 23, done. remote: Counting objects: 100% (23/23), done. remote: Compressing objects: 16% (3/18) Resolving deltas: 100% (1/1), done.6/18) remote: Compressing objects: 100% (18/18), done. remote: Total 23 (delta 1), reused 19 (delta 1), pack-reused 0 2. visual studio code로 열기 windows&amp;gt; cd okd-tutorial2-src &amp;gt; code .</description>
+      <description>sample github  1. Sample Code를 Clone한다. windows&amp;gt; git clone git@github.com:bluewhale-users/okd-tutorial2-src.git Cloning into &amp;#39;okd-tutorial2-src&amp;#39;... remote: Enumerating objects: 23, done. remote: Counting objects: 100% (23/23), done. remote: Compressing objects: 16% (3/18) Resolving deltas: 100% (1/1), done.6/18) remote: Compressing objects: 100% (18/18), done. remote: Total 23 (delta 1), reused 19 (delta 1), pack-reused 0 2. visual studio code로 열기 windows&amp;gt; cd okd-tutorial2-src &amp;gt; code .</description>
     </item>
     
     <item>
